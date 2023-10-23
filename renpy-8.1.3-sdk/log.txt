@@ -1,0 +1,283 @@
+Mon Oct 23 08:37:11 2023
+Windows-10-10.0.22635
+Ren'Py 8.1.3.23091805
+ 
+
+Bootstrap to the start of init.init. took 0.02s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.35s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Set script version to: None (alternate path)
+Running init code. took 0.29s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.01s
+Index archives took 0.00s
+Dump and make backups. took 0.00s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.250000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object. took 0.17s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 3050 Ti Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 545.84'
+Display Info: None
+Screen sizes: virtual=(800, 600) physical=(1000, 750) drawable=(1000, 750)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "launcher/game/editor.rpyc", line 581, in script
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\exports.py", line 3347, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 4543, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\screen.py", line 770, in event
+    rv = self.child.event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1403, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1403, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1403, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\viewport.py", line 579, in event
+    rv = super(Viewport, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\behavior.py", line 1142, in event
+    return handle_click(self.clicked)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\behavior.py", line 1075, in handle_click
+    rv = run(action)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\behavior.py", line 379, in run
+    return action(*args, **kwargs)
+  File "game/editor.rpy", line 327, in __call__
+  File "game/editor.rpy", line 307, in fancy_select_editor
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\game.py", line 287, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "installer.py", line 451, in manifest
+  File "installer.py", line 193, in download
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/api.py", line 75, in get
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/api.py", line 60, in request
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/sessions.py", line 524, in request
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/sessions.py", line 637, in send
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
+ConnectionError: HTTPSConnectionPool(host='www.renpy.org', port=443): Max retries exceeded with url: /extensions/vscode/vscode.py (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000000007ee0cd0>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))
+
+While running game code:
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/editor.rpy", line 327, in __call__
+  File "game/editor.rpy", line 307, in fancy_select_editor
+ConnectionError: HTTPSConnectionPool(host='www.renpy.org', port=443): Max retries exceeded with url: /extensions/vscode/vscode.py (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000000007ee0cd0>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))
+
+Full traceback:
+  File "launcher/game/editor.rpyc", line 581, in script
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\exports.py", line 3347, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 4543, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\screen.py", line 770, in event
+    rv = self.child.event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1403, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1403, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1403, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\viewport.py", line 579, in event
+    rv = super(Viewport, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\behavior.py", line 1142, in event
+    return handle_click(self.clicked)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\behavior.py", line 1075, in handle_click
+    rv = run(action)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\behavior.py", line 379, in run
+    return action(*args, **kwargs)
+  File "game/editor.rpy", line 327, in __call__
+  File "game/editor.rpy", line 307, in fancy_select_editor
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\game.py", line 287, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "installer.py", line 451, in manifest
+  File "installer.py", line 193, in download
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/api.py", line 75, in get
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/api.py", line 60, in request
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/sessions.py", line 524, in request
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/sessions.py", line 637, in send
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
+ConnectionError: HTTPSConnectionPool(host='www.renpy.org', port=443): Max retries exceeded with url: /extensions/vscode/vscode.py (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000000007e37850>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))
+
+While running game code:
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/editor.rpy", line 327, in __call__
+  File "game/editor.rpy", line 307, in fancy_select_editor
+ConnectionError: HTTPSConnectionPool(host='www.renpy.org', port=443): Max retries exceeded with url: /extensions/vscode/vscode.py (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000000007e37850>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))
+
+Full traceback:
+  File "launcher/game/editor.rpyc", line 581, in script
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\exports.py", line 3347, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 4543, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\screen.py", line 770, in event
+    rv = self.child.event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1403, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1403, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1403, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\viewport.py", line 579, in event
+    rv = super(Viewport, self).event(ev, x, y, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 281, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\layout.py", line 1179, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\behavior.py", line 1142, in event
+    return handle_click(self.clicked)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\behavior.py", line 1075, in handle_click
+    rv = run(action)
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\display\behavior.py", line 379, in run
+    return action(*args, **kwargs)
+  File "game/editor.rpy", line 327, in __call__
+  File "game/editor.rpy", line 307, in fancy_select_editor
+  File "D:\Git-Huh\Fragmented\Fragmented\renpy-8.1.3-sdk\renpy\game.py", line 287, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "installer.py", line 451, in manifest
+  File "installer.py", line 193, in download
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/api.py", line 75, in get
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/api.py", line 60, in request
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/sessions.py", line 524, in request
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/sessions.py", line 637, in send
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
+ConnectionError: HTTPSConnectionPool(host='www.renpy.org', port=443): Max retries exceeded with url: /extensions/atom/atom.py (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000000007e2b970>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))
+
+While running game code:
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/editor.rpy", line 327, in __call__
+  File "game/editor.rpy", line 307, in fancy_select_editor
+ConnectionError: HTTPSConnectionPool(host='www.renpy.org', port=443): Max retries exceeded with url: /extensions/atom/atom.py (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000000007e2b970>: Failed to establish a new connection: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond'))
