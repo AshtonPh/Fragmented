@@ -54,4 +54,6 @@ label start:
         "A mage's staff":
             $ weapon = "mage's staff"
             mc "A mage's staff is in my hand. It pulses with arcane energy, ready to unleash its power."
+    
+    jump combat
 
