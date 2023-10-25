@@ -3,15 +3,47 @@ label combat:
         import random
 
         class Character():
-            def __init__(self, name, hp, mana, moveset):
+            def __init__(self, name, label, hp, mana, friend_code, moveset):
                 self.name = name
+                self.label = label
                 self.hp = hp
                 self.moveset = moveset
                 self.mana = mana
+                self.friend_code = friend_code
             def append_move(self, move):
                 self.moveset.append(move)
-            def set_target(self, target):
-                self.target_character = target
+            def set_target(self, turn_system):
+                # if is temp target for enemies, can create other classes that inherit
+                # from Character in order to give different behavior to different npcs...
+                # ie, see wolf class below
+
+                # else has the full targeting system for the player
+                if self.name != "player":
+                    for i in turn_system.order:
+                        if i.name == "player":
+                            self.target_character = i
+                else:
+                    #Renpy ask and choice menu
+                    narrator("Who would you like to target?", interact=False)
+                    tempList = []
+                    if self.selected_move.type == "enemy":
+                        for i in turn_system.order:
+                            if i.friend_code != self.friend_code:
+                                tempList.append((i.label, i.name))
+                    elif self.selected_move.type == "friendly":
+                        for i in turn_system.order:
+                            if i.friend_code == self.friend_code:
+                                tempList.append((i.label, i.name))
+                    elif self.selected_move.type == "self":
+                        tempList.append((self.label, self.name))
+
+                    tempInput = renpy.display_menu(tempList)
+
+                    for x in turn_system.order:
+                        if tempInput == x.name:
+                            self.target_character = x
+
+                    # self.target_character = target
             def use_move(self):
                 if self.selected_move == None:
                     pass
@@ -25,7 +57,10 @@ label combat:
 
                 #Renpy ask and choice menu
                 narrator("What move would you like to use?", interact=False)
-                tempInput = renpy.display_menu([ ("Slash", "slash"), ("Bite", "bite") ])
+                tempList = []
+                for i in self.moveset:
+                    tempList.append((i.label, i.name))
+                tempInput = renpy.display_menu(tempList)
 
                 for x in self.moveset:
                     if tempInput == x.name:
@@ -39,16 +74,27 @@ label combat:
             def check(self):
                 pass
 
+        class Wolf(Character):
+            def __init__(self, name, label, hp, mana, friend_code, moveset):
+                super().__init__(name, label, hp, mana, friend_code, moveset)
+            def set_target(self, turn_system):
+                if self.name != "player":
+                    for i in turn_system.order:
+                        if i.name == "player":
+                            self.target_character = i
+
 
         class Move():
-            def __init__(self, name, value, mana):
+            def __init__(self, name, label, value, mana, type):
                 self.name = name
+                self.label = label
                 self.value = value
                 self.mana = mana
+                self.type = type
 
         class Attack(Move):
-            def __init__(self, name, value, mana):
-                super().__init__(name, value, mana)
+            def __init__(self, name, label, value, mana, type):
+                super().__init__(name, label, value, mana, type)
             def use_move(self, target):
                 global active_character
                 if active_character.mana < self.mana:
@@ -57,8 +103,8 @@ label combat:
                     target.hp = target.hp - self.value
 
         class Heal(Move):
-            def __init__(self, name, value, mana):
-                super().__init__(name, value, mana)
+            def __init__(self, name, label, value, mana, type):
+                super().__init__(name, label, value, mana, type)
             def use_move(self, target):
                 global active_character
                 if active_character.mana < self.mana:
@@ -97,11 +143,13 @@ label combat:
                 for x in self.order:
                     x.check()
 
-        slash = Attack("slash", 10, 0)
-        bite = Attack("bite", 20, 0)
-        player = Character("player", 100, 50, [slash, bite])
-        test_enemy = Character("test_enemy", 100, 50, [slash, bite])
-        test_enemy2 = Character("test_enemy2", 100, 50, [slash, bite, bite])
+        slash = Attack("slash", "Slash", 10, 0, "enemy")
+        bite = Attack("bite", "Bite", 20, 0, "enemy")
+        heal_limb = Heal("heal limb", "Heal Limb", 20, 0, "friendly")
+        heal_self = Heal("heal self", "Heal Self", 50, 0, "self")
+        player = Character("player", "Player",100, 50, 1, [slash, bite, heal_limb, heal_self])
+        test_enemy = Wolf("test_enemy", "Test_enemy",100, 50, 2, [slash, bite])
+        test_enemy2 = Wolf("test_enemy2", "Test_enemy2",100, 50, 2, [slash, bite, bite])
         turn = Turn([test_enemy, test_enemy2, player])
 
         def combat_loop():
@@ -112,13 +160,13 @@ label combat:
                 if active_character.name == "player":
                     narrator("Player turn", interact=False)
                     active_character.pick_move_player()
-                    active_character.set_target(test_enemy)
+                    active_character.set_target(turn)
                     narrator(active_character.name + " uses " + active_character.selected_move.name + " on " + active_character.target_character.name)
                     active_character.use_move()
                 else:
                     narrator("enemy turn")
                     active_character.pick_move_npc()
-                    active_character.set_target(player)
+                    active_character.set_target(turn)
                     narrator(active_character.name + " uses " + active_character.selected_move.name + " on " + active_character.target_character.name)
                     active_character.use_move()
 
