@@ -1,0 +1,120 @@
+label introduction_ranger:
+
+    scene snowy_forest
+    with fade
+
+    show ranger with moveinright
+
+    "Weary from the fight with the wolves, you're caught off-guard as the last wolf lunges. Just as the situation seems dire, an arrow whizzes past, striking the wolf squarely in the head. It collapses, mere inches away."
+
+    "Ranger: 'Looks like you could use some help.'"
+
+    menu:
+        "Thank you. I had it under control, but I appreciate the assist.":
+            jump gratitude_response
+
+        "Who are you? You're skilled with that bow.":
+            jump curiosity_response
+
+        "I'm grateful. That was too close for comfort.":
+            jump comfort_response
+
+label gratitude_response:
+    "Ranger: 'Sure you did. But out here, even the strongest can be overwhelmed. It's not just about skill; it's about survival. I'm Illyria. I'd prefer to meet you under better circumstances both those are few and far between around here these days.'"
+    jump common_followup
+
+label curiosity_response:
+    "Ranger: 'I've had a lot of practice. When your life depends on it, you get good fast. I'm Illyria, by the way.'"
+    jump common_followup
+
+label comfort_response:
+    "Ranger: 'You're welcome. These woods have become more dangerous by the day. You need to be on guard at all times. It's nice to meet you-- I'm Illyria'"
+    jump common_followup
+
+label common_followup:
+    # Common dialogue after initial choice
+    "Player: 'Seems like you've had your fair share of survival.'"
+    "Ranger: 'More than I'd like. Ever since the alchemist turned this place into a death trap, every day is a fight to see tomorrow. Who are you? I've not seen you around before but you seem to know how to handle yourself and a weapon which is rare around these parts.'"
+    
+
+    menu:
+        "I'm just trying to figure that out myself.":
+            jump identity_crisis
+
+        "A traveler, lost in more ways than one.":
+            jump lost_traveler
+
+        "Someone who owes you one now.":
+            jump debt_of_gratitude
+
+label identity_crisis:
+    "Ranger: 'Aren't we all? This place... it changes you. Makes you question everything.'"
+    "Player: 'You sound like you've lost a lot.'"
+    "Ranger: 'Everything. My family, my home... Now, I wander these woods, haunted by memories and fighting to survive.'"
+    jump mark_conversation
+
+label lost_traveler:
+    "Ranger: 'I know the feeling. This land used to be familiar, now it's like a distant memory, twisted and dark.'"
+    "Player: 'What twisted it?'"
+    "Ranger: 'The alchemist's experiments. He tried to play god, and we're living in his failed creation. A world of monsters, curses, and endless winter.'"
+    jump mark_conversation
+
+label debt_of_gratitude:
+    "Ranger: 'No debt needed. We survivors need to stick together. The wilderness doesn't take sides.'"
+    "Player: 'How have you survived this long?'"
+    "Ranger: 'By learning from the beasts. You either become the predator, or you're the prey. And I refuse to be hunted down.'"
+    jump mark_conversation
+
+label mark_conversation:
+    "While conversing with her, her cloak shifts, revealing a faint purple mark rising up her fingertips."
+
+    menu:
+        "What's that mark on your hand?":
+            jump curse_explanation
+
+        "Cursed wasteland? What happened here?":
+            jump wasteland_story
+
+        "You seem to know your way around. Can you help me?":
+            jump guidance_offer
+
+label curse_explanation:
+    "Ranger: 'This? It's a curse, or so I believe. A constant reminder of the cost of survival out here. The things I've had to do... they come with a price.'"
+    "Player: 'A curse? From what?'"
+    "Ranger: 'From consuming the essence of the monsters. It was either that or starve. But now, this mark spreads, and with it, a darkness grows inside me.'"
+    jump final_choice
+
+label wasteland_story:
+    "Ranger: 'It started with the alchemist's experiments. His quest for power turned our home into a nightmare. Now, we live among the consequences.'"
+    "Player: 'And you've been fighting these... consequences?'"
+    "Ranger: 'Every day. The alchemist's creations roam these lands, and I hunt them, trying to undo at least some of his horrors.'"
+    jump final_choice
+
+label guidance_offer:
+    "Ranger: 'I can. But be warned, it's not just the direction you choose, but the dangers you face along the way.'"
+    "Player: 'I'll take my chances. I need to understand this place.'"
+    "Ranger: 'Then follow me, but keep your weapon ready. Danger lurks behind every tree in this cursed forest.'"
+    jump final_choice
+
+label final_choice:
+    "Ranger: 'I'm heading out to track one of them down. It's personal. You're welcome to join me if you're up for it.'"
+
+    menu:
+        "I could use the company, and I want to help.":
+            jump join_hunt
+
+        "I need to find my own way, but thank you.":
+            jump parting_ways
+
+label join_hunt:
+    "Player: 'What's our first move?'"
+    "Ranger: 'We'll start by tracking a beast I've been following. It's dangerous, but I believe we can take it down together.'"
+ 
+
+label parting_ways:
+    "Player: 'Maybe our paths will cross again.'"
+    "Ranger: 'Perhaps they will. Until then, may your arrows fly true and your steps be silent.'"
+ 
+return
+
+
