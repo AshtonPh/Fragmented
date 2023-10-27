@@ -1,87 +1,49 @@
-Wed Oct 25 13:26:07 2023
-Windows-10-10.0.19044
+Fri Oct 27 10:31:19 2023
+Windows-10-10.0.22635
 Ren'Py 8.1.3.23091805
  
 
-Bootstrap to the start of init.init. took 0.06s
-Early init. took 0.02s
-Loader init. took 0.60s
-Loading error handling. took 0.15s
-Loading script. took 1.68s
-Loading save slot metadata. took 0.07s
+Bootstrap to the start of init.init. took 0.02s
+Early init. took 0.00s
+Loader init. took 0.05s
+Loading error handling. took 0.02s
+Loading script. took 0.37s
+Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
 Set script version to: None (alternate path)
- - Init at launcher/game/download.rpyc:22 took 0.33235 s.
- - Init at launcher/game/installer.rpyc:6 took 1.03723 s.
-Running init code. took 2.03s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
+Running init code. took 0.31s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.01s
+Reloading save slot metadata. took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.00s
+Dump and make backups. took 0.01s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.02s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.37s
+Creating interface object. took 0.16s
 Cleaning stores took 0.00s
-Init translation took 0.04s
+Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.05s
+Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.10s
+Prepare screens took 0.07s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.47s
+Interface start. took 0.07s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 527.37'
+Renderer: b'NVIDIA GeForce RTX 3050 Ti Laptop GPU/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 545.84'
 Display Info: None
 Screen sizes: virtual=(800, 600) physical=(1000, 750) drawable=(1000, 750)
 Maximum texture size: 4096x4096
-Traceback (most recent call last):
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/urllib3/connection.py", line 140, in _new_conn
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/urllib3/util/connection.py", line 60, in create_connection
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/socket.py", line 954, in getaddrinfo
-socket.gaierror: [Errno 11001] getaddrinfo failed
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/urllib3/connectionpool.py", line 598, in urlopen
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/urllib3/connectionpool.py", line 346, in _make_request
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/urllib3/connectionpool.py", line 850, in _validate_conn
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/urllib3/connection.py", line 284, in connect
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/urllib3/connection.py", line 149, in _new_conn
-urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000000007eba6d0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/adapters.py", line 439, in send
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/urllib3/connectionpool.py", line 638, in urlopen
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/urllib3/util/retry.py", line 388, in increment
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.renpy.org', port=443): Max retries exceeded with url: /channels.json (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000000007eba6d0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Fragmented-main\Fragmented-main\renpy-8.1.3-sdk\renpy\exports.py", line 3947, in run
-    fn(*args, **kwargs)
-  File "game/updater.rpy", line 228, in fetch_update_channels
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/api.py", line 75, in get
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/api.py", line 60, in request
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/sessions.py", line 524, in request
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/sessions.py", line 637, in send
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/requests/adapters.py", line 516, in send
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.renpy.org', port=443): Max retries exceeded with url: /channels.json (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000000007eba6d0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
