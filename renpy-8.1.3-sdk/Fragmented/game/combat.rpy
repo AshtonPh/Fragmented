@@ -191,3 +191,4 @@ label combat:
 
 
         combat_loop()
+    jump introduction_ranger

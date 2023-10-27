@@ -2,8 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/combat.rpy", line 27: invalid syntax
-                if self.selected_move.type == "enemy"
+The label join_hunt is defined twice, at File "game/script.rpy", line 179:
+label join_hunt:
+and File "game/script.rpy", line 191:
+label join_hunt:
+
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Wed Oct 25 14:13:50 2023
+Fri Oct 27 13:52:10 2023
