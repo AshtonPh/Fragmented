@@ -67,9 +67,12 @@ label start:
             $ weapon = "mage's staff"
             mc "A mage's staff is in my hand. It pulses with arcane energy, ready to unleash its power."
     
+    $ combat = "wolf"
     jump combat
 label introduction_ranger:
 
+    hide wolf1
+    hide wolf2
     scene snowy_forest
     with fade
     play music "ambient.ogg" loop
@@ -252,24 +255,28 @@ label Spider_combat:
         "Illyria, hold on! I'll get you out!":
             "The player is now faced with the daunting task of battling the monstrous spider while trying to free Illyria."
 
-            #combat code here
+            $ combat = "spider"
 
-            "With a final, desperate effort, the player manages to land a crippling blow on the spider."
+            jump combat
 
-            hide spider
-            "The player rushes to Illyria's side, casting aside all of the thick webbing."
+            
 
-            Illyria "Thank... thank you. I... I was so scared."
-
-            "Are you hurt?"
-
-            Illyria "No, just... shaken. Spiders... they took my parents from me. I've never... never gotten over that fear."
-
-            Illyria "They ambushed us one night... just like this. I was young, too young to help. I could only hide... and watch."
-
-            jump post_spider_fight
+            
 
 label post_spider_fight:
+
+    "With a final, desperate effort, you manage to land a crippling blow on the spider."
+
+    hide spider
+    "You rush to Illyria's side, casting aside all of the thick webbing."
+
+    Illyria "Thank... thank you. I... I was so scared."
+
+    "Are you hurt?"
+
+    Illyria "No, just... shaken. Spiders... they took my parents from me. I've never... never gotten over that fear."
+
+    Illyria "They ambushed us one night... just like this. I was young, too young to help. I could only hide... and watch."
     scene snowy_forest
     with fade
 

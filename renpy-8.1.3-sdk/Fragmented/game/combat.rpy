@@ -82,6 +82,15 @@ label combat:
                     for i in turn_system.order:
                         if i.name == "player":
                             self.target_character = i
+        
+        class Spider(Character):
+            def __init__(self, name, label, hp, mana, friend_code, moveset):
+                super().__init__(name, label, hp, mana, friend_code, moveset)
+            def set_target(self, turn_system):
+                if self.name != "player":
+                    for i in turn_system.order:
+                        if i.name == "player":
+                            self.target_character = i
 
 
         class Move():
@@ -148,12 +157,19 @@ label combat:
 
         slash = Attack("slash", "Slash", 90, 0, "enemy")
         bite = Attack("bite", "Bite", 20, 0, "enemy")
+        venom = Attack("venom", "Venom", 150, 0, "enemy")
         heal_limb = Heal("heal limb", "Heal Limb", 20, 0, "friendly")
         heal_self = Heal("heal self", "Heal Self", 50, 0, "self")
         player = Character("player", "Player",1000, 50, 1, [slash, bite, heal_limb, heal_self])
         wolf1 = Wolf("wolf1", "Wolf1",100, 50, 2, [slash, bite])
         wolf2 = Wolf("wolf2", "Wolf2",100, 50, 2, [slash, bite, bite])
-        turn = Turn([wolf1, wolf2, player])
+        spider = Spider("spider", "Spider", 500, 50, 3, [venom])
+        
+        if combat == "wolf":
+            turn = Turn([wolf1, wolf2, player])
+        elif combat == "spider":
+            turn = Turn([spider, player])
+        
 
         def combat_loop():
             while True:
@@ -194,6 +210,10 @@ label combat:
 
 
         combat_loop()
-    hide wolf1
-    hide wolf2
-    jump introduction_ranger
+        if combat == "wolf":
+            renpy.jump("introduction_ranger")
+        elif combat == "spider":
+            renpy.jump("post_spider_fight")
+
+                
+    
