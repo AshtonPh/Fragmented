@@ -6,7 +6,7 @@ label start:
     scene bg_wasteland
     with fade
 
-    play music "ambient.mp3"
+    play music "ambient.ogg" loop
 
     "The screen fades in from black, revealing a snow-covered wasteland. The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
 
@@ -38,14 +38,14 @@ label start:
 
     "The growls grow louder, more insistent."
 
-    play music "wolf.mp3"
+    play music "combat.ogg" loop
 
     transform my_left:
         xalign 0.3
     transform my_right:
         xalign 0.7
     scene bg_wasteland
-    show wolf at my_left
+    show wolf1 at my_left
     show wolf2 at my_right
     "The remnants of the Alchemist's creations lurk in the shadows, souls trapped in monstrous forms, forever damned by their creator's insatiable thirst for power."
 
@@ -72,8 +72,8 @@ label introduction_ranger:
 
     scene snowy_forest
     with fade
-
-    show ranger with moveinright
+    play music "ambient.ogg" loop
+    show ranger at my_left
 
     "Weary from the fight with the wolves, you're caught off-guard as the last wolf lunges. Just as the situation seems dire, an arrow whizzes past, striking the wolf squarely in the head. It collapses, mere inches away."
 
@@ -197,7 +197,7 @@ label quest_start:
 
     "She heads to a rugged, snow-laden path leading deeper into the forest. The trees stand tall, their branches heavy with snow, casting long, eerie shadows across the ground."
 
-    show Illyria with dissolve
+    show ranger with dissolve
     "Illyria moves with a purpose, her eyes scanning the horizon. Her bow is at the ready, an arrow nocked but not drawn."
 
     Illyria "The beast we're tracking... it's not far now. Stay close and stay quiet."
@@ -235,7 +235,9 @@ label Spider_combat:
 
     "The ground trembles slightly, as you feel the sudden, jarring movement of something large and ominous."
 
-    show spider monstrous 
+    scene mountain_spider
+
+    play music "combat.ogg" loop
 
     "A massive, grotesque black spider, its body a horrifying amalgamation of twisted limbs and dripping venom, bursts forth from the dense canopy above."
     "Illyria, caught by surprise, barely has time to react. She turns, her bow half drawn, but it's too late."
@@ -268,12 +270,13 @@ label Spider_combat:
             jump post_spider_fight
 
 label post_spider_fight:
-    scene aftermath_forest
+    scene snowy_forest
     with fade
 
+    play music "ambient.ogg" loop
     "Illyria, still shaking from the encounter, sits against a tree. You kneel beside her, offering comfort."
 
-    show Illyria vulnerable
+    show ranger
 
     "Her usual stoic demeanor is replaced by vulnerability. Her eyes, usually so full of resolve, now flicker with the shadows of her past."
 
@@ -296,12 +299,12 @@ label post_spider_fight:
     jump Illyria_cabin
 
 label Illyria_cabin:
-    scene illyria_cabin_interior
+    scene hidden_cabin
     with fade
 
     "After the encounter with the spider, Illyria leads you through the dense forest to a small, hidden cabin. The warmth from the fireplace inside is a welcome relief from the cold."
 
-    show illyria normal
+    show ranger
 
     Illyria "This is my refuge. Not much, but it's safe and warm. You've been a great help, and I want to offer you something in return. She points to the table, on which lies a healing potion, as well as a bow and a quiver full of arrows."
 

@@ -139,18 +139,21 @@ label combat:
                     if x.hp <= 0:
                         narrator(x.name + " is defeated")
                         self.order.remove(x)
+                        if  (x.name != "player"):
+                            renpy.hide(x.name.lower())
+                        
             def check_state(self):
                 for x in self.order:
                     x.check()
 
-        slash = Attack("slash", "Slash", 10, 0, "enemy")
+        slash = Attack("slash", "Slash", 90, 0, "enemy")
         bite = Attack("bite", "Bite", 20, 0, "enemy")
         heal_limb = Heal("heal limb", "Heal Limb", 20, 0, "friendly")
         heal_self = Heal("heal self", "Heal Self", 50, 0, "self")
-        player = Character("player", "Player",100, 50, 1, [slash, bite, heal_limb, heal_self])
-        test_enemy = Wolf("test_enemy", "Test_enemy",100, 50, 2, [slash, bite])
-        test_enemy2 = Wolf("test_enemy2", "Test_enemy2",100, 50, 2, [slash, bite, bite])
-        turn = Turn([test_enemy, test_enemy2, player])
+        player = Character("player", "Player",1000, 50, 1, [slash, bite, heal_limb, heal_self])
+        wolf1 = Wolf("wolf1", "Wolf1",100, 50, 2, [slash, bite])
+        wolf2 = Wolf("wolf2", "Wolf2",100, 50, 2, [slash, bite, bite])
+        turn = Turn([wolf1, wolf2, player])
 
         def combat_loop():
             while True:
@@ -191,4 +194,6 @@ label combat:
 
 
         combat_loop()
+    hide wolf1
+    hide wolf2
     jump introduction_ranger
