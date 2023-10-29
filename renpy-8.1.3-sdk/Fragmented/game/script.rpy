@@ -55,20 +55,26 @@ label start:
 
     mc "I need to defend myself. But... I need answers. First, this castle. It beckons."
 
+    call initialize
+
     menu:
         "Choose your weapon:"
         "A short sword":
             $ weapon = "short sword"
+            $ player_move_set.append(slash)
             mc "I feel the weight of a short sword by my side. It's sharp and ready for combat."
         "A Long Bow":
             $ weapon = "long bow"
+            $ player_move_set.append(arrow)
             mc "A long bow is strapped to my back, with a quiver full of arrows. It's perfect for long-range attacks."
         "A mage's staff":
             $ weapon = "mage's staff"
+            $ player_move_set.append(fire_bolt)
             mc "A mage's staff is in my hand. It pulses with arcane energy, ready to unleash its power."
     
     $ combat = "wolf"
     jump combat
+
 label introduction_ranger:
 
     hide wolf1
@@ -78,7 +84,7 @@ label introduction_ranger:
     play music "ambient.ogg" loop
     show ranger at my_left
 
-    "Weary from the fight with the wolves, you're caught off-guard as the last wolf lunges. Just as the situation seems dire, an arrow whizzes past, striking the wolf squarely in the head. It collapses, mere inches away."
+    "Just as the situation seems dire, an arrow whizzes past, striking the wolf squarely in the head. It collapses, mere inches away."
 
     ranger " 'Looks like you could use some help.'"
     "You turn to look at your savior and see a young woman running toward you, bow in hand. Her attire is rugged, designed for mobility and camouflage against the snow and trees. A hood partially obscures her face, and she nocks another arrow as she approaches you."
