@@ -1,51 +1,50 @@
-Sun Oct 29 18:05:37 2023
-Windows-10-10.0.19044
+Sun Oct 29 19:50:44 2023
+Windows-10-10.0.22621
 Ren'Py 8.1.3.23091805
  
 
-Bootstrap to the start of init.init. took 0.13s
-Early init. took 0.01s
-Loader init. took 0.39s
-Loading error handling. took 1.13s
-Loading script. took 18.12s
-Loading save slot metadata. took 0.12s
+Bootstrap to the start of init.init. took 0.02s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.16s
+Loading script. took 4.88s
+Loading save slot metadata. took 0.01s
 Loading persistent. took 0.00s
 Set script version to: None (alternate path)
- - Init at launcher/game/installer.rpy:6 took 0.68826 s.
-Running init code. took 2.04s
-Loading analysis data. took 0.05s
-Analyze and compile ATL. took 0.01s
-Reloading save slot metadata. took 0.04s
+Running init code. took 0.75s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.01s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Alex\\AppData\\Roaming/RenPy/backups\\renpy-8.1.3-sdk':
-Dump and make backups. took 1.96s
+Backing up script files to 'C:\\Users\\lucav\\AppData\\Roaming/RenPy/backups\\renpy-8.1.3-sdk':
+Dump and make backups. took 0.02s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.12s
-DPI scale factor: 1.250000
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 1.10s
+Creating interface object. took 0.17s
 Cleaning stores took 0.00s
-Init translation took 0.13s
-Build styles took 0.01s
+Init translation took 0.04s
+Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.08s
-Save screen analysis took 0.07s
-Prepare screens took 0.31s
-Save pyanalysis. took 0.10s
-Save bytecode. took 0.81s
-Running _start took 0.06s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.04s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.17s
+Running _start took 0.02s
 Performance test:
-Interface start. took 0.38s
+Interface start. took 0.06s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
+primary display bounds: (0, 0, 2560, 1440)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 527.37'
+Renderer: b'NVIDIA GeForce RTX 4080/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 537.58'
 Display Info: None
-Screen sizes: virtual=(800, 600) physical=(1000, 750) drawable=(1000, 750)
+Screen sizes: virtual=(800, 600) physical=(800, 600) drawable=(800, 600)
 Maximum texture size: 4096x4096

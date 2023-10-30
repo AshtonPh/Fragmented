@@ -1,4 +1,4 @@
-﻿define mc = Character("????")
+define mc = Character("????")
 define ranger = Character("Ranger", color = "#276927")
 define Illyria = Character("Illyria", color = "#276927")
 label start:
@@ -6,25 +6,26 @@ label start:
     scene bg_wasteland
     with fade
 
-    play music "ambient.ogg" loop
+    play music "ambient.mp3"
 
-    "The screen fades in from black, revealing a snow-covered wasteland. The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
+    "You wake up with a start. Your vision is blurry, but after blinking your eyes and adjusting to the light, you look around, revealing a snow-covered wasteland. The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
 
-    scene altar with dissolve
-    "A massive stone altar stands defiantly amidst the sea of snow. Chains dangle from its sides, their ends embedded in the frozen ground. At the center of the altar, a lone figure stirs, surrounded by intricate, glowing runes carved into the stone."
+    show altar with dissolve
+    "A massive stone altar stands defiantly amidst the sea of snow. Chains dangle from its sides, their ends embedded in the frozen ground. At the center of the altar lays you, surrounded by intricate, glowing runes carved into the stone."
 
-    "Your vision is blurred, and a sharp, pulsating pain thunders behind your eyes. Your body feels heavy, and an overwhelming cold numbs your senses. As your eyes adjust, the world around you starts to take form."
+    "Your vision is still hazy, and a sharp, pulsating pain thunders behind your eyes. Your body feels heavy, and an overwhelming cold numbs your senses. As your eyes adjust, the world around you starts to take form."
 
     mc "Wh... where am I?"
 
     "Your voice sounds foreign to your own ears, echoing back to you from the surrounding wasteland. You try to move, but your limbs feel sluggish, as though they've been weighed down."
 
+
     #show bg_wasteland_pan with dissolve
-    "The camera pans upwards, revealing an endless stretch of snow-covered plains, with the ruins of ancient buildings jutting out like skeletal fingers trying to grasp at the heavens. The sky overhead is a bleak shade of grey, with no sun in sight."
+    "You look beyond the altar, revealing an endless stretch of snow-covered plains, with the ruins of ancient buildings jutting out like skeletal fingers trying to grasp at the heavens. The sky overhead is a bleak shade of grey, with no sun in sight."
 
-    "From the distance, you hear a faint growl, followed by the sound of shuffling feet. Shadows move beyond the curtain of the snowstorm."
+    "From the distance, you hear a faint growl, followed by the sound of shuffling feet. Shadows move beyond the curtain of the snowstorm and dance behind the treeline."
 
-    "The wind carries whispers of lament, stories of a land once vibrant, now reduced to a frozen hellscape. The Alchemist's experiments, they murmur, turned paradise into purgatory."
+    "The wind carries whispers of lament, stories of a land once vibrant, now reduced to a frozen hellscape. The Alchemist's experiments, they murmur, turned paradise into purgatory. You can't remember who you are or how you got here, but something remains in your memory. The Alchemist."
 
     #show statue with dissolve
     "On your left, half buried in snow, lies a broken statue of a child, its face twisted in a silent scream. On your right, a tattered flag flutters weakly – an emblem of a kingdom or clan, perhaps, but its insignia has been weathered away."
@@ -38,16 +39,16 @@ label start:
 
     "The growls grow louder, more insistent."
 
-    play music "combat.ogg" loop
+    play music "wolf.mp3"
 
     transform my_left:
         xalign 0.3
     transform my_right:
         xalign 0.7
     scene bg_wasteland
-    show wolf1 at my_left
+    show wolf at my_left
     show wolf2 at my_right
-    "The remnants of the Alchemist's creations lurk in the shadows, souls trapped in monstrous forms, forever damned by their creator's insatiable thirst for power."
+   "The remnants of the Alchemist's creations lurk in the shadows, souls trapped in monstrous forms, forever damned by their creator's insatiable thirst to live beyond death."
 
     "Emerging from the snowstorm, you see the grotesque figures of the failed experiments. Some resemble beasts with twisted human features, while others are more humanoid but with limbs and features grotesquely out of proportion. Their eyes, however, tell a story of pain, confusion, and anger."
 
@@ -55,36 +56,27 @@ label start:
 
     mc "I need to defend myself. But... I need answers. First, this castle. It beckons."
 
-    call initialize
-
     menu:
         "Choose your weapon:"
         "A short sword":
             $ weapon = "short sword"
-            $ player_move_set.append(slash)
             mc "I feel the weight of a short sword by my side. It's sharp and ready for combat."
         "A Long Bow":
             $ weapon = "long bow"
-            $ player_move_set.append(arrow)
             mc "A long bow is strapped to my back, with a quiver full of arrows. It's perfect for long-range attacks."
         "A mage's staff":
             $ weapon = "mage's staff"
-            $ player_move_set.append(fire_bolt)
             mc "A mage's staff is in my hand. It pulses with arcane energy, ready to unleash its power."
     
-    $ combat = "wolf"
     jump combat
-
 label introduction_ranger:
 
-    hide wolf1
-    hide wolf2
     scene snowy_forest
     with fade
-    play music "ambient.ogg" loop
-    show ranger at my_left
 
-    "Just as the situation seems dire, an arrow whizzes past, striking the wolf squarely in the head. It collapses, mere inches away."
+    show ranger with moveinright
+
+    "Weary from the fight with the wolves, you're caught off-guard as the last wolf lunges. Just as the situation seems dire, an arrow whizzes past, striking the wolf squarely in the head. It collapses, mere inches away."
 
     ranger " 'Looks like you could use some help.'"
     "You turn to look at your savior and see a young woman running toward you, bow in hand. Her attire is rugged, designed for mobility and camouflage against the snow and trees. A hood partially obscures her face, and she nocks another arrow as she approaches you."
@@ -206,7 +198,7 @@ label quest_start:
 
     "She heads to a rugged, snow-laden path leading deeper into the forest. The trees stand tall, their branches heavy with snow, casting long, eerie shadows across the ground."
 
-    show ranger with dissolve
+    show Illyria with dissolve
     "Illyria moves with a purpose, her eyes scanning the horizon. Her bow is at the ready, an arrow nocked but not drawn."
 
     Illyria "The beast we're tracking... it's not far now. Stay close and stay quiet."
@@ -244,9 +236,7 @@ label Spider_combat:
 
     "The ground trembles slightly, as you feel the sudden, jarring movement of something large and ominous."
 
-    scene mountain_spider
-
-    play music "combat.ogg" loop
+    show spider monstrous 
 
     "A massive, grotesque black spider, its body a horrifying amalgamation of twisted limbs and dripping venom, bursts forth from the dense canopy above."
     "Illyria, caught by surprise, barely has time to react. She turns, her bow half drawn, but it's too late."
@@ -261,35 +251,30 @@ label Spider_combat:
         "Illyria, hold on! I'll get you out!":
             "The player is now faced with the daunting task of battling the monstrous spider while trying to free Illyria."
 
-            $ combat = "spider"
+            #combat code here
 
-            jump combat
+            "With a final, desperate effort, the player manages to land a crippling blow on the spider."
 
-            
+            hide spider
+            "The player rushes to Illyria's side, casting aside all of the thick webbing."
 
-            
+            Illyria "Thank... thank you. I... I was so scared."
+
+            "Are you hurt?"
+
+            Illyria "No, just... shaken. Spiders... they took my parents from me. I've never... never gotten over that fear."
+
+            Illyria "They ambushed us one night... just like this. I was young, too young to help. I could only hide... and watch."
+
+            jump post_spider_fight
 
 label post_spider_fight:
-
-    "With a final, desperate effort, you manage to land a crippling blow on the spider."
-
-    hide spider
-    "You rush to Illyria's side, casting aside all of the thick webbing."
-
-    Illyria "Thank... thank you. I... I was so scared."
-
-    "Are you hurt?"
-
-    Illyria "No, just... shaken. Spiders... they took my parents from me. I've never... never gotten over that fear."
-
-    Illyria "They ambushed us one night... just like this. I was young, too young to help. I could only hide... and watch."
-    scene snowy_forest
+    scene aftermath_forest
     with fade
 
-    play music "ambient.ogg" loop
     "Illyria, still shaking from the encounter, sits against a tree. You kneel beside her, offering comfort."
 
-    show ranger
+    show Illyria vulnerable
 
     "Her usual stoic demeanor is replaced by vulnerability. Her eyes, usually so full of resolve, now flicker with the shadows of her past."
 
@@ -312,12 +297,12 @@ label post_spider_fight:
     jump Illyria_cabin
 
 label Illyria_cabin:
-    scene hidden_cabin
+    scene illyria_cabin_interior
     with fade
 
     "After the encounter with the spider, Illyria leads you through the dense forest to a small, hidden cabin. The warmth from the fireplace inside is a welcome relief from the cold."
 
-    show ranger
+    show Illyria normal
 
     Illyria "This is my refuge. Not much, but it's safe and warm. You've been a great help, and I want to offer you something in return. She points to the table, on which lies a healing potion, as well as a bow and a quiver full of arrows."
 
