@@ -57,7 +57,7 @@ label start:
 
     mc "I need to defend myself. But... I need answers. First, this castle. It beckons."
 
-    call initialize
+    call initialize from _call_initialize
 
     menu:
         "Choose your weapon:"
@@ -329,7 +329,7 @@ label Illyria_cabin:
 
         "I could use a bow and some arrows.":
             "Illyria smiles and hands you a well-crafted bow along with a quiver full of arrows."
-            Ilyria "A good choice for keeping dangers at a distance. There are 24 arrows; use them wisely."
+            Illyria "A good choice for keeping dangers at a distance. There are 24 arrows; use them wisely."
             $ player_bow = True
             $ player_arrows = 24
 
