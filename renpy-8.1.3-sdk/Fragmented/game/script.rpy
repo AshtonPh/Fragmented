@@ -39,7 +39,7 @@ label start:
 
     "The growls grow louder, more insistent."
 
-    play music "wolf.mp3"
+    play music "wolf.ogg"
 
     transform my_left:
         xalign 0.3
