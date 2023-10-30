@@ -48,7 +48,8 @@ label start:
     scene bg_wasteland
     show wolf at my_left
     show wolf2 at my_right
-   "The remnants of the Alchemist's creations lurk in the shadows, souls trapped in monstrous forms, forever damned by their creator's insatiable thirst to live beyond death."
+   
+    "The remnants of the Alchemist's creations lurk in the shadows, souls trapped in monstrous forms, forever damned by their creator's insatiable thirst to live beyond death."
 
     "Emerging from the snowstorm, you see the grotesque figures of the failed experiments. Some resemble beasts with twisted human features, while others are more humanoid but with limbs and features grotesquely out of proportion. Their eyes, however, tell a story of pain, confusion, and anger."
 
