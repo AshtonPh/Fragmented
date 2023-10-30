@@ -1,4 +1,4 @@
-Sun Oct 29 20:02:39 2023
+Sun Oct 29 20:07:45 2023
 Windows-10-10.0.22621
 Ren'Py 8.1.3.23091805
  
@@ -7,7 +7,7 @@ Bootstrap to the start of init.init. took 0.02s
 Early init. took 0.00s
 Loader init. took 0.02s
 Loading error handling. took 0.12s
-Loading script. took 0.22s
+Loading script. took 0.23s
 Loading save slot metadata. took 0.01s
 Loading persistent. took 0.00s
 Set script version to: None (alternate path)
@@ -19,7 +19,7 @@ Index archives took 0.00s
 Dump and make backups. took 0.00s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.01s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
@@ -30,7 +30,7 @@ Build styles took 0.00s
 Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.04s
+Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s

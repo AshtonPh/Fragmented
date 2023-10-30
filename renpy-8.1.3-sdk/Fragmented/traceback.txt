@@ -1,34 +1,51 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/combat.rpy", line 2, in script
-    python:
-  File "game/combat.rpy", line 56, in <module>
-    combat_loop()
-  File "game/combat.rpy", line 24, in combat_loop
-    active_character.pick_move_player()
-  File "game/initialize.rpy", line 55, in pick_move_player
-    tempString += i.name + " "
-AttributeError: 'str' object has no attribute 'name'
+  File "game/script.rpy", line 11, in script
+    "You wake up with a start. Your vision is blurry, but after blinking your eyes and adjusting to the light, you look around, revealing a snow-covered wasteland. The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
+  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 69, in _window_show
+    renpy.with_statement(trans)
+OSError: Couldn't find file 'ambient.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/combat.rpy", line 2, in script
-    python:
-  File "D:\Fragmented-main\Fragmented-main\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\Fragmented-main\Fragmented-main\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/combat.rpy", line 56, in <module>
-    combat_loop()
-  File "game/combat.rpy", line 24, in combat_loop
-    active_character.pick_move_player()
-  File "game/initialize.rpy", line 55, in pick_move_player
-    tempString += i.name + " "
-AttributeError: 'str' object has no attribute 'name'
+  File "game/script.rpy", line 11, in script
+    "You wake up with a start. Your vision is blurry, but after blinking your eyes and adjusting to the light, you look around, revealing a snow-covered wasteland. The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 900, in execute
+    statement_name("say")
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 47, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 69, in _window_show
+    renpy.with_statement(trans)
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\exports.py", line 1758, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 2978, in do_with
+    return self.interact(trans_pause=True,
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 4379, in interact_core
+    renpy.audio.audio.periodic()
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\audio\audio.py", line 1224, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\audio\audio.py", line 1202, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\audio\audio.py", line 1144, in periodic_pass
+    c.periodic()
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\audio\audio.py", line 534, in periodic
+    topf = load(filename)
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\loader.py", line 833, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'ambient.mp3'.
 
-Windows-10-10.0.19044 AMD64
+Windows-10-10.0.22621 AMD64
 Ren'Py 8.1.3.23091805
 Fragmented 1.0
-Sun Oct 29 19:16:48 2023
+Sun Oct 29 20:08:18 2023

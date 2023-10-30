@@ -6,7 +6,7 @@ label start:
     scene bg_wasteland
     with fade
 
-    play music "ambient.mp3"
+    play music "ambient.ogg"
 
     "You wake up with a start. Your vision is blurry, but after blinking your eyes and adjusting to the light, you look around, revealing a snow-covered wasteland. The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
 
