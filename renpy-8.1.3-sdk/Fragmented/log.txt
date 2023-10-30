@@ -1,91 +1,48 @@
-Sun Oct 29 20:08:11 2023
-Windows-10-10.0.22621
+Sun Oct 29 21:54:23 2023
+Windows-10-10.0.19044
 Ren'Py 8.1.3.23091805
  
 
-Bootstrap to the start of init.init. took 0.02s
+Bootstrap to the start of init.init. took 0.04s
 Early init. took 0.00s
-Loader init. took 0.01s
-Loading error handling. took 0.02s
-Loading script. took 0.06s
-Loading save slot metadata. took 0.02s
+Loader init. took 0.05s
+Loading error handling. took 0.03s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.03s
 Loading persistent. took 0.00s
-Running init code. took 0.02s
+Running init code. took 0.06s
 Loading analysis data. took 0.01s
 Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.01s
+Reloading save slot metadata. took 0.02s
 Index archives took 0.00s
-Dump and make backups. took 0.03s
+Dump and make backups. took 0.05s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.01s
-DPI scale factor: 1.000000
+Initial gc. took 0.02s
+DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.15s
+Creating interface object. took 0.29s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.03s
+Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.05s
+Interface start. took 0.08s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
+primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
 Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce RTX 4080/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 537.58'
+Renderer: b'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 527.37'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(2560, 1417) drawable=(2560, 1417)
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1001) drawable=(1920, 1001)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 11, in script
-    "You wake up with a start. Your vision is blurry, but after blinking your eyes and adjusting to the light, you look around, revealing a snow-covered wasteland. The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 900, in execute
-    statement_name("say")
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 47, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 69, in _window_show
-    renpy.with_statement(trans)
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\exports.py", line 1758, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 2978, in do_with
-    return self.interact(trans_pause=True,
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\display\core.py", line 4379, in interact_core
-    renpy.audio.audio.periodic()
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\audio\audio.py", line 1224, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 444, in raise_
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\audio\audio.py", line 1202, in periodic_thread_main
-    periodic_pass()
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\audio\audio.py", line 1144, in periodic_pass
-    c.periodic()
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\audio\audio.py", line 534, in periodic
-    topf = load(filename)
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\audio\audio.py", line 72, in load
-    rv = renpy.loader.load(fn, directory="audio")
-  File "C:\Users\lucav\OneDrive\Documents\GitHub\Fragmented\renpy-8.1.3-sdk\renpy\loader.py", line 833, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'ambient.mp3'.
-
-While running game code:
-  File "game/script.rpy", line 11, in script
-    "You wake up with a start. Your vision is blurry, but after blinking your eyes and adjusting to the light, you look around, revealing a snow-covered wasteland. The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
-  File "renpy/common/000window.rpy", line 114, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 69, in _window_show
-    renpy.with_statement(trans)
-OSError: Couldn't find file 'ambient.mp3'.

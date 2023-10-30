@@ -156,7 +156,8 @@
                         narrator(x.name + " is defeated")
                         self.order.remove(x)
                         if  (x.name != "player"):
-                            renpy.hide(x.name.lower())
+                            renpy.hide(x.name)
+                            renpy.with_statement(dissolve, always=False)
                         
             def check_state(self):
                 for x in self.order:
