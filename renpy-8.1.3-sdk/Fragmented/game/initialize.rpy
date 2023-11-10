@@ -3,13 +3,14 @@
         import random
 
         class Character():
-            def __init__(self, name, label, hp, mana, friend_code, moveset):
+            def __init__(self, name, label, hp, mana, friend_code, moveset, healthbarnumber):
                 self.name = name
                 self.label = label
                 self.hp = hp
                 self.moveset = moveset
                 self.mana = mana
                 self.friend_code = friend_code
+                self.healthbarnumber = healthbarnumber
             def append_move(self, move):
                 self.moveset.append(move)
             def set_target(self, turn_system):
@@ -75,8 +76,8 @@
                 return False
 
         class Wolf(Character):
-            def __init__(self, name, label, hp, mana, friend_code, moveset):
-                super().__init__(name, label, hp, mana, friend_code, moveset)
+            def __init__(self, name, label, hp, mana, friend_code, moveset, healthbarnumber):
+                super().__init__(name, label, hp, mana, friend_code, moveset, healthbarnumber)
             def set_target(self, turn_system):
                 if self.name != "player":
                     for i in turn_system.order:
@@ -90,8 +91,8 @@
 
         
         class Spider(Character):
-            def __init__(self, name, label, hp, mana, friend_code, moveset):
-                super().__init__(name, label, hp, mana, friend_code, moveset)
+            def __init__(self, name, label, hp, mana, friend_code, moveset, healthbarnumber):
+                super().__init__(name, label, hp, mana, friend_code, moveset, healthbarnumber)
             def set_target(self, turn_system):
                 if self.name != "player":
                     for i in turn_system.order:
@@ -151,12 +152,42 @@
             def target(self, target):
                 self.target = target
             def any_dead(self):
+                global bar1_currenthp
+                global bar1_maxhp
+                global bar2_currenthp
+                global bar2_maxhp
+                global bar3_currenthp
+                global bar3_maxhp
                 for x in self.order:
+                    if (x.healthbarnumber == 1):
+                        if x.hp <= 0:
+                            bar1_currenthp = 0
+                        else:
+                            bar1_currenthp = x.hp
+                    if (x.healthbarnumber == 2):
+                        if x.hp <= 0:
+                            bar2_currenthp = 0
+                        else:
+                            bar2_currenthp = x.hp
+                    if (x.healthbarnumber == 3):
+                        if x.hp <= 0:
+                            bar3_currenthp = 0
+                        else:
+                            bar3_currenthp = x.hp
                     if x.hp <= 0:
                         narrator(x.name + " is defeated")
                         self.order.remove(x)
                         if  (x.name != "player"):
                             renpy.hide(x.name)
+                            renpy.with_statement(dissolve, always=False)
+                        if (x.healthbarnumber == 1):
+                            renpy.hide_screen("bar1")
+                            renpy.with_statement(dissolve, always=False)
+                        if (x.healthbarnumber == 2):
+                            renpy.hide_screen("bar2")
+                            renpy.with_statement(dissolve, always=False)
+                        if (x.healthbarnumber == 3):
+                            renpy.hide_screen("bar3")
                             renpy.with_statement(dissolve, always=False)
                         
             def check_state(self):

@@ -2,10 +2,10 @@ label combat:
     python:
         import random
 
-        player = Character("player", "Player",1000, 50, 1, player_move_set)
-        wolf1 = Wolf("wolf1", "Wolf1",100, 50, 2, [slash, bite])
-        wolf2 = Wolf("wolf2", "Wolf2",100, 50, 2, [slash, bite, bite])
-        spider = Spider("spider", "Spider", 500, 50, 3, [venom])
+        player = Character("player", "Player",1000, 50, 1, player_move_set, 1)
+        wolf1 = Wolf("wolf1", "Wolf1",100, 50, 2, [slash, bite], 2)
+        wolf2 = Wolf("wolf2", "Wolf2",100, 50, 2, [slash, bite, bite], 3)
+        spider = Spider("spider", "Spider", 500, 50, 3, [venom], 2)
         
         if combat == "wolf":
             turn = Turn([wolf1, wolf2, player])
@@ -54,6 +54,9 @@ label combat:
 
         combat_loop()
         if combat == "wolf":
+            renpy.hide_screen("bar1")
+            renpy.hide_screen("bar2")
+            renpy.hide_screen("bar3")
             renpy.jump("introduction_ranger")
         elif combat == "spider":
             renpy.jump("post_spider_fight")

@@ -2,6 +2,7 @@
 define ranger = Character("Ranger", color = "#276927")
 define Illyria = Character("Illyria", color = "#276927")
 label start:
+    call initialize_screens
     # Scene starts with the snow-covered wasteland.
     scene bg_wasteland
     with fade
@@ -57,7 +58,7 @@ label start:
 
     mc "I need to defend myself. But... I need answers. First, this castle. It beckons."
 
-    call initialize from _call_initialize
+    call initialize
 
     menu:
         "Choose your weapon:"
@@ -75,6 +76,11 @@ label start:
             mc "A mage's staff is in my hand. It pulses with arcane energy, ready to unleash its power."
     
     $ combat = "wolf"
+    $ change_bar2_values(100, 100, 0.2, 0.0)
+    $ change_bar3_values(100, 100, 0.7, 0.0)
+    show screen bar1
+    show screen bar2
+    show screen bar3
     jump combat
 
 label introduction_ranger:

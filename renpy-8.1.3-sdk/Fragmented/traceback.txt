@@ -1,22 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 332, in script
-    Ilyria "A good choice for keeping dangers at a distance. There are 24 arrows; use them wisely."
-Exception: Sayer 'Ilyria' is not defined.
+  File "game/combat.rpy", line 2, in script
+    python:
+  File "game/combat.rpy", line 55, in <module>
+    combat_loop()
+  File "game/combat.rpy", line 41, in combat_loop
+    turn.any_dead()
+  File "game/initialize.rpy", line 186, in any_dead
+    renpy.hide_screen(bar2)
+NameError: name 'bar2' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 332, in script
-    Ilyria "A good choice for keeping dangers at a distance. There are 24 arrows; use them wisely."
-  File "D:\Git-Huh\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 890, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "D:\Git-Huh\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 783, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'Ilyria' is not defined.
+  File "game/combat.rpy", line 2, in script
+    python:
+  File "D:\fragProj\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\fragProj\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/combat.rpy", line 55, in <module>
+    combat_loop()
+  File "game/combat.rpy", line 41, in combat_loop
+    turn.any_dead()
+  File "game/initialize.rpy", line 186, in any_dead
+    renpy.hide_screen(bar2)
+NameError: name 'bar2' is not defined
 
-Windows-10-10.0.22635 AMD64
+Windows-10-10.0.19044 AMD64
 Ren'Py 8.1.3.23091805
 Fragmented 1.0
-Mon Oct 30 10:19:42 2023
+Fri Nov 10 14:24:52 2023
