@@ -206,7 +206,7 @@ label parting_ways:
     mc " 'Maybe our paths will cross again.'"
     Illyria " 'Perhaps they will. Until then, may your arrows fly true and your steps be silent.'"
  
-return
+    jump journey_to_castle
 
 
 label quest_start:
@@ -271,6 +271,11 @@ label Spider_combat:
             # "The player is now faced with the daunting task of battling the monstrous spider while trying to free Illyria."
 
             $ combat = "spider"
+
+
+            $ change_bar2_values(500, 500, 0.5, 0.0)
+            show screen bar1
+            show screen bar2
 
             jump combat            
 
@@ -341,7 +346,7 @@ label Illyria_cabin:
 
     "You thank Illyria for her generosity. The comfort of the cabin and the warmth of the fire make it hard to leave, but the journey ahead calls."
 
-    return
+    jump journey_to_castle
 
 
 

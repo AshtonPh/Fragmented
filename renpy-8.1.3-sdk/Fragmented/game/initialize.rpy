@@ -100,6 +100,15 @@
                             self.target_character = i
 
 
+        class Bat(Character):
+            def __init__(self, name, label, hp, mana, friend_code, moveset, healthbarnumber):
+                super().__init__(name, label, hp, mana, friend_code, moveset, healthbarnumber)
+            def set_target(self, turn_system):
+                if self.name != "player":
+                    for i in turn_system.order:
+                        if i.name == "player":
+                            self.target_character = i
+
         class Move():
             def __init__(self, name, label, value, mana, type):
                 self.name = name
@@ -117,6 +126,17 @@
                     print("Move Fails, Not Enough Mana")
                 else:
                     target.hp = target.hp - self.value
+
+        class Bloodsuck(Move):
+            def __init__(self, name, label, value, mana, type):
+                super().__init__(name, label, value, mana, type)
+            def use_move(self, target):
+                global active_character
+                if active_character.mana < self.mana:
+                    print("Move Fails, Not Enough Mana")
+                else:
+                    target.hp = target.hp - self.value
+                    active_character.hp = active_character.hp + self.value
 
         class Heal(Move):
             def __init__(self, name, label, value, mana, type):
@@ -205,6 +225,7 @@
         venom = Attack("venom", "Venom", 150, 0, "enemy")
         heal_limb = Heal("heal limb", "Heal Limb", 20, 0, "friendly")
         heal_self = Heal("heal self", "Heal Self", 50, 0, "self")
+        blood_suck = Bloodsuck("blood suck", "Blood Suck", 50, 10, "enemy")
 
         player_move_set = []
 

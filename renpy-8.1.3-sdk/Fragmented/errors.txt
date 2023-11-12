@@ -2,8 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/initialize.rpy", line 165: invalid syntax
-                    else
+The label combat is defined twice, at File "game/combat.rpy", line 1:
+label combat:
+and File "game/script2.rpy", line 25:
+label combat:
+
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Fri Nov 10 14:18:56 2023
+Sun Nov 12 10:24:16 2023
