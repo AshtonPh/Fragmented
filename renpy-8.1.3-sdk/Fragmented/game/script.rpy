@@ -1,15 +1,48 @@
 ﻿define mc = Character("????")
 define ranger = Character("Ranger", color = "#276927")
 define Illyria = Character("Illyria", color = "#276927")
+
+default persistent.timesdied = 0
+default persistent.healthupgrade = 0
+default persistent.damageupgrade = 0
+default persistent.manaupgrade = 0
+default persistent.upgradecounter = 0
+
 label start:
+    $ renpy.save("most_recent_save", "most_recent_save")
+
+    # setting up some variables and objects, etc, at game start
+    $ mana_aware = False
+    $ arrow_count = 0
     call initialize_screens
+    
     # Scene starts with the snow-covered wasteland.
-    scene bg_wasteland
-    with fade
+    scene bg_wasteland with fade
 
     play music "ambient.ogg" loop
 
     "You wake up with a start. Your vision is blurry, but after blinking your eyes and adjusting to the light, you look around, revealing a snow-covered wasteland. The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
+    
+    if persistent.timesdied > 0:
+        # make sure persistance doesnt trigger on an intentional reload by the player
+        # if the game does the reload, then the upgrade will happen, otherwise it will be skipped
+        if persistent.upgradecounter == persistent.timesdied:
+            pass
+        else:
+            menu:
+                "Choose an Upgrade:"
+                "Damage":
+                    $ persistent.damageupgrade += 10
+                    $ persistent.upgradecounter += 1
+                    "You feel the strength within you increase."
+                "Health":
+                    $ persistent.healthupgrade += 20
+                    $ persistent.upgradecounter += 1
+                    "You feel your resiliance increase."
+                "Mana":
+                    $ persistent.manaupgrade += 20
+                    $ persistent.upgradecounter += 1
+                    "You feel the amount of mana your body can hold increase."
 
     scene altar with dissolve
     
@@ -69,15 +102,19 @@ label start:
         "A Long Bow":
             $ weapon = "long bow"
             $ player_move_set.append(arrow)
+            $ arrow_count = 0
             mc "A long bow is strapped to my back, with a quiver full of arrows. It's perfect for long-range attacks."
         "A mage's staff":
             $ weapon = "mage's staff"
+            $ mana_aware = True
+            $ player_move_set.append(smash)
             $ player_move_set.append(fire_bolt)
+            $ player_move_set.append(heal_self)
             mc "A mage's staff is in my hand. It pulses with arcane energy, ready to unleash its power."
     
     $ combat = "wolf"
-    $ change_bar2_values(100, 100, 0.2, 0.0)
-    $ change_bar3_values(100, 100, 0.7, 0.0)
+    $ change_bar2_values(100, 100, 0.2, 0.0, "Wolf1")
+    $ change_bar3_values(100, 100, 0.7, 0.0, "Wolf2")
     show screen bar1
     show screen bar2
     show screen bar3
@@ -272,8 +309,8 @@ label Spider_combat:
 
             $ combat = "spider"
 
-
-            $ change_bar2_values(500, 500, 0.5, 0.0)
+            $ change_bar1_values(player.maxhp, player.maxhp, 0.1, 0.7, "Player")
+            $ change_bar2_values(500, 500, 0.5, 0.0, "Spider")
             show screen bar1
             show screen bar2
 

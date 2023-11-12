@@ -37,8 +37,9 @@ label bats_combat:
 
     $ combat = "bats"
 
-    $ change_bar2_values(100, 100, 0.2, 0.0)
-    $ change_bar3_values(100, 100, 0.7, 0.0)
+    $ change_bar1_values(player.maxhp, player.maxhp, 0.1, 0.7, "Player")
+    $ change_bar2_values(100, 100, 0.2, 0.0, "Bat1")
+    $ change_bar3_values(100, 100, 0.7, 0.0, "Bat2")
     show screen bar1
     show screen bar2
     show screen bar3

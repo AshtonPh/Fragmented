@@ -2,11 +2,13 @@
 errors listed below, and try again.
 
 
-The label combat is defined twice, at File "game/combat.rpy", line 1:
-label combat:
-and File "game/script2.rpy", line 25:
-label combat:
+File "game/persist.rpy", line 2: expected statement.
+    timesdied += 1
+              ^
 
+File "game/persist.rpy", line 3: expected statement.
+    narrator("You have fallen, but you persist.")
+                                                 ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Sun Nov 12 10:24:16 2023
+Sun Nov 12 16:23:11 2023
