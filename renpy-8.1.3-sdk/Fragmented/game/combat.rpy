@@ -3,7 +3,7 @@ label combat:
         import random
         import time
 
-        player = Character("player", "Player", 100 + persistent.healthupgrade, 100 + persistent.manaupgrade, 1, player_move_set, 1)
+        player = Character("player", "Player", 1000 + persistent.healthupgrade, 100 + persistent.manaupgrade, 1, player_move_set, 1)
         person = player
         if mana_aware:
             renpy.show_screen("display_mana")
@@ -14,6 +14,11 @@ label combat:
         bat1 = Bat("bat1", "Bat1", 100, 50, 2, [blood_suck, bite], 2)
         bat2 = Bat("bat2", "Bat2", 100, 50, 2, [blood_suck, bite], 3)
 
+        bandit1 = Bandit("bandit1", "Bandit1", 200, 50, 2, [stab, enemySlash], 2)
+        bandit2 = Bandit("bandit2", "Bandit2", 200, 50, 2, [stab, enemySlash], 3)
+
+
+
         
         if combat == "wolf":
             turn = Turn([player, wolf1, wolf2])
@@ -21,6 +26,9 @@ label combat:
             turn = Turn([spider, player])
         elif combat == "bats":
             turn = Turn([bat1, bat2, player])
+        elif combat == "bandits":
+            turn = Turn([bandit1, bandit2, player])
+
         
 
         def combat_loop():
@@ -95,3 +103,10 @@ label combat:
             renpy.hide_screen("display_mana")
             renpy.hide_screen("display_arrows")
             renpy.jump("castle_gates")
+        elif combat == "bandits":
+            renpy.hide_screen("bar1")
+            renpy.hide_screen("bar2")
+            renpy.hide_screen("bar3")
+            renpy.hide_screen("display_mana")
+            renpy.hide_screen("display_arrows")
+            renpy.jump("bandit_aftermath")

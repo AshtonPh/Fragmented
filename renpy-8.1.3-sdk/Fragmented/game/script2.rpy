@@ -1,5 +1,6 @@
 define mc = Character("????")
 define duchess = Character("The Duchess", color = "#d71542ee")
+define sir_henrick = Character("Sir Henrick", color = "#d76c15ee")
 
 label journey_to_castle:
     scene snowy_path
@@ -129,4 +130,113 @@ label duchess_encounter:
 label duchess_options:
   
     "The duchess watches you with a mixture of hope and resignation, a silent testament to the suffering of her people and the land."
-    return
+
+    menu:
+        "Is there anything else I can do to help you or your people?":
+            jump offer_help
+
+        "I'll head to the town first. Perhaps the alchemist's assistant can shed more light on this situation.":
+            jump visit_town
+
+        "I'm ready to explore the secrets of the alchemist’s lair.":
+            jump alchemists_lair
+
+
+label offer_help:
+    duchess " 'Your willingness to aid us is a balm to our weary spirits. Many need help—orphans, wounded, those still fighting against the darkness.'"
+
+    "She gestures to a side door, where her aide awaits."
+
+    duchess " 'Speak with Sir Henrick at the door. He coordinates our efforts and will guide you to where your skills are most needed.'"
+
+    "You nod, turning to the door to seek out Sir Hendrick."
+
+    jump Sir_Hendrick
+
+label visit_town:
+    "The duchess nods in approval."
+
+    duchess " 'A wise decision. Knowledge is as powerful a weapon as any blade or spell.’  "
+
+    "She hands you a sealed letter."
+
+    duchess " 'Take this. It bears my seal and will help ensure his cooperation. Be cautious; he is a man driven by fear and guilt.'"
+
+    "You tuck the letter safely into your cloak."
+ 
+    $ seal = True
+    jump main_village
+
+
+label alchemists_lair:
+    "A shadow of concern crosses the duchess's face."
+
+    duchess " 'You are brave, indeed. The lair is a place of great evil, a blight upon our land. If you are to go, be prepared for anything.'"
+
+    "She rises, moving to a large, ornate chest. From within, she retrieves a small, crystal vial filled with a swirling, luminescent liquid."
+
+    duchess " 'Take this. It is a potion of clarity. It will protect your mind from the alchemist's dark illusions.'"
+
+    "Gratefully, you accept the vial, feeling its power pulse in your palm."
+
+    $ Potion_of_clarity = True
+  
+    jump path_to_hell
+
+
+label Sir_Hendrick:
+
+    scene royal_barrack with fade
+    "You approach Sir Henrick, a man whose stern visage is softened by the weariness in his eyes. He stands by the door, a list of tasks clutched in his hand."
+
+    sir_henrick " 'I was told you'd come. We have much to do and too few hands to do it. Here are the pressing matters at hand. We could use help repairing an overrun village; hunting a particularly nasty monster that’s been terrorizing the farmers; or investigating what happened to our most recent supply shipment. '"
+
+    menu:
+        "Help fortify the defenses of the Duchy.":
+            "Sir Henrick nods solemnly."
+            sir_henrick " 'Our walls have suffered from the constant attacks. Your aid in strengthening them could be the difference between life and death for many. A local village has been overrun and some of its walls destroyed. We would’ve just evacuated but there are too many elderly, children, and disabled to be able to move them far away enough to safety. We’ll need you to go help defend and try and rebuild what you can'"
+            "He hands you a map and a hammer, and sends you on your way."
+            jump fortify_defenses
+
+
+        "Help with the missing supplies.":
+            "Sir Hendrick looks relieved."
+            sir_hendrick " 'Your assistance is crucial. The empire seldom responds to our requests for assistance, but their yearly supply delivery was supposed to arrive two weeks ago. Our last confirmation that the supply train was safe was the village before Greenfield– something must have happened to the wagon train on its way to or in Greenfield. We’ll need you to go investigate so that we can find the supplies we desperately need, but the path is overrun with dangers. You'll need to be cautious and swift.'"
+            "He hands you a list of the supplies and a small pouch of gold for any expenses."
+            "You nod and prepare to leave for Greenfield."
+            $ gold += 100 
+            jump supply_run_preparation
+
+
+label fortify_defenses:
+
+    scene village_road with fade
+    "The village in need is not far, but time is of the essence."
+
+    "As you study the map, you notice two paths leading to the village. One is the main road, well-traveled and safer, but longer. The other is a shortcut, hastily scratched into the map, promising a quicker route but potentially more dangerous."
+
+    menu:
+        "Take the well-traveled path.":
+            "Deciding that safety is paramount, especially considering the villagers' plight, you choose the well-traveled path. It may take longer, but the risk of unexpected dangers is less."
+            jump arrive_at_village_main_path
+
+        "Take the shortcut.":
+            "Time is of the essence, and every moment counts. You decide to take the risk and follow the shortcut, hoping it will save precious time."
+            "The shortcut leads you through dense woods and overgrown trails. The silence is eerie, and you can't shake the feeling of being watched. As you exit the forest, ahead of you is a long stretch of snowy plains, the sunset reflecting off of the whiteness and creating a dazzling display of warm colors across the horizon."
+            "You consult with your map, and the shortcut goes across the plain and back into another copse of trees. Your steps squeak and crunch as you cross the plains and every rustle of a squirrel or god knows what beneath the snow sends your heart into your throat."
+            jump arrive_at_village_shortcut
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

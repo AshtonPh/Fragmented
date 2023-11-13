@@ -112,6 +112,15 @@
                         if i.name == "player":
                             self.target_character = i
 
+        class Bandit(Character):
+            def __init__(self, name, label, hp, mana, friend_code, moveset, healthbarnumber):
+                super().__init__(name, label, hp, mana, friend_code, moveset, healthbarnumber)
+            def set_target(self, turn_system):
+                if self.name != "player":
+                    for i in turn_system.order:
+                        if i.name == "player":
+                            self.target_character = i
+
         class Move():
             def __init__(self, name, label, value, mana, type):
                 self.name = name
@@ -266,6 +275,7 @@
         heal_limb = Heal("heal limb", "Heal Limb", 20, 0, "friendly")
         heal_self = Heal("heal self", "Heal Self", 150, 50, "self")
         blood_suck = Bloodsuck("blood suck", "Blood Suck", 50, 10, "enemy")
+        stab = Attack("stab", "Stab", 100 + persistent.damageupgrade, 0, "enemy")
 
         player_move_set = []
 

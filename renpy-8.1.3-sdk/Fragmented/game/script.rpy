@@ -14,6 +14,7 @@ label start:
     # setting up some variables and objects, etc, at game start
     $ mana_aware = False
     $ arrow_count = 0
+    $ gold = 0
     call initialize_screens
     
     # Scene starts with the snow-covered wasteland.

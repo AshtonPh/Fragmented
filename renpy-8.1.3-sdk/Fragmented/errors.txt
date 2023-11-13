@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/persist.rpy", line 2: expected statement.
-    timesdied += 1
-              ^
-
-File "game/persist.rpy", line 3: expected statement.
-    narrator("You have fallen, but you persist.")
-                                                 ^
+File "game/script4.rpy", line 99: expected statement.
+    "Just an ale, please.":
+                          ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Sun Nov 12 16:23:11 2023
+Sun Nov 12 23:31:33 2023
