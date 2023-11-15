@@ -139,6 +139,7 @@
                 else:
                     narrator(active_character.name + " uses " + active_character.selected_move.name + " on " + active_character.target_character.name + "{w=0.5}{nw}")
                     target.hp = target.hp - self.value
+                    active_character.mana -= self.mana
                     renpy.show_screen("bar1")
                     renpy.with_statement(vpunch)
 
@@ -188,6 +189,8 @@
                         target.hp = target.maxhp
                     else:
                         target.hp = target.hp + self.value
+                
+                
 
         class Turn():
             def __init__(self, order):
@@ -270,7 +273,7 @@
         arrow = Arrow("arrow", "Arrow", 90 + persistent.damageupgrade, 0, "enemy")
         bite = Attack("bite", "Bite", 20, 0, "enemy")
         smash = Attack("smash", "Smash", 20 + persistent.damageupgrade, 0, "enemy")
-        fire_bolt = Attack("fire bolt", "Fire Bolt", 80 + persistent.damageupgrade, 10, "enemy")
+        fire_bolt = Attack("fire bolt", "Fire Bolt", 80 + persistent.damageupgrade, 20, "enemy")
         venom = Attack("venom", "Venom", 150, 0, "enemy")
         heal_limb = Heal("heal limb", "Heal Limb", 20, 0, "friendly")
         heal_self = Heal("heal self", "Heal Self", 150, 50, "self")

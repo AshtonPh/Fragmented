@@ -3,6 +3,8 @@ game/ matches ** (['all']).
 game/audio/ matches ** (['all']).
 game/audio/ambient.ogg matches ** (['all']).
 game/audio/combat.ogg matches ** (['all']).
+game/bars.rpy matches ** (['all']).
+game/bars.rpyc matches ** (['all']).
 game/cache/ matches ** (['all']).
 game/cache/bytecode-39.rpyb matches game/cache/bytecode-39.rpyb (['all']).
 game/cache/py3analysis.rpyb matches ** (['all']).
@@ -110,12 +112,32 @@ game/gui.rpy matches ** (['all']).
 game/gui.rpyc matches ** (['all']).
 game/images/ matches ** (['all']).
 game/images/altar.jpg matches ** (['all']).
+game/images/bandit1.png matches ** (['all']).
+game/images/bandit2.png matches ** (['all']).
+game/images/barren_village.jpg matches ** (['all']).
+game/images/bat1.png matches ** (['all']).
+game/images/bat2.png matches ** (['all']).
 game/images/bg_wasteland.jpg matches ** (['all']).
+game/images/castle_exterior.jpg matches ** (['all']).
+game/images/dense_forest.jpg matches ** (['all']).
+game/images/duchess.png matches ** (['all']).
+game/images/fortified_wall.jpg matches ** (['all']).
+game/images/greenBar.PNG matches ** (['all']).
 game/images/hidden_cabin.jpg matches ** (['all']).
+game/images/main_village.jpg matches ** (['all']).
 game/images/mountain_spider.jpg matches ** (['all']).
 game/images/ranger.png matches ** (['all']).
+game/images/redBar.PNG matches ** (['all']).
+game/images/royal_barrack.jpg matches ** (['all']).
+game/images/royal_study.jpg matches ** (['all']).
 game/images/snowy_forest.jpg matches ** (['all']).
 game/images/snowy_forest_path.jpg matches ** (['all']).
+game/images/snowy_path.jpg matches ** (['all']).
+game/images/throne_room.jpg matches ** (['all']).
+game/images/twin_bats.jpg matches ** (['all']).
+game/images/village_road.jpg matches ** (['all']).
+game/images/village_shop.jpg matches ** (['all']).
+game/images/village_tavern.jpg matches ** (['all']).
 game/images/wolf1.png matches ** (['all']).
 game/images/wolf2.png matches ** (['all']).
 game/initialize.rpy matches ** (['all']).
@@ -123,6 +145,8 @@ game/initialize.rpyc matches ** (['all']).
 game/Intial Scene.txt matches ** (['all']).
 game/options.rpy matches ** (['all']).
 game/options.rpyc matches ** (['all']).
+game/persist.rpy matches ** (['all']).
+game/persist.rpyc matches ** (['all']).
 game/Ranger Scene.txt matches ** (['all']).
 game/saves/ matches game/saves/ (None).
 game/screens.rpy matches ** (['all']).
@@ -130,6 +154,12 @@ game/screens.rpyc matches ** (['all']).
 game/script.rpy matches ** (['all']).
 game/script.rpy.bak matches **.bak (None).
 game/script.rpyc matches ** (['all']).
+game/script2.rpy matches ** (['all']).
+game/script2.rpyc matches ** (['all']).
+game/script3.rpy matches ** (['all']).
+game/script3.rpyc matches ** (['all']).
+game/script4.rpy matches ** (['all']).
+game/script4.rpyc matches ** (['all']).
 game/test_combat_281.py matches ** (['all']).
 game/tl/ matches ** (['all']).
 game/tl/None/ matches ** (['all']).

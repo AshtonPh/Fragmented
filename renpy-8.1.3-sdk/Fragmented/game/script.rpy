@@ -15,7 +15,7 @@ label start:
     $ mana_aware = False
     $ arrow_count = 0
     $ gold = 0
-    call initialize_screens
+    call initialize_screens from _call_initialize_screens
     
     # Scene starts with the snow-covered wasteland.
     scene bg_wasteland with fade
@@ -92,7 +92,7 @@ label start:
 
     mc "I need to defend myself. But... I need answers. First, this castle. It beckons."
 
-    call initialize
+    call initialize from _call_initialize
 
     menu:
         "Choose your weapon:"
