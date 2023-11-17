@@ -1,6 +1,6 @@
 define mc = Character("????")
 define duchess = Character("The Duchess", color = "#d71542ee")
-define sir_henrick = Character("Sir Henrick", color = "#d76c15ee")
+define sir_hendrick = Character("Sir Hendrick", color = "#d76c15ee")
 
 label journey_to_castle:
     scene snowy_path
@@ -122,9 +122,9 @@ label duchess_encounter:
     duchess " 'You are not the first to come seeking answers, nor, I fear, will you be the last. But if you have the will to brave the perils, I will tell you all I know.'"
 menu:
     "Tell me more about the alchemist’s lair."            
-    duchess " 'It is deep in the foothills, among the most dangerous and dense concentration of the aberrations. You could try to explore it on your own, but if you’d like assistance, I know that the alchemist’s assistant now lives in the nearest village swallowing his sorrows in the tavern.’"
-    duchess " ‘I don’t blame him for helping the alchemist– all of us were blinded by greed and tricked by his silver tongue. I’ve known the boy since he lost his mother, and he would never seek to harm the duchy or its people."
-     "The townspeople, however, hold him in much lower regard. He is shunned and blamed for the deaths of their children, so he mostly keeps to himself and his drink.'"
+    duchess " 'It is deep in the foothills, among the most dangerous and dense concentration of the aberrations. You could try to explore it on your own, but if you’d like assistance, I know that the alchemist’s assistant now lives in the nearest village swallowing his sorrows in the tavern.'"
+    duchess " 'I don’t blame him for helping the alchemist– all of us were blinded by greed and tricked by his silver tongue. I’ve known the boy since he lost his mother, and he would never seek to harm the duchy or its people.'"
+    "The townspeople, however, hold him in much lower regard. He is shunned and blamed for the deaths of their children, so he mostly keeps to himself and his drink.'"
 
     jump duchess_options
 
@@ -191,12 +191,12 @@ label Sir_Hendrick:
     "You approach Sir Henrick, a man whose stern visage is softened by the weariness in his eyes. He stands by the door, a list of tasks clutched in his hand."
 
     sir_henrick " 'I was told you'd come. We have much to do and too few hands to do it. Here are the pressing matters at hand."
-     "We could use help repairing an overrun village; hunting a particularly nasty monster that’s been terrorizing the farmers; or investigating what happened to our most recent supply shipment. '"
+    "We could use help repairing an overrun village; hunting a particularly nasty monster that’s been terrorizing the farmers; or investigating what happened to our most recent supply shipment. '"
 
     menu:
         "Help fortify the defenses of the Duchy.":
             "Sir Henrick nods solemnly."
-            sir_henrick " 'Our walls have suffered from the constant attacks. Your aid in strengthening them could be the difference between life and death for many. A local village has been overrun and some of its walls destroyed. We would’ve just evacuated but there are too many elderly, children, and disabled to be able to move them far away enough to safety. We’ll need you to go help defend and try and rebuild what you can'"
+            sir_hendrick " 'Our walls have suffered from the constant attacks. Your aid in strengthening them could be the difference between life and death for many. A local village has been overrun and some of its walls destroyed. We would’ve just evacuated but there are too many elderly, children, and disabled to be able to move them far away enough to safety. We’ll need you to go help defend and try and rebuild what you can'"
             "He hands you a map and a hammer, and sends you on your way."
             jump fortify_defenses
 
@@ -225,12 +225,12 @@ label fortify_defenses:
         "Take the shortcut.":
             "Time is of the essence, and every moment counts. You decide to take the risk and follow the shortcut, hoping it will save precious time."
             "The shortcut leads you through dense woods and overgrown trails. The silence is eerie, and you can't shake the feeling of being watched."
-             "As you exit the forest, ahead of you is a long stretch of snowy plains, the sunset reflecting off of the whiteness and creating a dazzling display of warm colors across the horizon."
+            "As you exit the forest, ahead of you is a long stretch of snowy plains, the sunset reflecting off of the whiteness and creating a dazzling display of warm colors across the horizon."
             "You consult with your map, and the shortcut goes across the plain and back into another copse of trees."
-             "Your steps squeak and crunch as you cross the plains and every rustle of a squirrel or god knows what beneath the snow sends your heart into your throat."
+            "Your steps squeak and crunch as you cross the plains and every rustle of a squirrel or god knows what beneath the snow sends your heart into your throat."
             jump arrive_at_village_shortcut
 
- label arrive_at_village_shortcut:
+label arrive_at_village_shortcut:
     "Leaving the snowy field behind, you step into the dense forest, the shortcut's path barely visible under the overgrowth. The stark contrast between the open, white expanse and the dark, enclosing woods is disorienting."
 
     "The trees loom overhead, their branches like gnarled hands reaching out to the sky. The silence of the forest is unnerving, broken only by the crunch of your footsteps on the snow-covered ground."
@@ -238,7 +238,7 @@ label fortify_defenses:
     "As you delve deeper, the light fades, the thick canopy above blocking out the sun. The air grows colder, and a sense of foreboding settles over you. You can't shake the feeling that you're not alone in these woods."
 
     "Suddenly, a chilling scream pierces the silence. You spin around, coming face to face with a horrifying creature. It's like nothing you've ever seen before: a mass of writhing limbs, each one ending in sharp, claw-like appendages."
-     "In the center of this monstrosity is a face, twisted in agony, resembling a screaming baby."
+    "In the center of this monstrosity is a face, twisted in agony, resembling a screaming baby."
 
     "The creature lunges at you, its limbs flailing wildly. You barely have time to react, dodging and weaving through the trees, trying to escape this nightmare."
 ##add combat where the creature runs away at low health##
