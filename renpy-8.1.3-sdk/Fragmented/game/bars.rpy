@@ -115,4 +115,4 @@
             xalign 0.53
             yalign 0.72
             vbox:
-                text "Arrows: [arrow_count]"
+                text "Arrows: [arrows.count]"

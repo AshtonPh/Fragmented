@@ -12,11 +12,13 @@ label start:
     $ renpy.save("most_recent_save", "most_recent_save")
 
     # setting up some variables and objects, etc, at game start
+    
     $ mana_aware = False
     $ arrow_count = 0
     $ gold = 0
     call initialize_screens from _call_initialize_screens
     
+    default inventory = Inventory([],0)
     # Scene starts with the snow-covered wasteland.
     scene bg_wasteland with fade
 
@@ -103,7 +105,8 @@ label start:
         "A Long Bow":
             $ weapon = "long bow"
             $ player_move_set.append(arrow)
-            $ arrow_count = 0
+            $ arrows.add_count(20)
+            $ inventory.add_item(arrows)
             mc "A long bow is strapped to my back, with a quiver full of arrows. It's perfect for long-range attacks."
         "A mage's staff":
             $ weapon = "mage's staff"

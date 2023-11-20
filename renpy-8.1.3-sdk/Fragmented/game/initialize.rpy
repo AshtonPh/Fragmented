@@ -148,7 +148,7 @@
                 super().__init__(name, label, value, mana, type)
             def use_move(self, target):
                 global active_character
-                global arrow_count
+                arrow_count = arrows.count
                 if active_character.mana < self.mana:
                     narrator("Move Fails, Not Enough Mana" + "{w=0.5}{nw}")
                 if arrow_count <= 0:
@@ -158,6 +158,7 @@
                     target.hp = target.hp - self.value
                     renpy.show_screen("bar1")
                     renpy.with_statement(vpunch)
+                    arrows.use(1)
 
         class Bloodsuck(Move):
             def __init__(self, name, label, value, mana, type):
@@ -283,5 +284,6 @@
         player_move_set = []
 
         #player = Character("player", "Player",1000, 100, 1, player_move_set, 1)
+
 
     return

@@ -120,8 +120,8 @@ label duchess_encounter:
     "The duchess's gaze meets yours, a silent plea for help that needs no words."
 
     duchess " 'You are not the first to come seeking answers, nor, I fear, will you be the last. But if you have the will to brave the perils, I will tell you all I know.'"
-menu:
-    "Tell me more about the alchemist’s lair."            
+    
+    mc "Tell me more about the alchemist’s lair."            
     duchess " 'It is deep in the foothills, among the most dangerous and dense concentration of the aberrations. You could try to explore it on your own, but if you’d like assistance, I know that the alchemist’s assistant now lives in the nearest village swallowing his sorrows in the tavern.'"
     duchess " 'I don’t blame him for helping the alchemist– all of us were blinded by greed and tricked by his silver tongue. I’ve known the boy since he lost his mother, and he would never seek to harm the duchy or its people.'"
     "The townspeople, however, hold him in much lower regard. He is shunned and blamed for the deaths of their children, so he mostly keeps to himself and his drink.'"
@@ -190,7 +190,7 @@ label Sir_Hendrick:
     scene royal_barrack with fade
     "You approach Sir Henrick, a man whose stern visage is softened by the weariness in his eyes. He stands by the door, a list of tasks clutched in his hand."
 
-    sir_henrick " 'I was told you'd come. We have much to do and too few hands to do it. Here are the pressing matters at hand."
+    sir_hendrick " 'I was told you'd come. We have much to do and too few hands to do it. Here are the pressing matters at hand."
     "We could use help repairing an overrun village; hunting a particularly nasty monster that’s been terrorizing the farmers; or investigating what happened to our most recent supply shipment. '"
 
     menu:
@@ -230,24 +230,6 @@ label fortify_defenses:
             "Your steps squeak and crunch as you cross the plains and every rustle of a squirrel or god knows what beneath the snow sends your heart into your throat."
             jump arrive_at_village_shortcut
 
-label arrive_at_village_shortcut:
-    "Leaving the snowy field behind, you step into the dense forest, the shortcut's path barely visible under the overgrowth. The stark contrast between the open, white expanse and the dark, enclosing woods is disorienting."
-
-    "The trees loom overhead, their branches like gnarled hands reaching out to the sky. The silence of the forest is unnerving, broken only by the crunch of your footsteps on the snow-covered ground."
-
-    "As you delve deeper, the light fades, the thick canopy above blocking out the sun. The air grows colder, and a sense of foreboding settles over you. You can't shake the feeling that you're not alone in these woods."
-
-    "Suddenly, a chilling scream pierces the silence. You spin around, coming face to face with a horrifying creature. It's like nothing you've ever seen before: a mass of writhing limbs, each one ending in sharp, claw-like appendages."
-    "In the center of this monstrosity is a face, twisted in agony, resembling a screaming baby."
-
-    "The creature lunges at you, its limbs flailing wildly. You barely have time to react, dodging and weaving through the trees, trying to escape this nightmare."
-##add combat where the creature runs away at low health##
-    "After what feels like an eternity, the creature finally retreats, disappearing into the depths of the forest as quickly as it appeared. You're left panting, heart racing, the adrenaline still coursing through you."
-
-    "Shaken but determined, you press on, the encounter serving as a grim reminder of the dangers that lurk in these lands. The village needs you, now more than ever."
-
-    "Emerging from the forest, the sight of the village brings a sense of relief. The shortcut was risky, but you've made it, and now it's time to help these people rebuild their lives."
-    jump fortify_village_walls
 
 
 
