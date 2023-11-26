@@ -191,6 +191,12 @@
                     else:
                         target.hp = target.hp + self.value
                 
+        class Use_item(Move):
+            def __init__(self, name, label, value, mana, type):
+                super().__init__(name, label, value, mana, type)
+            def use_move(self, target):
+                global active_character
+                
                 
 
         class Turn():

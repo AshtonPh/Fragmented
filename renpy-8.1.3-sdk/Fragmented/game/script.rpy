@@ -8,6 +8,13 @@ default persistent.damageupgrade = 0
 default persistent.manaupgrade = 0
 default persistent.upgradecounter = 0
 
+screen my_screen():
+    vbox:
+        textbutton "Inventory" action Call("equipment")
+        yalign 0.74
+        xalign 0.5
+        
+
 label start:
     $ renpy.save("most_recent_save", "most_recent_save")
 
@@ -22,7 +29,10 @@ label start:
 
     play music "ambient.ogg" loop
 
-    "You wake up with a start. Your vision is blurry, but after blinking your eyes and adjusting to the light, you look around, revealing a snow-covered wasteland. The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
+    show screen my_screen
+
+    "You wake up with a start. Your vision is blurry, but after blinking your eyes and adjusting to the light, you look around, revealing a snow-covered wasteland."
+    "The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
     
     if persistent.timesdied > 0:
         # make sure persistance doesnt trigger on an intentional reload by the player
@@ -99,12 +109,14 @@ label start:
         "A short sword":
             $ weapon = "short sword"
             $ player_move_set.append(slash)
+            $ inventory.add_item(short_sword)
             mc "I feel the weight of a short sword by my side. It's sharp and ready for combat."
         "A Long Bow":
             $ weapon = "long bow"
             $ player_move_set.append(arrow)
             $ arrows.add_count(20)
             $ inventory.add_item(arrows)
+            $ inventory.add_item(long_bow)
             mc "A long bow is strapped to my back, with a quiver full of arrows. It's perfect for long-range attacks."
         "A mage's staff":
             $ weapon = "mage's staff"
@@ -112,6 +124,7 @@ label start:
             $ player_move_set.append(smash)
             $ player_move_set.append(fire_bolt)
             $ player_move_set.append(heal_self)
+            $ inventory.add_item(mage_staff)
             mc "A mage's staff is in my hand. It pulses with arcane energy, ready to unleash its power."
     
     $ combat = "wolf"
@@ -376,15 +389,18 @@ label Illyria_cabin:
             "Illyria nods and hands you a small vial filled with a glowing, green liquid."
             Illyria "This should help mend your wounds and restore your strength. Be careful out there."
             $ player_healing_potion = True
+            $ minor_health_potion.add_count(1)
+            $ inventory.add_item(minor_health_potion)
 
         "I could use a bow and some arrows.":
             "Illyria smiles and hands you a well-crafted bow along with a quiver full of arrows."
             Illyria "A good choice for keeping dangers at a distance. There are 24 arrows; use them wisely."
             $ player_bow = True
             $ player_arrows = 24
+            $ arrows.add_count(24)
 
     "You thank Illyria for her generosity. The comfort of the cabin and the warmth of the fire make it hard to leave, but the journey ahead calls."
-
+    $ inventory.list_items()
     jump journey_to_castle
 
 
