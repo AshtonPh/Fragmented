@@ -7,6 +7,8 @@ default persistent.healthupgrade = 0
 default persistent.damageupgrade = 0
 default persistent.manaupgrade = 0
 default persistent.upgradecounter = 0
+default persistent.tutorial = True
+default bullshit = False
 
 screen my_screen():
     vbox:
@@ -16,6 +18,16 @@ screen my_screen():
         
 
 label start:
+    if bullshit:
+        $ bullshit = False
+        return
+    
+    # user instructions at the beginning of the game
+    if persistent.tutorial:
+        "Welcome to Fragmented! Esc will take you to the in-game menu, where you return to the main menu or quit. Please DO NOT save the game. This will cause problems."
+        "The game will automatically save for you at specific save points."
+        "Have fun!"
+    
     $ renpy.save("most_recent_save", "most_recent_save")
 
     # setting up some variables and objects, etc, at game start
