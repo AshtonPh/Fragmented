@@ -300,11 +300,13 @@ screen navigation():
             textbutton _("Start") action Start()
 
         else:
+            #textbutton _("History") action ShowMenu("history")
 
-            textbutton _("History") action ShowMenu("history")
+            #textbutton _("Save") action ShowMenu("save")
+            pass
 
-            textbutton _("Save") action ShowMenu("save")
-
+        textbutton _("Clear Persistant") action Call("clear_persistant")
+        
         textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("preferences")
@@ -317,12 +319,13 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        #textbutton _("About") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            #textbutton _("Help") action ShowMenu("help")
+            pass
 
         if renpy.variant("pc"):
 
