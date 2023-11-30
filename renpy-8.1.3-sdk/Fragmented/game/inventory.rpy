@@ -22,6 +22,29 @@ init python:
                 narrator("You have " + str(len(self.items)) + " items in your inventory:")
                 for item in self.items:
                     narrator(f"{item.name} - {item.description} - x{item.count}.")
+        
+        def list_equipment(self, type):
+            e_list = []
+            if (type == "armor"):
+                for item in self.items:
+                    if "armor" in item.key:
+                        e_list.append(item)
+            elif (type == "weapon"):
+                for item in self.items:
+                    if "weapon" in item.key:
+                        e_list.append(item)
+            elif (type == "necklace"):
+                for item in self.items:
+                    if "necklace" in item.key:
+                        e_list.append(item)
+            elif (type == "ring"):
+                for item in self.items:
+                    if "ring" in item.key:
+                        e_list.append(item)
+
+                        
+                        
+
                 
 
     class Items():
@@ -56,36 +79,61 @@ init python:
         def __init__(self):
             self.armor = None
             self.weapon = None
-            self.auxiliary = None
+            self.necklace = None
+            self.ring = None
 
         def equip(self, item, slot):
             if slot == "armor":
                 if "armor" in item.key:
                     narrator("You equipped the " + item.name + ".")
                     self.armor = item
+                    
                 else:
                     narrator("You can't equip that item in that slot.")
             elif slot == "weapon":
                 if "weapon" in item.key:
-                    narrator("You equipped the " + item.name + ".")
                     self.weapon = item
+                    adjust_moveset(item)
+                    narrator("You equipped the " + item.name + ".")
+                    
                 else:
                     narrator("You can't equip that item in that slot.")
                 self.weapon = item
-            elif slot == "auxiliary":
-                if "auxiliary" in item.key:
+            elif slot == "necklace":
+                if "necklace" in item.key:
                     narrator("You equipped the " + item.name + ".")
-                    self.auxiliary = item
+                    self.necklace = item
                 else:
                     narrator("You can't equip that item in that slot.")
+            elif slot == "ring":
+                if "ring" in item.key:
+                    narrator("You equipped the " + item.name + ".")
+                    self.ring = item
+                else:
+                    narrator("You can't equip that item in that slot.")
+            else:
+                narrator("That is not a valid slot.")
+            
 
         def get_value(self, slot):
             if slot == "armor":
                 return self.armor
             elif slot == "weapon":
                 return self.weapon
-            elif slot == "auxiliary":
-                return self.auxiliary
+            elif slot == "necklace":
+                return self.necklace
+
+        
+    def adjust_moveset(equipment):
+        player_move_set = []
+        if equipment == short_sword:
+            player_move_set.append(slash)
+        if equipment == long_bow:
+            player_move_set.append(arrow)
+        if equipment == mage_staff:      
+            player_move_set.append(smash)
+            player_move_set.append(fire_bolt)
+            player_move_set.append(heal_self)      
 
         
 
@@ -105,5 +153,6 @@ init python:
 
     # Test equipment
     simple_clothes = Items("Simple Clothes", "Simple clothes that are easy to move in", 1, "simple_armor", 10)
-    ring_of_vitality = Items("Ring of Vitality", "A ring that increases your health", 1, "health_ring_auxiliary", 10)
+    ring_of_vitality = Items("Ring of Vitality", "A ring that increases your health", 1, "health_ring", 10)
+    necklace_of_energy = Items("Necklace of Energy", "A necklace that increases your energy", 1, "energy_necklace", 10)
 

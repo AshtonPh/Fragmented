@@ -14,6 +14,8 @@
                 self.healthbarnumber = healthbarnumber
             def append_move(self, move):
                 self.moveset.append(move)
+            def empty_moveset(self):
+                self.moveset = []
             def set_target(self, turn_system):
                 # if is temp target for enemies, can create other classes that inherit
                 # from Character in order to give different behavior to different npcs...

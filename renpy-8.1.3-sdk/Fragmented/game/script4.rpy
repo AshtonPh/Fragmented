@@ -104,21 +104,3 @@ label tavern_gossip:
         "Leave the tavern":
             jump main_village
 
-
-
-
-
-
-
-label path_to_hell:
-    "The path to the alchemist's lair is fraught with danger. The very air seems to thicken with malice as you step onto the trail."
-
-    "The trees are gnarled, and the ground beneath your feet crunches with a mixture of frost and ash. The silence is oppressive, broken only by the occasional distant scream."
-
-    "You steel yourself for the journey ahead, knowing that each step takes you closer to the heart of darkness."
-
-    "The path is not straightforward; it twists and turns, leading you through a landscape that seems designed to confuse and disorient."
-
-    "But you press on, determined to confront the alchemist and end his reign of terror."
-
-    return
