@@ -125,7 +125,7 @@ init python:
 
         
     def adjust_moveset(equipment):
-        player_move_set = []
+        player_move_set.clear()
         if equipment == short_sword:
             player_move_set.append(slash)
         if equipment == long_bow:
