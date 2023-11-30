@@ -19,7 +19,7 @@ label path_to_hell:
             "The sight of the incubus gives you pause. Perhaps there is wisdom in retreat, to regroup and approach this challenge with a better plan."
             jump main_village
         ##Only if with the assistant##
-        "Talk to the Alchemist’s assitant." if assistant = True:
+        "Talk to the Alchemist’s assitant." if assistant == True:
             "The assistant, a hint of fear in his voice, whispers about a hidden path around the back of the mountain, leading to another entrance."
             "You weigh your options, considering the potential risks and rewards of this less direct approach."
                 menu:
@@ -267,7 +267,7 @@ label door_2:
         menu:
             "Check out the other doors":
                 jump choose_a_door
-            "Turn to the alchemist's assistant" if assistant = True:
+            "Turn to the alchemist's assistant" if assistant == True:
                 jump inside_door_2
 
 label door_3:
