@@ -36,6 +36,7 @@ label start:
     call initialize_screens from _call_initialize_screens
     
     default inventory = Inventory([],0)
+    default equipment = Equipment()
     # Scene starts with the snow-covered wasteland.
     scene bg_wasteland with fade
 
@@ -120,8 +121,8 @@ label start:
         "Choose your weapon:"
         "A short sword":
             $ weapon = "short sword"
-            $ player_move_set.append(slash)
             $ inventory.add_item(short_sword)
+            $ equipment.equip(short_sword, "weapon")
             mc "I feel the weight of a short sword by my side. It's sharp and ready for combat."
         "A Long Bow":
             $ weapon = "long bow"

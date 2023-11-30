@@ -250,6 +250,38 @@ label post_fortification:
             "With your next steps decided, you leave the duchess's study, the upcoming challenge settling in your mind. The alchemist's lair awaits, and with it, answers to the mysteries plaguing the land."
             jump path_to_hell
         
+        "I’ll go see if I can help Sir Hendrick with anything else.":
+            mc "I’ll go see if I can help Sir Hendrick with anything else. There might be more I can do to aid the duchy."
+            duchess "A wise decision. Sir Hendrick will surely appreciate your assistance. Return when you are ready to proceed."
+            jump Sir_Hendrick
+
+label monster_hunt_preparation:
+    menu:
+        "Can you tell me more about this creature?":
+            sir_hendrick "It's a fearsome beast, large and covered in disgusting, warped skin. Its eyes glow red in the darkness, and it has been attacking travelers and villagers without warning. It’s fast– almost nobody who’s seen it has lived to tell the tale, and it seems to have an uncanny ability to avoid arrows and the like."
+            return
+
+        "What's the reward for dealing with this creature?":
+            sir_hendrick "The Duchy will be in your debt. We can offer you a substantial sum of gold, and you'll have the gratitude of our people. Before you go, if you’d like to take a look around the armory you can take something to help you face the beast."
+            $ armory= True
+            ##The point of this is when it returns to the dialogue tree the armory is now available##
+            return
+        
+        "I’ll go check out the armory." if armory == True:
+            sir_hendrick "Certainly! Follow me, it’s down at the end of this hall."
+            jump armory
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
