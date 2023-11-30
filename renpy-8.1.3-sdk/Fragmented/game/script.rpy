@@ -10,7 +10,7 @@ default persistent.upgradecounter = 0
 default persistent.tutorial = True
 default bullshit = False
 
-screen my_screen():
+screen inventory_screen():
     vbox:
         textbutton "Inventory" action Call("equipment")
         yalign 0.74
@@ -42,7 +42,7 @@ label start:
 
     play music "ambient.ogg" loop
 
-    show screen my_screen
+    
 
     "You wake up with a start. Your vision is blurry, but after blinking your eyes and adjusting to the light, you look around, revealing a snow-covered wasteland."
     "The wind howls eerily, its mournful wails echoing across the vast expanse of white. The relentless snowstorm rages on, each flake dancing whimsically before merging into the blanket beneath. The air is thick with the scent of frost and desolation."
@@ -126,18 +126,16 @@ label start:
             mc "I feel the weight of a short sword by my side. It's sharp and ready for combat."
         "A Long Bow":
             $ weapon = "long bow"
-            $ player_move_set.append(arrow)
             $ arrows.add_count(20)
             $ inventory.add_item(arrows)
             $ inventory.add_item(long_bow)
+            $ equipment.equip(long_bow, "weapon")
             mc "A long bow is strapped to my back, with a quiver full of arrows. It's perfect for long-range attacks."
         "A mage's staff":
             $ weapon = "mage's staff"
             $ mana_aware = True
-            $ player_move_set.append(smash)
-            $ player_move_set.append(fire_bolt)
-            $ player_move_set.append(heal_self)
             $ inventory.add_item(mage_staff)
+            $ equipment.equip(mage_staff, "weapon")
             mc "A mage's staff is in my hand. It pulses with arcane energy, ready to unleash its power."
     
     $ combat = "wolf"
@@ -157,6 +155,7 @@ label introduction_ranger:
     play music "ambient.ogg" loop
     show ranger at my_left
     with moveinright
+    show screen inventory_screen
 
     "Just as the situation seems dire, an arrow whizzes past, striking the wolf squarely in the head. It collapses, mere inches away."
 

@@ -1,4 +1,5 @@
 label combat:
+    hide screen inventory_screen
     python:
         import random
         import time
@@ -110,3 +111,5 @@ label combat:
             renpy.hide_screen("display_mana")
             renpy.hide_screen("display_arrows")
             renpy.jump("bandit_aftermath")
+    
+    show screen inventory_screen
