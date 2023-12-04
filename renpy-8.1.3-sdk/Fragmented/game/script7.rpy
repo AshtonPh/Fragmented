@@ -1,6 +1,7 @@
 ﻿
 # upper level initial narration + variable initialization
 label explore_upper_levels:
+    # Put these elsewhere
     default libary_intro = True
     default observatory_intro = True
     default sanctuary_intro = True

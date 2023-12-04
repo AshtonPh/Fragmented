@@ -12,7 +12,7 @@ label equipment:
             if e_choice != "back":
                 e = renpy.display_menu(inventory.list_equipment(e_choice))
                 equipment.equip(e.name, e_choice)
-        else
+        else:
             pass   
         
     hide inventory with fade

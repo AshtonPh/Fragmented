@@ -140,7 +140,7 @@ label duchess_options:
             jump visit_town
 
         "I'm ready to explore the secrets of the alchemist’s lair.":
-            jump alchemists_lair
+            jump alchemists_lair_conversation
 
 
 label offer_help:
@@ -169,7 +169,7 @@ label visit_town:
     jump main_village
 
 
-label alchemists_lair:
+label alchemists_lair_conversation:
     "A shadow of concern crosses the duchess's face."
 
     duchess " 'You are brave, indeed. The lair is a place of great evil, a blight upon our land. If you are to go, be prepared for anything.'"
