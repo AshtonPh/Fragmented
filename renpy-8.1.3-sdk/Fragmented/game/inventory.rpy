@@ -22,6 +22,10 @@ init python:
                 narrator("You have " + str(len(self.items)) + " items in your inventory:")
                 for item in self.items:
                     narrator(f"{item.name} - {item.description} - x{item.count}.")
+
+        # Make the inventory iterable
+        def __iter__(self):
+            return iter(self.items)
         
         def list_equipment(self, type):
             e_list = []
@@ -122,6 +126,17 @@ init python:
                 return self.weapon
             elif slot == "necklace":
                 return self.necklace
+
+        def list_equipment(self):
+            narrator("You have the following equipment:")
+            if self.armor != None:
+                narrator("Armor: " + self.armor.name)
+            if self.weapon != None:
+                narrator("Weapon: " + self.weapon.name)
+            if self.necklace != None:
+                narrator("Necklace: " +self.necklace.name)
+            if self.ring != None:
+                narrator("Ring: " + self.ring.name)
 
         
     def adjust_moveset(equipment):
