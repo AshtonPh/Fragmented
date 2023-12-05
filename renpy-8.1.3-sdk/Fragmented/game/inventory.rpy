@@ -8,7 +8,7 @@ init python:
         def add_item(self, item):
             self.items.append(item)
             self.no_items += 1
-            self.check_for_item()
+            self.check_for_item(item)
 
         # Remove an item from the inventory
         def remove_item(self, item):
@@ -58,6 +58,7 @@ init python:
                 if item.name == "Minor Health Potion":
                     player_move_set.append(drink_minor_health_potion)
                     break
+                if item.name 
                 else:
                     pass
                         
@@ -207,6 +208,7 @@ init python:
     gold = Items("Gold", "Shiny gold coins", 0, "gold", 0)
     arrows = Items("Arrows", "Ammunition of the bow", 0, "arrows", 0)
     minor_health_potion = Items("Minor Health Potion", "A potion that heals a small amount of health", 0, "consumable", 100)
+    agility_potion = Items("Agility Potion", "Faster than the wind", 0, "consumable", 30)
 
 
 

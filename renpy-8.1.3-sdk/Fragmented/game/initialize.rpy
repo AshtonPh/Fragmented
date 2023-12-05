@@ -220,6 +220,27 @@
             def update_value(self, new_value):
                 self.value = new_value
 
+        class Agility_potion(Move):
+            def __init__(self, name, label, value, mana, type):
+                super().__init__(name, label, value, mana, type)
+            def use_move(self, target):
+                global active_character
+
+                roll = random.random()
+                if roll <= 0.3:
+                    global agile = True
+                else:
+                    global agile = False
+                agility_potion.use(1)
+                if (agility_potion <= 0):
+                    # Remove drink_agility_potion from player's moveset 
+                    for i in player.moveset:
+                        if i.name == "agility potion":
+                            player.moveset.remove(i)
+                            break
+            def update_value(self, new_value):
+                self.value = new_value
+
         class Use_item(Move):
             def __init__(self, name, label, value, mana, type):
                 super().__init__(name, label, value, mana, type)
@@ -317,6 +338,7 @@
         blood_suck = Bloodsuck("blood suck", "Blood Suck", 50, 10, "enemy")
         stab = Attack("stab", "Stab", 100 + persistent.damageupgrade, 0, "enemy")
         drink_minor_health_potion = Health_potion("minor health potion", "Drink Minor Health Potion", 100, 0, "self")
+        drink_agility_potion = Agility_potion("agility potion", "Drink Agility Potion", 0, 0, "self")
 
         
 

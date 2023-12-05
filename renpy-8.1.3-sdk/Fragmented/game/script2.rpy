@@ -180,7 +180,7 @@ label alchemists_lair_conversation:
 
     "Gratefully, you accept the vial, feeling its power pulse in your palm."
 
-    $ Potion_of_clarity = True
+    $ Potion_of_agility = True
   
     jump path_to_hell
 

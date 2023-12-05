@@ -50,6 +50,7 @@ label combat:
                     active_character.pick_move_player()
                     active_character.set_target(turn)
                     active_character.use_move()
+                    
                 else:
                     # narrator("enemy turn")
                     active_character.pick_move_npc()
