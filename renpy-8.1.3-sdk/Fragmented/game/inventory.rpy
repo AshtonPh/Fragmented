@@ -8,7 +8,7 @@ init python:
         def add_item(self, item):
             self.items.append(item)
             self.no_items += 1
-            self.check_for_item(item)
+            self.check_for_item()
 
         # Remove an item from the inventory
         def remove_item(self, item):
@@ -54,11 +54,13 @@ init python:
 
 
         def check_for_item(self):
-            for item in self.items:
-                if item.name == "Minor Health Potion":
+            for item in self.items: 
+                if item.name == "Minor Health Potion" and item.count >= 1:
                     player_move_set.append(drink_minor_health_potion)
-                    break
-                if item.name 
+                    pass
+                if item.name == "Agility Potion" and item.count >= 1:
+                    player_move_set.append(drink_agility_potion)
+                    pass
                 else:
                     pass
                         

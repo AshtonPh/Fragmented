@@ -35,12 +35,12 @@ label path_to_hell:
 label alternate_path:
     "You both skirt around the edge of the clearing, keeping a wary eye on the incubus. Its icy breath crystallizes in the air, a stark reminder of the danger lurking just yards away."
     "The assistant leads you to a secluded part of the mountain, where the snow and rock seem to blend seamlessly. He brushes away layers of snow, revealing a hidden door, cleverly inset into the mountain itself."
-    assistant: "Here it is. This door leads to the alchemist's records room. It's where he kept all his research and findings."
+    assistant "Here it is. This door leads to the alchemist's records room. It's where he kept all his research and findings."
     "The door, though unassuming, feels heavy with history. You can sense the secrets it guards, the knowledge it has witnessed."
-    assistant: "I've only been in here a few times. The things he wrote about... some were fascinating, others deeply troubling."
+    assistant "I've only been in here a few times. The things he wrote about... some were fascinating, others deeply troubling."
     "With a nod, you push the door open. It creaks ominously, revealing a dimly lit corridor that leads into the heart of the mountain. You follow along the corridor until it opens up into a small records room."
     "The room is a trove of knowledge. Shelves line the walls, filled with scrolls, books, and various artifacts. The air is thick with the scent of old parchment and ink."
-        jump inside_door_1
+    jump inside_door_1
 
 label battle_ice_incubus:
     "As you step forward, the ice incubus emits a chilling howl, a sound that seems to freeze the very air. Its movements are swift and graceful, each step leaving a trail of frost in its wake."
@@ -318,13 +318,13 @@ label door_1_exit:
     "As you pass through the door, it shuts hard behind you automatically, the alchemist's assistant barely dodging out of the way. You turn to look at the door, you notice its surface is unnaturally smooth, almost like polished glass. It reflects the torchlight eerily, creating a mesmerizing effect." 
     "You run your hands over its surface, feeling no seams, no handles, no keyholes – nothing to suggest a way to open it."
     "It's as if the door is part of the wall itself. You press and knock, but it remains unyielding, "
-    assistant: "Ah.... fuck. I forgot that it did that. We won't be able to get back in without the alchemist, he's the only one who can open that door from the inside."
-        jump alchemists_lair
+    assistant "Ah.... fuck. I forgot that it did that. We won't be able to get back in without the alchemist, he's the only one who can open that door from the inside."
+    jump alchemists_lair
 
 label shelf_1:
     "A Bundle of Letters: Tied with a faded ribbon, these letters offer glimpses into the alchemist's personal and professional relationships. They range from formal requests for rare ingredients to heartfelt pleas from old friends concerned about the alchemist's well-being. One letter, in particular, is filled with worry:"
     "Alaric, your last correspondence was troubling. You speak of breaking barriers never meant to be crossed. Remember, there is a line between genius and madness. Do not lose yourself in your quest."
-        jump inside_door_1
+    jump inside_door_1
 
 label shelf_2:
     "Scroll 3: Week 22 of Experiments"
@@ -336,7 +336,7 @@ label shelf_2:
     "The altars have proven effective in anchoring the soul, but the process is not without its risks. The tethering can be disorienting, and there have been instances where subjects have become lost in time, unable to return to their original moment. The potential for disaster is high, and I must proceed with utmost caution."
     "As I continue my work, I can't help but wonder if the pursuit of immortality is worth the price. The line between genius and madness grows thinner with each passing day, and I fear what I might become should I cross it."
     "The scroll ends abruptly, the final words trailing off into an indecipherable scribble."
-        jump inside_door_1
+    jump inside_door_1
 
 
 label shelf_3:
@@ -353,20 +353,20 @@ label shelf_3:
     "Perform the ritual at the stroke of midnight, under the light of the full moon, at the ancient altar."
     "The journey will be perilous, but the reward is the culmination of a lifetime's work. I must succeed, for the sake of all I have sacrificed."
     "The scroll includes a detailed map to the altar, along with sketches of the required ingredients."
-        jump inside_door_1
+    jump inside_door_1
 
 label shelf_4:
     "Week 34: The Assistant's Discovery"
     "The air in the laboratory was thick with tension, the kind that precedes a storm. My assistant, always loyal and diligent, had stumbled upon the darker aspects of my work. The revelation hit him like a physical blow, his face a mask of horror and disbelief. I had kept him in the dark, sparing him the moral burden of my more... extreme methods. But now, the truth lay bare between us, an insurmountable chasm."
     "He accused me of monstrosity, of crossing lines no man should ever cross. I tried to explain, to justify my actions with the greater good, but my words fell on deaf ears. He left that night, his departure a silent condemnation of my choices. The loss of his trust and companionship was a blow, but the work must continue. The path to immortality is a solitary one, and sacrifices must be made."
-        jump inside_door_1
+    jump inside_door_1
 
 label shelf_5:
     "Week 36: The Deepening Winter"
     "As the entity in the basement grows in power, its influence seeps into the land. The duchy has fallen into an unending winter, the skies perpetually gray, the air biting cold. The snow blankets the ground in a suffocating embrace, and the once vibrant forests stand silent, their life choked by frost."
     "The villagers speak of an eternal winter, a curse brought upon by my experiments. They do not understand the forces at play, the delicate balance I am trying to maintain. The entity's hunger for soul energy is disrupting the natural order, its power a malignant force against the world's very essence."
     "The changing environment is a grim reminder of the consequences of my actions. The pursuit of knowledge and power comes at a price, and the duchy is paying it in full."
-        jump inside_door_1
+    jump inside_door_1
 
 
 label shelf_6:
@@ -374,7 +374,7 @@ label shelf_6:
     "The Duchess, a woman of keen intellect and unwavering determination, has discovered my involvement in the duchy's plight. In a desperate bid to stop me, she dispatched the Duke and his men. They came in force, righteous fury in their eyes, swords drawn, ready to end my 'madness.'"
     "But they were not prepared for what awaited them. The creatures, my creations, descended upon them with a ferocity born of hunger and twisted instinct. The battle was a massacre, the Duke and his men torn asunder, their flesh consumed, their souls absorbed. The ground was soaked with blood, the air filled with screams and the sickening sounds of rending flesh."
     "The Duchess's grief turned to rage, her sorrow to a burning desire for vengeance. I have made an enemy of the one person who could have understood my quest. But there is no turning back now. The path is set, and I must follow it to its end, no matter the cost."
-        jump inside_door_1
+    jump inside_door_1
 
 label shelf_7:
     "Week 40: The Curse of Consumption"
@@ -382,7 +382,7 @@ label shelf_7:
     "I have observed this transformation with a mix of horror and fascination. The process is irreversible, a descent into madness and monstrosity. In my quest to understand the nature of life and death, I have unleashed a plague upon the land, a curse that turns men into monsters."
     "In a twisted experiment, I forced the transmutations to consume the corpses of their fallen brethren. The result was a horror beyond comprehension. The creatures became more grotesque, more powerful, their hunger for blood and consumption insatiable. They are no longer mere experiments; they are abominations, a testament to my hubris and folly."
     "The weight of my sins grows heavier with each passing day. The path to immortality is paved with the souls of the damned, and I am their architect."
-        jump inside_door_1
+    jump inside_door_1
 
 label shelf_8:
     "Week 42: The time has come to undertake the most crucial experiment of my life. The preparations are complete, and the path to the altar is clear, though fraught with danger. The creatures that roam the woods are a testament to my work's unintended consequences, and they will not take kindly to my intrusion."
@@ -390,17 +390,17 @@ label shelf_8:
     "The potion is ready, the ingredients combined with meticulous care. The ritual at the altar will be the final step, the moment where I either achieve immortality or succumb to the unknown. The thought of losing my memories, of forgetting who I am and what I've done, terrifies me. But the pursuit of knowledge, the quest for eternal life, demands sacrifice."
     "I will transcend. I must transcend. Should I succeed, I will emerge from the ritual reborn, my body restored to its youthful prime. Only then will I have the power to right these wrongs. Should I fail, I entrust this knowledge to whoever finds these scrolls. Use it wisely, for the power they contain is both wondrous and terrifying. May god have mercy on our souls."
     "To whoever reads this, know that my intentions were noble, even if my methods were flawed. I sought to conquer death, to unlock the secrets of the universe. Whether I am remembered as a hero or a monster, know that I did what I believed was necessary for the advancement of alchemy and the betterment of mankind."
-        jump inside_door_1
+    jump inside_door_1
 
 label inside_door_2:
     "Standing before the second door, you are taken aback by its complexity and beauty. The combination lock, an intricate mesh of gears and symbols, appears almost insurmountable. The assistant steps forward, a look of concentration etched on his face."
-    assistant: "This lock... the alchemist designed it himself. It's not just a barrier; it's a test. He used to say that only those who truly understand his work could access what lies beyond."
+    assistant "This lock... the alchemist designed it himself. It's not just a barrier; it's a test. He used to say that only those who truly understand his work could access what lies beyond."
     "The assistant carefully examines the lock, his fingers tracing the astrological signs and alchemical elements. He pauses occasionally, muttering to himself as he recalls lessons and conversations with the alchemist."
     "The assistant begins to manipulate the lock, aligning symbols and gears with a practiced hand. He seems to be following a sequence, a pattern known only to him and the alchemist."
-    assistant: "Each symbol here represents a key aspect of the alchemist's research... and his life. See, this one stands for the celestial alignment under which he made a groundbreaking discovery. And this one here symbolizes the element he believed was the essence of life."
+    assistant "Each symbol here represents a key aspect of the alchemist's research... and his life. See, this one stands for the celestial alignment under which he made a groundbreaking discovery. And this one here symbolizes the element he believed was the essence of life."
     "As he speaks, the gears of the lock begin to move more smoothly, clicking into place with satisfying precision. The complexity of the puzzle slowly unravels under his deft touch."
     "Finally, with a soft click, the last gear falls into place, and the lock releases. The door swings open, revealing the room beyond."
-    assistant: "There we go. He always said that understanding was the key to unlocking the world's mysteries. I guess he meant it quite literally in this case."
+    assistant "There we go. He always said that understanding was the key to unlocking the world's mysteries. I guess he meant it quite literally in this case."
     "As the door creaks open, you step into a realm that feels detached from the rest of the lair. The room is bathed in a soft, ethereal light, casting gentle shadows across the walls adorned with arcane symbols." 
     "In the center, a stand holds an elegant robe, a staff, and a ring, each item radiating a sense of power and history. Shelves lined with mysterious artifacts and a desk cluttered with magical paraphernalia suggest this room is a personal sanctuary for profound arcane work."
     menu:
@@ -481,20 +481,20 @@ label book_4:
     "The diaries and personal notes reveal a mind grappling with the consequences of its actions. The entries become more introspective and filled with doubt."
     "An entry dated about a month before your arrival at the lair speaks of deep regret and a longing for redemption. The alchemist writes of a growing realization that his quest for knowledge and power has led him astray from his original noble intentions."
     "The most recent entry speaks of a final experiment, one that would either restore everything to its rightful path or end in utter ruin. The alchemist writes of preparing to undertake this experiment himself."
-        jump inside_door_2
+    jump inside_door_2
 
 label artifacts:
     "Each artifact on the shelves has its own aura of mystery. A small box contains a set of runes that hum with power, a vial filled with a swirling galaxy-like substance, and a miniature model of a celestial orrery that moves on its own. These items are not just collectibles but tools and trophies of a life spent exploring the boundaries of reality. It's probably best not to touch them."
-        jump inside_door_2
+    jump inside_door_2
 
 label workbenchy:
     "The workbench is cluttered with ongoing experiments and inventions. Among them, a half-assembled device designed to harness elemental energies, and a series of crystalline lenses that seem to alter the fabric of reality when looked through. Notes scattered around suggest these projects were at the heart of the alchemist's current research."
-        jump inside_door_2
+    jump inside_door_2
 
 
 label achievements:
     "The wall displays a testament to a life of recognition and accomplishment. Each frame holds a certificate, a commendation, or a letter of appreciation from various magical institutions and societies. One particularly ornate certificate is from the Arcanum Magna, honoring the alchemist for groundbreaking research in transmutation."
-        jump achievements
+    jump achievements
 
 label inside_door_3:
     "The steel door's creak is a foreboding overture to the horrors within. As it swings open, a wave of cold, stale air rushes out, carrying with it the echoes of despair and suffering." 
@@ -550,22 +550,22 @@ label left_shelves:
     "A collection of bottles, each filled with a luminous red liquid that pulses gently, like a heartbeat. The liquid's viscosity and the way it clings to the glass suggest a powerful regenerative property. The label below is smudged but it appears to be an advanced healing potion."
     "Bottles of deep blue liquid, shimmering with an inner light that seems to dance and play. The fluid moves with an almost sentient grace, hinting at the potent magical energies contained within. The label below is smudged but it appears to be an advanced mana potion."
     "Small vials containing a clear, sparkling substance. The liquid appears to constantly shift between liquid and a fine mist. The label below documents it as an advanced agility potion."    
-        menu:
-            "Take the potions":
+    menu:
+        "Take the potions":
             $ advanced_healing_potions = + 3
             $ advanced_mana_potions = + 3
             $ advanced_agility_potions = + 3
-                jump inside_door_4
-            ##pls help UwU (make sure they can't take them again)##
-            "Look back around the room":
-                jump inside_door_4
+            jump inside_door_4
+        ##pls help UwU (make sure they can't take them again)##
+        "Look back around the room":
+            jump inside_door_4
 
 label right_shelves:
     "The ingredients on display are as varied as they are exotic. Some are common in alchemical practices, while others are rare and possibly dangerous. Notable among them are:"
     "Wolfsbane: Bundles of this dark, leafy plant are stored in sealed containers. Known for its potency in repelling malevolent creatures and its use in transformational potions, the wolfsbane here appears to be of an exceptionally high quality."
     "Phoenix Feather: A single, radiant feather, its colors shifting in the light. The feather exudes a warm, comforting energy, suggesting its use in powerful healing potions or perhaps in rituals of rebirth and renewal."
     "Dragon Scale Powder: A small, securely locked box contains this rare ingredient. The scales have been ground into a fine, iridescent powder that seems to absorb and reflect light in mesmerizing patterns. Its uses could range from fire-resistant potions to concoctions granting immense strength or resilience."
-        jump inside_door_4
+    jump inside_door_4
 
 label drawers:
     "Hidden among the more mundane supplies are items of a more personal nature:"
@@ -576,7 +576,7 @@ label drawers:
     "Next is a collection of letters, some with ink faded by time. They speak of concerns and warnings about the path of the alchemist's research. One unsigned note simply says, 'Remember why you started this journey.'"
     "Tucked into the corner of the furthest drawer, you find a locket."
     "The locket, once elegant, now shows signs of age. Inside is a miniature painting of a young woman, her eyes bright with intelligence and kindness. The inscription on the back reads 'To Alaric, with all my love - Elenor,'"
-        jump inside_door_4
+    jump inside_door_4
 
 
 label explore_basement:
@@ -624,7 +624,7 @@ label final_journey:
     "You reach out and gently remove the emerald stone from its forehead. The stone is warm to the touch, pulsating with a life force that resonates with your own. As you hold it, a sense of harmony fills you, a connection to the forest and its ancient magic."
     "The stag rises, its form starting to fade. Before it completely vanishes, it nods to you, a final gesture of respect. The clearing is silent once more, the only evidence of the encounter being the glowing stone in your hand."
     "With the first stone retrieved, you take a moment to reflect on the battle and the journey ahead. The forest seems to acknowledge your victory, the trees whispering words of encouragement. You set your sights on the next destination, the icy wasteland, where the serpent awaits."
-        jump serpent_journey
+    jump serpent_journey
 
 label serpent_journey:
     "Leaving the enchanted forest behind, your journey takes you to the frigid expanse of the icy wasteland. The transition from the lush forest to the barren, frozen landscape is jarring. The ground crunches underfoot, each step a reminder of the harsh environment that surrounds you."
@@ -652,7 +652,7 @@ label armadillo:
     "Approaching the fallen guardian, you reach out to the deep ruby stone embedded in its chest. As your fingers touch the stone, a surge of energy courses through you, a fiery warmth that contrasts the mountain's chill."
     "The creature's eyes meet yours, conveying a sense of respect and acknowledgment. Then, it fades into the mountain winds, leaving behind only the red stone in your grasp."
     "With the final stone in hand, you take a moment to reflect on the journey. The mountains, with their harsh beauty and unforgiving nature, have tested your resolve and strength. Now, with all three stones collected, you are ready to return to the alchemist's lair and face what lies beyond the sealed door."
-        jump final_return
+    jump final_return
 
 label final_return:
     "With the elemental stones in your possession, you make your way back to the alchemist's lair. The journey back feels different, almost surreal. Each step is laden with the weight of your impending confrontation. The lair, once a place of mystery and discovery, now feels like the threshold to a final, decisive battle."
@@ -664,11 +664,11 @@ label final_return:
     "The Ruby Stone: Finally, you insert the red stone into the armadillo-like creature's mural. A wave of warmth spreads, the mountain scene coming alive with the sounds of distant avalanches and the creature's resonant roar."
     "You stand at the brink, the darkness before you promising a challenge beyond any you've faced. A voice within warns you of the danger, a final admonition that this entity is unlike any other. It is not just a threat to your life, but to your very soul."
     "You understand that if you fall to this entity, there will be no return. Your soul could be consumed entirely, severed from the cycle of life and death you've come to understand. The stakes are higher than ever."
-        menu:
-            "Step into the darkness":
-                jump final_boss
-            "Turn back and strengthen yourself before the final confrontation":
-                jump alchemists_lair
+    menu:
+        "Step into the darkness":
+            jump final_boss
+        "Turn back and strengthen yourself before the final confrontation":
+            jump alchemists_lair
     
     
 label final_boss:
@@ -676,30 +676,30 @@ label final_boss:
     "As you step through the threshold, the darkness gives way to a chamber that defies all expectations. The room is vast, its walls etched with arcane symbols that pulse with a sickly light. The air is thick with a palpable sense of dread, and the very fabric of reality seems to warp and twist around you."
     "In the center of the chamber, the entity awaits. Its form changes, a reflection of the soul energy it has consumed."
 
-    if deaths = 0: ##define entity and figure this out for me UwU. Also in the combat add jump to final_scene##
+    if deaths == 0: ##define entity and figure this out for me UwU. Also in the combat add jump to final_scene##
         "This form is gaunt, its body a skeletal mockery of life. It moves with a desperate, frenzied hunger, its eyes hollow pits of longing. The air around it is cold, filled with the echoes of its starvation."
-        Entity: "So... fresh... untouched by death. Your soul... it calls to me... a feast long denied."
+        Entity "So... fresh... untouched by death. Your soul... it calls to me... a feast long denied."
         "Your hunger ends here, creature. I will not be your sustenance."
-            jump boss_1
-    if deaths <5&>1:
+        jump boss_1
+    if (deaths <= 5 and deaths >= 1):
         "The entity before you is flickering, its form a swirling mass of tortured souls. You can see faces, hear whispers of agony and despair. The entity's hunger is palpable, its desire for more soul energy almost tangible."
-        Entity: "More... I need more... Your deaths have fed me, but I am still so hungry. Give me your soul."
+        Entity "More... I need more... Your deaths have fed me, but I am still so hungry. Give me your soul."
         "You will feed no longer!"
-            jump boss_2
-    if deaths <13&>5:
+        jump boss_2
+    if (deaths <= 13 and deaths > 5):
         "The entity is a towering behemoth, radiating dark power. The air crackles with malevolent energy, and the very ground seems to recoil from its touch. Its presence assaults your mind, a constant barrage of corruption and madness."
-        Entity: "Yes... feel the power... the chaos... You've made me strong. Now, let us merge into one eternal nightmare."
+        Entity "Yes... feel the power... the chaos... You've made me strong. Now, let us merge into one eternal nightmare."
         "You're a blight, a corruption. I'll tear you apart, piece by piece."
-            jump boss_3
-    if deaths >13: 
+        jump boss_3
+    if (deaths > 13): 
         "In this form, the entity is a colossal monstrosity, its presence overwhelming. Reality buckles under its weight, and your mind fractures at the mere sight of it. The entity is a maelstrom of soul energy, each death having made it nigh unstoppable."
-        Entity: "I am eternal... infinite... You are but a drop in the ocean of souls I command. Surrender and become part of my dominion."
+        Entity "I am eternal... infinite... You are but a drop in the ocean of souls I command. Surrender and become part of my dominion."
         "No matter your strength, I will not yield. I fight for all those you've consumed!"
-            jump boss_4
+        jump boss_4
 
 
 label boss_1:
-    Entity: "You stand before me, a mere mortal, yet I can sense you seek understanding. Do you not fear what lies beyond your comprehension?"
+    Entity "You stand before me, a mere mortal, yet I can sense you seek understanding. Do you not fear what lies beyond your comprehension?"
     menu:
         "Fear? Yes, there's fear. But there's also a need to understand. What are you? Why are you here?":
             jump boss_1_1
@@ -714,41 +714,41 @@ label boss_1:
 label boss_1_1:
     "I am a being of ancient times, born from the chaos of creation. This realm... it was not my choice. Your kind, with their relentless pursuit of forbidden knowledge, they tore the veil and pulled me into your world. I am here because of your actions, your desires."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 label boss_1_2:
     "My story is as old as the cosmos. I am a remnant of a forgotten age, a time when realities were not so rigidly defined. An alchemist of this land, in his hubris, reached into the abyss. He sought power, and in doing so, he anchored me to your world, feeding me with the energy of countless souls."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 label boss_1_3:
     "Comprehension? You seek to understand what is beyond understanding. I am a consequence of your world's arrogance. The alchemist, in his quest for immortality, meddled with forces beyond his grasp. He bound me to this realm, a prison of his own making, sustained by the cycle of death and rebirth he created."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 label boss_2:
-    Entity: "You stand before me, a mere mortal, yet I can sense you seek understanding. Do you not fear what lies beyond your comprehension?"
+    Entity "You stand before me, a mere mortal, yet I can sense you seek understanding. Do you not fear what lies beyond your comprehension?"
     menu:
         "Fear? Yes, there's fear. But there's also a need to understand. What are you? Why are you here?":
             jump boss_2_1
@@ -762,42 +762,42 @@ label boss_2:
 label boss_2_1:
     "I am a being of ancient times, born from the chaos of creation. This realm... it was not my choice. Your kind, with their relentless pursuit of forbidden knowledge, they tore the veil and pulled me into your world. I am here because of your actions, your desires."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 label boss_2_2:
     "My story is as old as the cosmos. I am a remnant of a forgotten age, a time when realities were not so rigidly defined. An alchemist of this land, in his hubris, reached into the abyss. He sought power, and in doing so, he anchored me to your world, feeding me with the energy of countless souls."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 label boss_2_3:
     "Comprehension? You seek to understand what is beyond understanding. I am a consequence of your world's arrogance. The alchemist, in his quest for immortality, meddled with forces beyond his grasp. He bound me to this realm, a prison of his own making, sustained by the cycle of death and rebirth he created."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 
 label boss_3:
-    Entity: "You stand before me, a mere mortal, yet I can sense you seek understanding. Do you not fear what lies beyond your comprehension?"
+    Entity "You stand before me, a mere mortal, yet I can sense you seek understanding. Do you not fear what lies beyond your comprehension?"
     menu:
         "Fear? Yes, there's fear. But there's also a need to understand. What are you? Why are you here?":
             jump boss_3_1
@@ -811,42 +811,42 @@ label boss_3:
 label boss_3_1:
     "I am a being of ancient times, born from the chaos of creation. This realm... it was not my choice. Your kind, with their relentless pursuit of forbidden knowledge, they tore the veil and pulled me into your world. I am here because of your actions, your desires."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 label boss_3_2:
     "My story is as old as the cosmos. I am a remnant of a forgotten age, a time when realities were not so rigidly defined. An alchemist of this land, in his hubris, reached into the abyss. He sought power, and in doing so, he anchored me to your world, feeding me with the energy of countless souls."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 label boss_3_3:
     "Comprehension? You seek to understand what is beyond understanding. I am a consequence of your world's arrogance. The alchemist, in his quest for immortality, meddled with forces beyond his grasp. He bound me to this realm, a prison of his own making, sustained by the cycle of death and rebirth he created."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 
 label boss_4:
-    Entity: "You stand before me, a mere mortal, yet I can sense you seek understanding. Do you not fear what lies beyond your comprehension?"
+    Entity "You stand before me, a mere mortal, yet I can sense you seek understanding. Do you not fear what lies beyond your comprehension?"
     menu:
         "Fear? Yes, there's fear. But there's also a need to understand. What are you? Why are you here?":
             jump boss_4_1
@@ -860,43 +860,43 @@ label boss_4:
 label boss_4_1:
     "I am a being of ancient times, born from the chaos of creation. This realm... it was not my choice. Your kind, with their relentless pursuit of forbidden knowledge, they tore the veil and pulled me into your world. I am here because of your actions, your desires."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 label boss_4_2:
     "My story is as old as the cosmos. I am a remnant of a forgotten age, a time when realities were not so rigidly defined. An alchemist of this land, in his hubris, reached into the abyss. He sought power, and in doing so, he anchored me to your world, feeding me with the energy of countless souls."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 label boss_4_3:
     "Comprehension? You seek to understand what is beyond understanding. I am a consequence of your world's arrogance. The alchemist, in his quest for immortality, meddled with forces beyond his grasp. He bound me to this realm, a prison of his own making, sustained by the cycle of death and rebirth he created."
     "So, you're a prisoner? A victim of circumstance? But the souls, the destruction... there must be more to your purpose here."
-    Entity: "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
+    Entity "Prisoner? Victim? Such terms are meaningless to me. I am a force of nature, an embodiment of the void. The souls... they are my sustenance, drawn to me as moths to a flame. In this realm, I am bound by its rules, yet I transcend them. My purpose? It is simply to exist, to feed, to grow."
     "Existence at the cost of others... there's no justification for that. There has to be a balance, a way to coexist without this endless cycle of suffering."
-    Entity: "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
+    Entity "Justification? Balance? Your concepts are irrelevant to me. I exist beyond your morality, beyond your notions of right and wrong. Coexistence? There is no coexistence with the void. It consumes, it expands. Yet, you intrigue me, mortal. You challenge the inevitable."
     "Inevitable? Maybe. But challenging the inevitable is what we do. It's our nature to seek, to question, to defy. There has to be a way to end this cycle, to free both our worlds from this torment."
-    Entity: "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
+    Entity "Defy? You amuse me. Your defiance is but a flicker in the darkness. Yet, in your persistence, I sense a resonance. The alchemist, in his folly, bound me here, but he also bound you. You are a part of this cycle, a key to its perpetuation and, perhaps, its end. Too bad that your cycle will have to end here."
     "I'm glad we're in agreement. I'll break the cycle. I'll sever the ties that bind us. Your growth, your power, it ends here. I'll dismantle every piece of this cursed puzzle, starting with you."
-    Entity: "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
+    Entity "Dismantle me? I am not a mere machine to be taken apart. I am a force of nature, born from the darkest depths of human ambition. You cannot simply 'dismantle' what you do not fully understand. I tire of your presence mortal. Your journey ends here."
     ##combat##
 
 
 label final_scene:
     "As the entity shudders in its final moments, the air in the chamber grows still. The once overwhelming presence of the entity diminishes, its form dissolving into the ether. Its final words echo in the chamber, a whisper fading into silence."
-    Entity: "Wait... this energy... Alchemist?... Alchemist!... you have undone what was wrought... by your hand... I return... to the void... from whence I came... Remember... the cost... of ambition..."
+    Entity "Wait... this energy... Alchemist?... Alchemist!... you have undone what was wrought... by your hand... I return... to the void... from whence I came... Remember... the cost... of ambition..."
     "With those final words, the entity vanishes, leaving behind a palpable sense of peace. The oppressive energy that once filled the chamber dissipates, replaced by a gentle, almost hopeful, quiet."
     "In the weeks that follow, the eternal winter that had gripped the land begins to recede. Snow and ice melt away, revealing the dormant life beneath. The sun, once a distant memory, now bathes the land in warmth and light. Trees bud and flowers bloom, heralding the arrival of a long-awaited spring."
     "The aberrations, those twisted creatures born of the alchemist's experiments, find their rest. They vanish as if they were but shadows at dawn, leaving behind a world that slowly awakens from a nightmare. In their place, regular animals return, timid at first, but gradually reclaiming their rightful place in the natural order."

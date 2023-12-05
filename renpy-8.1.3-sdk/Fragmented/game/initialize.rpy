@@ -225,14 +225,11 @@
                 super().__init__(name, label, value, mana, type)
             def use_move(self, target):
                 global active_character
-
-                roll = random.random()
-                if roll <= 0.3:
-                    global agile = True
-                else:
-                    global agile = False
+                global agile
+                agile = True
+                narrator(str(agile))
                 agility_potion.use(1)
-                if (agility_potion <= 0):
+                if (agility_potion.count <= 0):
                     # Remove drink_agility_potion from player's moveset 
                     for i in player.moveset:
                         if i.name == "agility potion":
@@ -324,7 +321,6 @@
                         return True
                 return False
 
-        
         unarmed_attack = Attack("unarmed", "Unarmed attack", 25 + persistent.damageupgrade, 0, "enemy")
         slash = Attack("slash", "Slash", 90 + persistent.damageupgrade , 0, "enemy")
         enemySlash = Attack("slash", "Slash", 90, 0, "enemy")

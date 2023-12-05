@@ -180,7 +180,8 @@ label alchemists_lair_conversation:
 
     "Gratefully, you accept the vial, feeling its power pulse in your palm."
 
-    $ Potion_of_agility = True
+    $ agility_potion.add_count(1)
+    $ inventory.add_item(agility_potion)
   
     jump path_to_hell
 
@@ -206,7 +207,7 @@ label Sir_Hendrick:
             sir_hendrick " 'Your assistance is crucial. The empire seldom responds to our requests for assistance, but their yearly supply delivery was supposed to arrive two weeks ago. Our last confirmation that the supply train was safe was the village before Greenfield– something must have happened to the wagon train on its way to or in Greenfield. We’ll need you to go investigate so that we can find the supplies we desperately need, but the path is overrun with dangers. You'll need to be cautious and swift.'"
             "He hands you a list of the supplies and a small pouch of gold for any expenses."
             "You nod and prepare to leave for Greenfield."
-            $ gold += 100 
+            $ gold.add_count(100)
             jump supply_run_preparation
 
 

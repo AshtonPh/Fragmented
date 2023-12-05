@@ -44,9 +44,12 @@ label start:
     default inventory = Inventory([],0)
     default equipment = Equipment()
 
+    default agile = False
+
     $ inventory.empty()
     $ arrows.update_count(0)
     $ gold.update_count(0)
+    
 
     $ inventory.add_item(arrows)
     $ inventory.add_item(gold)
@@ -117,6 +120,7 @@ label start:
 
     "The growls grow louder, more insistent."
 
+    
     play music "combat.ogg" loop
 
     transform my_left:
@@ -136,6 +140,9 @@ label start:
     mc "I need to defend myself. But... I need answers. First, this castle. It beckons."
 
     call initialize
+    
+    $ agility_potion.add_count(1)
+    $ inventory.add_item(agility_potion)
 
     menu:
         "Choose your weapon:"
@@ -159,8 +166,8 @@ label start:
             mc "A mage's staff is in my hand. It pulses with arcane energy, ready to unleash its power."
     
     $ combat = "wolf"
-    $ change_bar2_values(100, 100, 0.2, 0.0, "Wolf1")
-    $ change_bar3_values(100, 100, 0.7, 0.0, "Wolf2")
+    $ change_bar2_values(100, 100, 0.2, 0.0, "Hungry Wolf")
+    $ change_bar3_values(100, 100, 0.7, 0.0, "Rabious Wolf")
     show screen bar1
     show screen bar2
     show screen bar3

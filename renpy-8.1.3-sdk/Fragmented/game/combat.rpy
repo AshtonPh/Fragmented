@@ -1,16 +1,19 @@
+
+
 label combat:
     hide screen inventory_screen
     python:
         import random
         import time
-
+        
+        inventory.check_for_item()
         player = Character("player", "Player", 1000 + persistent.healthupgrade, 100 + persistent.manaupgrade, 1, player_move_set, 1)
         person = player
         if mana_aware:
             renpy.show_screen("display_mana")
         renpy.show_screen("display_arrows")
-        wolf1 = Wolf("wolf1", "Wolf1",100, 50, 2, [enemySlash, bite], 2)
-        wolf2 = Wolf("wolf2", "Wolf2",100, 50, 2, [enemySlash, bite], 3)
+        wolf1 = Wolf("wolf1", "Hungry Wolf",100, 50, 2, [enemySlash, bite], 2)
+        wolf2 = Wolf("wolf2", "Rabious Wolf",100, 50, 2, [enemySlash, bite], 3)
         spider = Spider("spider", "Spider", 500, 50, 3, [venom], 2)
         bat1 = Bat("bat1", "Bat1", 100, 50, 2, [blood_suck, bite], 2)
         bat2 = Bat("bat2", "Bat2", 100, 50, 2, [blood_suck, bite], 3)
@@ -34,10 +37,11 @@ label combat:
 
         def combat_loop():
             first_load = True
+
+            global agile
             while True:
                 # update the active character
                 turn.active()
-
                 # check state for each chracter, if first turn ignore this
                 if first_load == True:
                     first_load = False
@@ -52,10 +56,15 @@ label combat:
                     active_character.use_move()
                     
                 else:
-                    # narrator("enemy turn")
-                    active_character.pick_move_npc()
-                    active_character.set_target(turn)
-                    active_character.use_move()
+                    narrator(str(agile))
+                    if agile == True:
+                        narrator("The enemy's attack failed to connect!")
+                        agile = False
+                    else:
+                        # narrator("enemy turn")
+                        active_character.pick_move_npc()
+                        active_character.set_target(turn)
+                        active_character.use_move()
 
                 # check state for each chracter
                 if turn.check_state() == True:
