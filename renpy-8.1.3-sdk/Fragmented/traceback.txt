@@ -1,19 +1,19 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 177, in script call
-    ranger " 'Sure you did. But out here, even the strongest can be overwhelmed. It's not just about skill; it's about survival. I'm Illyria. I'd prefer to meet you under better circumstances both those are few and far between around here these days.'"
+  File "game/script2.rpy", line 9, in script call
+    "You decide it's time to part ways with Illyria and head towards the castle that looms in the distance. The path is treacherous, and the snow grows deeper with every step."
   File "game/equipment.rpy", line 5, in script
     python:
   File "game/equipment.rpy", line 22, in <module>
-    if item_list.length >0:
-AttributeError: 'RevertableList' object has no attribute 'length'
+    if item not in equipment:
+TypeError: argument of type 'Equipment' is not iterable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 177, in script call
-    ranger " 'Sure you did. But out here, even the strongest can be overwhelmed. It's not just about skill; it's about survival. I'm Illyria. I'd prefer to meet you under better circumstances both those are few and far between around here these days.'"
+  File "game/script2.rpy", line 9, in script call
+    "You decide it's time to part ways with Illyria and head towards the castle that looms in the distance. The path is treacherous, and the snow grows deeper with every step."
   File "game/equipment.rpy", line 5, in script
     python:
   File "D:\Git-Huh\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
@@ -21,10 +21,10 @@ Full traceback:
   File "D:\Git-Huh\Fragmented\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
     exec(bytecode, globals, locals)
   File "game/equipment.rpy", line 22, in <module>
-    if item_list.length >0:
-AttributeError: 'RevertableList' object has no attribute 'length'
+    if item not in equipment:
+TypeError: argument of type 'Equipment' is not iterable
 
 Windows-10-10.0.22635 AMD64
 Ren'Py 8.1.3.23091805
 Fragmented 1.0
-Sun Dec  3 20:17:47 2023
+Tue Dec  5 12:34:15 2023

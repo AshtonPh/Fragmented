@@ -84,6 +84,7 @@ label combat:
 
 
         combat_loop()
+        renpy.show_screen("inventory_screen")
         if combat == "wolf":
             renpy.hide_screen("bar1")
             renpy.hide_screen("bar2")
@@ -112,4 +113,3 @@ label combat:
             renpy.hide_screen("display_arrows")
             renpy.jump("bandit_aftermath")
     
-    show screen inventory_screen

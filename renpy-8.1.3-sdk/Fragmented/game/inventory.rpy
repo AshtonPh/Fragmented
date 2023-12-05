@@ -45,7 +45,11 @@ init python:
                 for item in self.items:
                     if "ring" in item.key:
                         e_list.append(item)
-
+                        
+        # Empty inventory
+        def empty(self):
+            self.items.clear()
+            self.no_items = 0
                         
                         
 
@@ -73,6 +77,9 @@ init python:
         # Add to the count of the item (stackable items only)
         def add_count(self, count):
             self.count += count
+        
+        def update_count(self, count):
+            self.count = count 
 
         # Remove from the count of the item (stackable items only)
         def use(self, count):
@@ -87,6 +94,7 @@ init python:
             self.ring = None
 
         def equip(self, item, slot):
+            
             if slot == "armor":
                 if "armor" in item.key:
                     narrator("You equipped the " + item.name + ".")
@@ -98,11 +106,11 @@ init python:
                 if "weapon" in item.key:
                     self.weapon = item
                     adjust_moveset(item)
+                    
                     narrator("You equipped the " + item.name + ".")
                     
                 else:
                     narrator("You can't equip that item in that slot.")
-                self.weapon = item
             elif slot == "necklace":
                 if "necklace" in item.key:
                     narrator("You equipped the " + item.name + ".")
@@ -138,17 +146,50 @@ init python:
             if self.ring != None:
                 narrator("Ring: " + self.ring.name)
 
+        def unequip(self, slot):
+            if slot == "armor":
+                narrator("You unequipped the " + self.armor.name + ".")
+                self.armor = None
+            elif slot == "weapon":
+                narrator("You unequipped the " + self.weapon.name + ".")
+                self.weapon = None
+                player_move_set.clear()
+            elif slot == "necklace":
+                narrator("You unequipped the " + self.necklace.name + ".")
+                self.necklace = None
+            elif slot == "ring":
+                narrator("You unequipped the " + self.ring.name + ".")
+                self.ring = None
+            else:
+                narrator("That is not a valid slot.")
+        
+        def __iter__(self):
+            equipment = [self.armor, self.weapon, self.necklace, self.ring]
+            return iter(equipment)
         
     def adjust_moveset(equipment):
         player_move_set.clear()
         if equipment == short_sword:
+            slash.update_value(equipment.value)
             player_move_set.append(slash)
         if equipment == long_bow:
+            arrow.update_value(equipment.value)
             player_move_set.append(arrow)
-        if equipment == mage_staff:      
+        if equipment == mage_staff:
+            smash.update_value(round(equipment.value/2))
             player_move_set.append(smash)
+
+            fire_bolt.update_value(round(equipment.value * 1.5))
             player_move_set.append(fire_bolt)
-            player_move_set.append(heal_self)      
+
+            heal_self.update_value(round(equipment.value * 1.5))
+            player_move_set.append(heal_self)
+        if equipment == hunter_bow:
+            arrow.update_value(equipment.value)
+            player_move_set.append(arrow)
+        else:
+            pass 
+        player_move_set.append(unarmed_attack)
 
         
 

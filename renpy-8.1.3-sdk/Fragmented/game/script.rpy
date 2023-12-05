@@ -15,7 +15,7 @@ screen inventory_screen():
         textbutton "Inventory" action Call("equipment")
         yalign 0.74
         xalign 0.5
-        
+
 
 label start:
     if bullshit:
@@ -28,15 +28,35 @@ label start:
         "The game will automatically save for you at specific save points."
         "Have fun!"
     
+    
+
+    
+
     $ renpy.save("most_recent_save", "most_recent_save")
 
     # setting up some variables and objects, etc, at game start
     
     $ mana_aware = False
+    default player_move_set = []
     call initialize_screens from _call_initialize_screens
+    
     
     default inventory = Inventory([],0)
     default equipment = Equipment()
+
+    $ inventory.empty()
+    $ arrows.update_count(0)
+    $ gold.update_count(0)
+
+    $ inventory.add_item(arrows)
+    $ inventory.add_item(gold)
+    $ inventory.add_item(simple_clothes)
+    $ inventory.add_item(ring_of_vitality)
+    $ inventory.add_item(necklace_of_energy)
+
+    $ equipment.equip(simple_clothes, "armor")
+    $ equipment.equip(ring_of_vitality, "ring")
+    $ equipment.equip(necklace_of_energy, "necklace")
     # Scene starts with the snow-covered wasteland.
     scene bg_wasteland with fade
 
@@ -115,7 +135,7 @@ label start:
 
     mc "I need to defend myself. But... I need answers. First, this castle. It beckons."
 
-    call initialize from _call_initialize
+    call initialize
 
     menu:
         "Choose your weapon:"
@@ -127,7 +147,7 @@ label start:
         "A Long Bow":
             $ weapon = "long bow"
             $ arrows.add_count(20)
-            $ inventory.add_item(arrows)
+            
             $ inventory.add_item(long_bow)
             $ equipment.equip(long_bow, "weapon")
             mc "A long bow is strapped to my back, with a quiver full of arrows. It's perfect for long-range attacks."
@@ -400,19 +420,16 @@ label Illyria_cabin:
         "A healing potion would be useful.":
             "Illyria nods and hands you a small vial filled with a glowing, green liquid."
             Illyria "This should help mend your wounds and restore your strength. Be careful out there."
-            $ player_healing_potion = True
             $ minor_health_potion.add_count(1)
             $ inventory.add_item(minor_health_potion)
 
         "I could use a bow and some arrows.":
             "Illyria smiles and hands you a well-crafted bow along with a quiver full of arrows."
             Illyria "A good choice for keeping dangers at a distance. There are 24 arrows; use them wisely."
-            $ player_bow = True
-            $ player_arrows = 24
             $ arrows.add_count(24)
+            $ inventory.add_item(hunter_bow)
 
     "You thank Illyria for her generosity. The comfort of the cabin and the warmth of the fire make it hard to leave, but the journey ahead calls."
-    $ inventory.list_items()
     jump journey_to_castle
 
 

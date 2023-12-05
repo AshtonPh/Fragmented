@@ -562,6 +562,10 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
+            text "Story written by Toby Mise and ChatGPT 4.0"
+            text "Art made by Thanh Nam Pham with Adobe Firefly and Fusion Brain"
+            text "Programmed by Alexander Matta and Thanh Nam Phanm"
+            text " "
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 

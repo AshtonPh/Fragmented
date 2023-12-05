@@ -144,6 +144,8 @@
                     active_character.mana -= self.mana
                     renpy.show_screen("bar1")
                     renpy.with_statement(vpunch)
+            def update_value(self, new_value):
+                self.value = new_value
 
         class Arrow(Move):
             def __init__(self, name, label, value, mana, type):
@@ -161,6 +163,8 @@
                     renpy.show_screen("bar1")
                     renpy.with_statement(vpunch)
                     arrows.use(1)
+            def update_value(self, new_value):
+                self.value = new_value
 
         class Bloodsuck(Move):
             def __init__(self, name, label, value, mana, type):
@@ -168,7 +172,7 @@
             def use_move(self, target):
                 global active_character
                 if active_character.mana < self.mana:
-                    pnarrator("Move Fails, Not Enough Mana" + "{w=0.5}{nw}")
+                    narrator("Move Fails, Not Enough Mana" + "{w=0.5}{nw}")
                 else:
                     narrator(active_character.name + " uses " + active_character.selected_move.name + " on " + active_character.target_character.name + "{w=0.5}{nw}")
                     active_character.mana -= self.mana
@@ -192,6 +196,8 @@
                         target.hp = target.maxhp
                     else:
                         target.hp = target.hp + self.value
+            def update_value(self, new_value):
+                self.value = new_value
                 
         class Use_item(Move):
             def __init__(self, name, label, value, mana, type):
@@ -276,8 +282,9 @@
                         return True
                 return False
 
-
-        slash = Attack("slash", "Slash", 90 + persistent.damageupgrade, 0, "enemy")
+        
+        unarmed_attack = Attack("unarmed", "Unarmed attack", 25 + persistent.damageupgrade, 0, "enemy")
+        slash = Attack("slash", "Slash", 90 + persistent.damageupgrade , 0, "enemy")
         enemySlash = Attack("slash", "Slash", 90, 0, "enemy")
         arrow = Arrow("arrow", "Arrow", 90 + persistent.damageupgrade, 0, "enemy")
         bite = Attack("bite", "Bite", 20, 0, "enemy")
@@ -289,7 +296,7 @@
         blood_suck = Bloodsuck("blood suck", "Blood Suck", 50, 10, "enemy")
         stab = Attack("stab", "Stab", 100 + persistent.damageupgrade, 0, "enemy")
 
-        player_move_set = []
+        
 
         #player = Character("player", "Player",1000, 100, 1, player_move_set, 1)
 

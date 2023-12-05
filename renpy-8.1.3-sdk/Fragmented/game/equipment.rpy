@@ -4,6 +4,7 @@ label equipment:
     
     python:
         inventory.list_items()
+        equipment.list_equipment()
         narrator("Would you like to adjust your equipment?", interact=False)
         e_choice = renpy.display_menu([("Yes",True), ("No",False)])
         if e_choice:
@@ -18,12 +19,18 @@ label equipment:
                     # Check if the item has the key e_choice in its key value
                     if e_choice in item.key:
                         # Add the item to the list as a tuple with the name and the item itself
-                        item_list.append((item.name, item))
+                        if item not in equipment.__iter__():
+                            item_list.append((item.name, item))
+                
                 if not item_list:
                     narrator("You have no items of that type.")
                 else:
+                    item_list.append(("Unequip", False))
                     e = renpy.display_menu(item_list)
-                    equipment.equip(e, e_choice)
+                    if e:
+                        equipment.equip(e, e_choice)
+                    else:
+                        equipment.unequip(e_choice)
             else:
                 pass
         else:
