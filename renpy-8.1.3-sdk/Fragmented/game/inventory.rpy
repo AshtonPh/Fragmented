@@ -8,6 +8,7 @@ init python:
         def add_item(self, item):
             self.items.append(item)
             self.no_items += 1
+            self.check_for_item()
 
         # Remove an item from the inventory
         def remove_item(self, item):
@@ -45,11 +46,20 @@ init python:
                 for item in self.items:
                     if "ring" in item.key:
                         e_list.append(item)
-                        
+
         # Empty inventory
         def empty(self):
             self.items.clear()
             self.no_items = 0
+
+
+        def check_for_item(self):
+            for item in self.items:
+                if item.name == "Minor Health Potion":
+                    player_move_set.append(drink_minor_health_potion)
+                    break
+                else:
+                    pass
                         
                         
 

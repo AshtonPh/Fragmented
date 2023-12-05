@@ -198,7 +198,28 @@
                         target.hp = target.hp + self.value
             def update_value(self, new_value):
                 self.value = new_value
+        
+        class Health_potion(Move):
+            def __init__(self, name, label, value, mana, type):
+                super().__init__(name, label, value, mana, type)
+            def use_move(self, target):
+                global active_character
+
+                if (target.hp + self.value > target.maxhp):
+                    target.hp = target.maxhp
+                else:
+                    target.hp = target.hp + self.value
                 
+                minor_health_potion.use(1)
+                if (minor_health_potion.count <= 0):
+                    # Remove drink_minor_health_potion from player's moveset 
+                    for i in player.moveset:
+                        if i.name == "minor health potion":
+                            player.moveset.remove(i)
+                            break
+            def update_value(self, new_value):
+                self.value = new_value
+
         class Use_item(Move):
             def __init__(self, name, label, value, mana, type):
                 super().__init__(name, label, value, mana, type)
@@ -295,6 +316,7 @@
         heal_self = Heal("heal self", "Heal Self", 150, 50, "self")
         blood_suck = Bloodsuck("blood suck", "Blood Suck", 50, 10, "enemy")
         stab = Attack("stab", "Stab", 100 + persistent.damageupgrade, 0, "enemy")
+        drink_minor_health_potion = Health_potion("minor health potion", "Drink Minor Health Potion", 100, 0, "self")
 
         
 
