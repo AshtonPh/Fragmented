@@ -46,7 +46,17 @@ label battle_ice_incubus:
     "As you step forward, the ice incubus emits a chilling howl, a sound that seems to freeze the very air. Its movements are swift and graceful, each step leaving a trail of frost in its wake."
 
     "You ready your weapon, your breath visible in the cold air. The incubus lunges, its claws extended, aiming to ensnare you in its icy grasp."
-    ##Insert Combat##
+
+    $ combat = "incubus"
+    $ change_bar1_values(player.maxhp, player.maxhp, 0.1, 0.7, "Player")
+    $ change_bar2_values(1380, 1380, 0.5, 0.0, "Ice incubus")
+
+    show screen bar1
+    show screen bar2
+
+    jump combat
+
+label defeat_ice_incubus:
 
     "Finally, with a well-placed blow, the incubus shatters into a thousand pieces, its form dissipating like mist. The air around you warms slightly, the oppressive cold lifting as the guardian falls."
 
