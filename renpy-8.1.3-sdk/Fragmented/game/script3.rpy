@@ -274,6 +274,10 @@ label monster_hunt_preparation:
             sir_hendrick "Certainly! Follow me, it’s down at the end of this hall."
             jump armory
 
+        "I’m ready to face the beast.":
+            sir_hendrick "Very well. I’ll lead you to the forest where it was last seen. Be careful, it’s a dangerous creature."
+            jump monster_preparation_2
+
 
 
 

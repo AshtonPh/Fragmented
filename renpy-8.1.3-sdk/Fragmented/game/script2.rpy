@@ -208,7 +208,7 @@ label Sir_Hendrick:
             "He hands you a list of the supplies and a small pouch of gold for any expenses."
             "You nod and prepare to leave for Greenfield."
             $ gold.add_count(100)
-            jump supply_run_preparation
+            jump monster_hunt_preparation
 
 
 label fortify_defenses:
