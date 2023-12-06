@@ -53,7 +53,7 @@ label village_shop:
                         "You don't have enough gold for that."
                 "Nevermind.":
                     pass
-
+            jump village_shop
         "Do you have any arrows":
             "He shows you a variety of arrows."
             shopkeeper "All arrows come as a sheath of twelve. We sell standard arrows for five gold."
@@ -67,6 +67,7 @@ label village_shop:
                         "You don't have enough gold for that."
                 "Nevermind.":
                     pass
+            jump village_shop
                     
 
 
@@ -90,12 +91,14 @@ label village_shop:
                         "You purchase the Agility Potion, though you hope you won’t need it anytime soon."
                     else:
                         "You don't have enough gold for that."
+            jump village_shop
+        "That’ll be all, thanks.":
+            jump thats_all
 
-    "That’ll be all, thanks."
+label thats_all:
+"With your purchases complete, you thank the shopkeeper and step back into the village, better equipped for your journey."
+    jump main_village
 
-    "With your purchases complete, you thank the shopkeeper and step back into the village, better equipped for your journey."
-
-    return
 
 
 label tavern_gossip:
