@@ -241,7 +241,7 @@ init python:
     throwing_knives = Items("Throwing Knives", "Small but deadly", 0, "consumable", 100)
     standard_health_potion = Items("Standard Health Potion", "A potion that heals a moderate amount of health", 0, "consumable", 300)
     greater_elixir = Items("Greater Elixir", "A potion that heals a large amount of health", 0, "consumable", 800)
-    strengh_potion = Items("Strength Potion", "A potion that increases your strength two fold", 0, "consumable", 2)
+    strength_potion = Items("Strength Potion", "A potion that increases your strength two fold", 0, "consumable", 2)
 
     # Non-stackable items (unique items)
     short_sword = Items("Short Sword", "An old short sword that may still have some uses", 1, "melee_weapon", 90)

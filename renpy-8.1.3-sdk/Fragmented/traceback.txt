@@ -1,38 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/combat.rpy", line 5, in script
-    python:
-  File "game/combat.rpy", line 99, in <module>
-    combat_loop()
-  File "game/combat.rpy", line 57, in combat_loop
-    active_character.use_move()
-  File "game/initialize.rpy", line 55, in use_move
-    self.selected_move.use_move(self.target_character)
-  File "game/initialize.rpy", line 220, in use_move
-    if i.name == mana.name:
-NameError: name 'mana' is not defined
+  File "game/script4.rpy", line 137, in script
+    assistant "Have we met before? You seem... familiar."
+Exception: Sayer b'assistant' is not a function or string.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/combat.rpy", line 5, in script
-    python:
-  File "D:\Git-Huh\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\Git-Huh\Fragmented\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/combat.rpy", line 99, in <module>
-    combat_loop()
-  File "game/combat.rpy", line 57, in combat_loop
-    active_character.use_move()
-  File "game/initialize.rpy", line 55, in use_move
-    self.selected_move.use_move(self.target_character)
-  File "game/initialize.rpy", line 220, in use_move
-    if i.name == mana.name:
-NameError: name 'mana' is not defined
+  File "game/script4.rpy", line 137, in script
+    assistant "Have we met before? You seem... familiar."
+  File "D:\Git-Huh\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 907, in execute
+    raise Exception("Sayer %s is not a function or string." % self.who.encode("utf-8"))
+Exception: Sayer b'assistant' is not a function or string.
 
 Windows-10-10.0.22635 AMD64
 Ren'Py 8.1.3.23091805
 Fragmented 1.0
-Tue Dec  5 18:15:17 2023
+Tue Dec  5 20:17:14 2023

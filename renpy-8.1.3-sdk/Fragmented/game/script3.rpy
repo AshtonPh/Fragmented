@@ -8,6 +8,8 @@ define woman = Character("Woman", color = "#ff7f7fee")
 
 define bandit_leader = Character("Bandit Leader", color = "#d70202ee")
 
+define monster = Character("Monster", color = "#ffd97fee")
+
 
 
 label arrive_at_village_main_path:
@@ -262,6 +264,7 @@ label post_fortification:
 
 
 label monster_hunt_preparation:
+    
     menu:
         "Can you tell me more about this creature?":
             sir_hendrick "It's a fearsome beast, large and covered in disgusting, warped skin. Its eyes glow red in the darkness, and it has been attacking travelers and villagers without warning. It’s fast– almost nobody who’s seen it has lived to tell the tale, and it seems to have an uncanny ability to avoid arrows and the like."
@@ -269,7 +272,7 @@ label monster_hunt_preparation:
 
         "What's the reward for dealing with this creature?":
             sir_hendrick "The Duchy will be in your debt. We can offer you a substantial sum of gold, and you'll have the gratitude of our people. Before you go, if you’d like to take a look around the armory you can take something to help you face the beast."
-            $ armory= True
+            $ armory = True
             ##The point of this is when it returns to the dialogue tree the armory is now available##
             return
         

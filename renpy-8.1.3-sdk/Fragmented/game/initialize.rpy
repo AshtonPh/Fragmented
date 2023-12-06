@@ -383,7 +383,7 @@
         heal_limb = Heal("heal limb", "Heal Limb", 20, 0, "friendly")
         heal_self = Heal("heal self", "Heal Self", 150, 50, "self")
         blood_suck = Bloodsuck("blood suck", "Blood Suck", 50, 10, "enemy")
-        stab = Attack("stab", "Stab", 100 + persistent.damageupgrade, 0, "enemy")
+        stab = Attack("stab", "Stab", 100, 0, "enemy")
         drink_minor_health_potion = Health_potion("Minor Health Potion", "Drink Minor Health Potion", 100, minor_health_potion, "self")
         drink_standard_health_potion = Health_potion("Standard Health Potion", "Drink Standard Health Potion", 300, standard_health_potion, "self")
         drink_greater_elixir = Health_potion("Greater Elixir", "Drink Greater Elixir", 800, greater_elixir, "self")
