@@ -1,6 +1,7 @@
 
 define shopkeeper = Character("Shopkeeper", color = "#c8c8c8ff")
 define bartender = Character("Bartender", color = "#7f9bffee")
+define assistant = Character("Assistant", color = "#7fffffee")
 
 
 label main_village:
@@ -35,47 +36,64 @@ label village_shop:
             shopkeeper "We have standard healing potions for 10 gold, and the stronger elixirs for 20 gold. Which would you prefer?"
             menu:
                 "Standard Healing Potion (10 gold)":
-                    $ player_gold -= 10
-                    $ player_healing_potions += 1
-                    "You hand over the coins and take the potion, feeling reassured by its presence."
-                "Stronger Elixir (20 gold)":
-                    $ player_gold -= 20
-                    $ player_stronger_elixirs += 1
-                    "You exchange more coins for the potent elixir, hoping it'll come in handy."
+                    if gold.count >= 10:
+                        $ gold.use(10)
+                        $ standard_health_potion.add_count(1)
+                        $ inventory.add_item(standard_health_potion)
+                        "You hand over the coins and take the potion, feeling reassured by its presence."
+                    else:
+                        "You don't have enough gold for that."
+                "Greater Elixir (20 gold)":
+                    if gold.count >= 20:
+                        $ gold.use(20)
+                        $ greater_elixir.add_count(1)
+                        $ inventory.add_item(greater_elixir)
+                        "You hand over the coins and take the elixir, feeling its power thrum through your fingers."
+                    else:
+                        "You don't have enough gold for that."
+                "Nevermind.":
+                    pass
 
-        "Do you have any special arrows?":
+        "Do you have any arrows":
             "He shows you a variety of arrows."
-            shopkeeper "All arrows come as a sheath of twelve. We sell standard arrows for five gold, have fire-tipped arrows for 15 gold a set, and ice arrows for 20 gold a set. Your choice."
+            shopkeeper "All arrows come as a sheath of twelve. We sell standard arrows for five gold."
             menu:
                 "Standard Arrows (5 gold)":
-                    $ gold -= 5
-                    $ arrow_count += 5
-                    "You can never go wrong with good old regular arrows. They’re cheap and always serve you well."
-                "Fire-Tipped Arrows (15 gold)":
-                    $ gold -= 15
-                    $ player_fire_arrows += 5
-                    "You purchase the fire-tipped arrows, feeling their warmth even through the quiver."
-                "Ice Arrows (20 gold)":
-                    $ gold -= 20
-                    $ player_ice_arrows += 5
-                    "You opt for the ice arrows, their tips glistening coldly."
+                    if gold.count >= 5:
+                        $ gold.use(5)
+                        $ arrows.add_count(12)
+                        "You hand over the coins and take the arrows, feeling their weight in your hands."
+                    else:
+                        "You don't have enough gold for that."
+                "Nevermind.":
+                    pass
+                    
+
 
         "Any potions for enhancing abilities?":
             "His eyes gleam as he presents two potions."
             shopkeeper "For the discerning adventurer, I have a Strength Potion and an Agility Potion, each for 25 gold."
             menu:
                 "Strength Potion (25 gold)":
-                    $ gold -= 25
-                    $ player_strength_potion = True
-                    "You purchase the Strength Potion, though you hope you won’t need it anytime soon."
+                    if gold.count >= 25:
+                        $ gold.use(25)
+                        $ strength_potion.add_count(1)
+                        $ inventory.add_item(strength_potion)
+                        "You purchase the Strength Potion, though you hope you won’t need it anytime soon."
+                    else:
+                        "You don't have enough gold for that."
                 "Agility Potion (25 gold)":
-                    $ gold -= 25
-                    $ player_agility_potion = True
-                    "You choose the Agility Potion, anticipating the swiftness it will grant."
+                    if gold.count >= 25:
+                        $ gold.use(25)
+                        $ agility_potion.add_count(1)
+                        $ inventory.add_item(agility_potion)
+                        "You purchase the Agility Potion, though you hope you won’t need it anytime soon."
+                    else:
+                        "You don't have enough gold for that."
 
-        "That’ll be all, thanks."
+    "That’ll be all, thanks."
 
-        "With your purchases complete, you thank the shopkeeper and step back into the village, better equipped for your journey."
+    "With your purchases complete, you thank the shopkeeper and step back into the village, better equipped for your journey."
 
     return
 
@@ -97,7 +115,7 @@ label tavern_gossip:
             "You approach the bartender, a burly man with a friendly demeanor."
             bartender "What'll it be? Ale?"
             "Just an ale, please."
-            $ gold -= 2
+            $ gold.use(1)
             "He pours you a frothy ale. You take a sip, savoring the rich flavor. Before you know it, you’ve downed the whole flagon."
             bartender "Ha! I haven’t seen someone with vigor like that in a long time. Stay as long as you’d like!"
 
@@ -132,7 +150,6 @@ label tavern_ale:
             jump main_village
 
         "Go get the man an ale":
-
             jump assistant_questions
 
         ##Sorry nam you’ll have to figure out some way to make you able to buy the ale for the assistant and not yourself##
@@ -185,30 +202,18 @@ label armory:
     menu:
         "A magic sword, glowing with an inner light.":
             "You pick up the sword, feeling its power thrum through your fingers. It's light, yet deadly, a perfect balance of grace and strength."
-            $ magic_sword = True
+            $ inventory.add_item(magic_sword)
             "Sir Hendrick nods approvingly."
             sir_hendrick "A fine choice. That sword has felled many a foul creature."
 
         "A new magic staff, pulsing with arcane energy.":
             "The staff calls to you, its energy resonating with your own. As you grasp it, a surge of power flows through you, awakening latent abilities."
-            $ armory_staff = True
+            $ inventory.add_item(arcane_staff)
             "Sir Hendrick smiles."
             sir_hendrick "Ah, a wise choice for those who understand the mysteries of magic."
 
-    "Next to the weapons, a small chest catches your eye, containing two unique items."
 
     menu:
-        "A mysterious amulet, pulsing with the power of the wind.":
-            "The amulet is light, almost ethereal. As you put it on, you feel a gentle breeze, as if the wind itself is protecting you."
-            $ wind_amulet = True
-            sir_hendrick "Good eye. That amulet has been an heirloom to the Duchy for many generations. Normally, I would never think of letting a commoner touch it, lest wear it, but these are grim times and I’d rather see it used by you than sitting in a chest in a fallen Duchy."
-            return 
-
-        "A strong chainmail vest, gleaming in the torchlight":
-            "You slip on the vest, and it fits to your chest perfectly. You try and move around, test out your weapons, and you find that you can move freely and that it doesn’t slow you down."
-            sir_hendrick "Good eye. That vest belonged to the late Duke. It served him well in many a battle." 
-            $ chainmail_vest = True
-            return
 
         "I'll take on this challenge. Where was it last seen?": 
             sir_hendrick "Brave decision. The last sighting was near the old mill in the woods. Be cautious, it's a dangerous foe."
@@ -328,6 +333,7 @@ label duchess_old_mill_arrival:
 
     "Suddenly, a noise from the upper floor breaks the silence, a reminder that you are not alone in this forsaken place."
 
+    
     jump old_mill_monster_encounter
 
 

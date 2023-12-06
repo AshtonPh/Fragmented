@@ -123,6 +123,15 @@
                         if i.name == "player":
                             self.target_character = i
 
+        class Monster(Character):
+            def __init__(self, name, label, hp, mana, friend_code, moveset, healthbarnumber):
+                super().__init__(name, label, hp, mana, friend_code, moveset, healthbarnumber)
+            def set_target(self, turn_system):
+                if self.name != "player":
+                    for i in turn_system.order:
+                        if i.name == "player":
+                            self.target_character = i
+
         class Move():
             def __init__(self, name, label, value, mana, type):
                 self.name = name
@@ -205,16 +214,20 @@
             def use_move(self, target):
                 global active_character
 
+                narrator("You healed for " + str(self.value) + " health" + "{w=0.5}{nw}"))
                 if (target.hp + self.value > target.maxhp):
                     target.hp = target.maxhp
                 else:
                     target.hp = target.hp + self.value
                 
-                minor_health_potion.use(1)
-                if (minor_health_potion.count <= 0):
-                    # Remove drink_minor_health_potion from player's moveset 
+                # loop through inventory and use the item matching name with self.cost
+                for i in inventory.__iter__():
+                    if i.name == self.mana.name:
+                        i.use(1)
+                        break
+                if (self.mana.count <= 0):
                     for i in player.moveset:
-                        if i.name == "minor health potion":
+                        if i.name == self.mana.name:
                             player.moveset.remove(i)
                             break
             def update_value(self, new_value):
@@ -226,13 +239,35 @@
             def use_move(self, target):
                 global active_character
                 global agile
+                global counter
                 agile = True
-                narrator(str(agile))
+                counter = 2
                 agility_potion.use(1)
                 if (agility_potion.count <= 0):
                     # Remove drink_agility_potion from player's moveset 
                     for i in player.moveset:
                         if i.name == "agility potion":
+                            player.moveset.remove(i)
+                            break
+            def update_value(self, new_value):
+                self.value = new_value
+        
+        class Strength_potion(Move):
+            def __init__(self, name, label, value, mana, type):
+                super().__init__(name, label, value, mana, type)
+            def use_move(self, target):
+                global active_character
+                
+                global strength
+                for i in player.moveset:
+                    if isinstance(i, Attack):
+                        i.update_value(round(i.value *2))
+                strength = True
+                strengh_potion.use(1)
+                if (strenth_potion.count <= 0):
+                    # Remove drink_agility_potion from player's moveset 
+                    for i in player.moveset:
+                        if i.name == "strength potion":
                             player.moveset.remove(i)
                             break
             def update_value(self, new_value):
@@ -244,7 +279,23 @@
             def use_move(self, target):
                 global active_character
                 
+        class Throw_knife(Move):
+            def __init__(self, name, label, value, mana, type):
+                super().__init__(name, label, value, mana, type)
+            def use_move(self, target):
+                global active_character
                 
+                target.hp = target.hp - self.value
+                
+                throwing_knives.use(1)
+                if (throwing_knives <= 0):
+                    # Remove drink_minor_health_potion from player's moveset 
+                    for i in player.moveset:
+                        if i.name == "throw knife":
+                            player.moveset.remove(i)
+                            break
+            def update_value(self, new_value):
+                self.value = new_value        
 
         class Turn():
             def __init__(self, order):
@@ -327,18 +378,21 @@
         arrow = Arrow("arrow", "Arrow", 90 + persistent.damageupgrade, 0, "enemy")
         bite = Attack("bite", "Bite", 20, 0, "enemy")
         smash = Attack("smash", "Smash", 20 + persistent.damageupgrade, 0, "enemy")
-        fire_bolt = Attack("fire bolt", "Fire Bolt", 80 + persistent.damageupgrade, 20, "enemy")
+        fire_bolt = Attack("fire bolt", "Fire Bolt", 80 + persistent.damageupgrade, 30, "enemy")
         venom = Attack("venom", "Venom", 150, 0, "enemy")
         heal_limb = Heal("heal limb", "Heal Limb", 20, 0, "friendly")
         heal_self = Heal("heal self", "Heal Self", 150, 50, "self")
         blood_suck = Bloodsuck("blood suck", "Blood Suck", 50, 10, "enemy")
         stab = Attack("stab", "Stab", 100 + persistent.damageupgrade, 0, "enemy")
-        drink_minor_health_potion = Health_potion("minor health potion", "Drink Minor Health Potion", 100, 0, "self")
+        drink_minor_health_potion = Health_potion("Minor Health Potion", "Drink Minor Health Potion", 100, minor_health_potion, "self")
+        drink_standard_health_potion = Health_potion("Standard Health Potion", "Drink Standard Health Potion", 300, standard_health_potion, "self")
+        drink_greater_elixir = Health_potion("Greater Elixir", "Drink Greater Elixir", 800, greater_elixir, "self")
         drink_agility_potion = Agility_potion("agility potion", "Drink Agility Potion", 0, 0, "self")
-
-        
-
+        throw_knife = Throw_knife("throw knife", "Throw Knife", 125 + persistent.damageupgrade, 0, "enemy")
+        drink_strength_potion = Strength_potion("strength potion", "Drink Strength Potion", 0, 0, "self")
+        magic_thrust = Attack("Magic thrust", "Magic Thrust", 100 + persistent.damageupgrade, 0, "enemy")
+        magic_blast = Attack("Magic blast", "Magic Blast", 200 + persistent.damageupgrade, 15 , "enemy")
         #player = Character("player", "Player",1000, 100, 1, player_move_set, 1)
 
-
+        enemyMagicBlast = Attack("Magic blast", "Magic Blast", 200, 15 , "enemy")
     return

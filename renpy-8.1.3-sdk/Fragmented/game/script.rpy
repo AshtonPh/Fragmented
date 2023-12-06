@@ -45,6 +45,8 @@ label start:
     default equipment = Equipment()
 
     default agile = False
+    default strength = False
+    default counter = 0
 
     $ inventory.empty()
     $ arrows.update_count(0)
@@ -141,8 +143,6 @@ label start:
 
     call initialize
     
-    $ agility_potion.add_count(1)
-    $ inventory.add_item(agility_potion)
 
     menu:
         "Choose your weapon:"

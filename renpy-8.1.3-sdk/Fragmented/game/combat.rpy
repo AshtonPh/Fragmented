@@ -21,7 +21,7 @@ label combat:
         bandit1 = Bandit("bandit1", "Bandit1", 200, 50, 2, [stab, enemySlash], 2)
         bandit2 = Bandit("bandit2", "Bandit2", 200, 50, 2, [stab, enemySlash], 3)
 
-
+        mill_monster = Monster("mill_monster", "Hideous Monster", 1000, 500, 2, [bite, enemyMagicBlast], 2)
 
         
         if combat == "wolf":
@@ -32,6 +32,8 @@ label combat:
             turn = Turn([bat1, bat2, player])
         elif combat == "bandits":
             turn = Turn([bandit1, bandit2, player])
+        elif combat == "millMonster":
+            turn = Turn([player, mill_monster])
 
         
 
@@ -39,6 +41,8 @@ label combat:
             first_load = True
 
             global agile
+            global counter
+            global strength
             while True:
                 # update the active character
                 turn.active()
@@ -54,12 +58,19 @@ label combat:
                     active_character.pick_move_player()
                     active_character.set_target(turn)
                     active_character.use_move()
+                    if strength == True:
+                        strength = False
+                        for i in player.moveset:
+                            if isinstance(i, Attack):
+                                i.update_value(round(i.value /2))
                     
                 else:
-                    narrator(str(agile))
                     if agile == True:
                         narrator("The enemy's attack failed to connect!")
-                        agile = False
+                        if counter > 0:
+                            counter -= 1
+                        if counter == 0:
+                            agile = False    
                     else:
                         # narrator("enemy turn")
                         active_character.pick_move_npc()
@@ -122,4 +133,10 @@ label combat:
             renpy.hide_screen("display_mana")
             renpy.hide_screen("display_arrows")
             renpy.jump("bandit_aftermath")
+        elif combat == "millMonster":
+            renpy.hide_screen("bar1")
+            renpy.hide_screen("bar2")
+            renpy.hide_screen("display_mana")
+            renpy.hide_screen("display_arrows")
+            renpy.jump("post_monster_fight")
     

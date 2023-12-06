@@ -6,9 +6,12 @@ init python:
 
         # Adding an item to the inventory
         def add_item(self, item):
-            self.items.append(item)
-            self.no_items += 1
-            self.check_for_item()
+            if item in self.items:
+                pass
+            else:
+                self.items.append(item)
+                self.no_items += 1
+                self.check_for_item()
 
         # Remove an item from the inventory
         def remove_item(self, item):
@@ -55,11 +58,20 @@ init python:
 
         def check_for_item(self):
             for item in self.items: 
-                if item.name == "Minor Health Potion" and item.count >= 1:
+                if item.name == "Minor Health Potion" and item.count >= 1 and drink_minor_health_potion not in player_move_set:
                     player_move_set.append(drink_minor_health_potion)
                     pass
-                if item.name == "Agility Potion" and item.count >= 1:
+                if item.name == "Agility Potion" and item.count >= 1 and drink_agility_potion not in player_move_set:
                     player_move_set.append(drink_agility_potion)
+                    pass
+                if item.name == "Throwing Knives" and item.count >= 1 and throw_knife not in player_move_set:
+                    player_move_set.append(throw_knife)
+                    pass
+                if item.name == "Standard Health Potion" and item.count >= 1 and drink_standard_health_potion not in player_move_set:
+                    player_move_set.append(drink_standard_health_potion)
+                    pass
+                if item.name == "Greater Elixir" and item.count >= 1 and drink_greater_elixir not in player_move_set:
+                    player_move_set.append(drink_greater_elixir)
                     pass
                 else:
                     pass
@@ -200,6 +212,21 @@ init python:
         if equipment == hunter_bow:
             arrow.update_value(equipment.value)
             player_move_set.append(arrow)
+        if equipment == magic_sword:
+            magic_thrust.update_value(equipment.value)
+            player_move_set.append(magic_thrust)
+
+            fire_bolt.update_value(round(equipment.value * 1.2))
+            player_move_set.append(fire_bolt)
+        
+        if equipment == arcane_staff:
+            smash.update_value(round(equipment.value/2))
+            player_move_set.append(smash)
+
+            magic_blast.update_value(round(equipment.value * 1.5))
+            player_move_set.append(magic_blast)
+
+
         else:
             pass 
         player_move_set.append(unarmed_attack)
@@ -211,15 +238,18 @@ init python:
     arrows = Items("Arrows", "Ammunition of the bow", 0, "arrows", 0)
     minor_health_potion = Items("Minor Health Potion", "A potion that heals a small amount of health", 0, "consumable", 100)
     agility_potion = Items("Agility Potion", "Faster than the wind", 0, "consumable", 30)
-
-
+    throwing_knives = Items("Throwing Knives", "Small but deadly", 0, "consumable", 100)
+    standard_health_potion = Items("Standard Health Potion", "A potion that heals a moderate amount of health", 0, "consumable", 300)
+    greater_elixir = Items("Greater Elixir", "A potion that heals a large amount of health", 0, "consumable", 800)
+    strengh_potion = Items("Strength Potion", "A potion that increases your strength two fold", 0, "consumable", 2)
 
     # Non-stackable items (unique items)
     short_sword = Items("Short Sword", "An old short sword that may still have some uses", 1, "melee_weapon", 90)
     long_bow = Items("Long Bow", "A old long bow that still have some shots left in it", 1, "ranged_weapon", 90)
     mage_staff = Items("Mage's Staff", "An old staff with some basic spells", 1, "magic_weapon", 80)
     hunter_bow = Items("Hunter's Bow", "One of Illyria's many trusty bows", 1, "ranged_weapon", 100)
-
+    magic_sword = Items("Magic Sword", "A sword that has been imbued with magic", 1, "melee_weapon", 150)
+    arcane_staff = Items("Arcane Staff", "A staff that has been imbued with magic", 1, "magic_weapon", 120) 
 
     # Test equipment
     simple_clothes = Items("Simple Clothes", "Simple clothes that are easy to move in", 1, "simple_armor", 10)

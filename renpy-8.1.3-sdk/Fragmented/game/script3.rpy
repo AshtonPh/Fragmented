@@ -81,8 +81,11 @@ label bandit_aftermath:
     
 
     play music "ambient.ogg" loop
-    $ Throwing_Knives = 5
-    $ gold += 15
+
+    $ throwing_knives.add_count(5)
+    $ inventory.add_item(throwing_knives)
+
+    $ gold.add_count(15)
     jump fortify_village_walls
 
 
@@ -237,7 +240,7 @@ label post_fortification:
     duchess "As promised, your reward. But more than that, you have our gratitude."
 
     "She hands you the pouch, the weight of the coins a tangible reminder of your efforts."
-    $ gold += 50
+    $ gold.add_count(50)
 
     mc "Thank you, Duchess. It was an honor to help."
 

@@ -24,7 +24,14 @@ label old_mill_monster_encounter:
 
     "The creature lunges forward, its movements a blur of malice and fury."
 
-    jump monster_combat ##add combat##
+    $ combat = "millMonster"
+
+    $ change_bar1_values(player.maxhp, player.maxhp, 0.1, 0.7, "Player")
+    $ change_bar2_values(1000, 500, 0.5, 0.0, "Hideous Monster")
+
+    show screen bar1
+    show screen bar2
+    jump combat
 
 
 label post_monster_fight:
