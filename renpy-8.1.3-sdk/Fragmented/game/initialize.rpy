@@ -392,6 +392,9 @@
         drink_strength_potion = Strength_potion("strength potion", "Drink Strength Potion", 0, 0, "self")
         magic_thrust = Attack("Magic thrust", "Magic Thrust", 100 + persistent.damageupgrade, 0, "enemy")
         magic_blast = Attack("Magic blast", "Magic Blast", 200 + persistent.damageupgrade, 15 , "enemy")
+
+        suck = Attack("Suck", "Suck", 69, 10, "enemy")
+        blow = Attack("Lick", "Lick", 420, 0, "enemy")
         #player = Character("player", "Player",1000, 100, 1, player_move_set, 1)
 
         enemyMagicBlast = Attack("Magic blast", "Magic Blast", 200, 15 , "enemy")

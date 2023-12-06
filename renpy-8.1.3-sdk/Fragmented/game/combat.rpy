@@ -23,6 +23,8 @@ label combat:
 
         mill_monster = Monster("mill_monster", "Hideous Monster", 1000, 500, 2, [bite, enemyMagicBlast], 2)
 
+        incubus = Monster("incubus", "Incubus", 1380, 420, 2, [suck, blow], 2)
+
         
         if combat == "wolf":
             turn = Turn([player, wolf1, wolf2])
@@ -34,6 +36,9 @@ label combat:
             turn = Turn([bandit1, bandit2, player])
         elif combat == "millMonster":
             turn = Turn([player, mill_monster])
+        elif combat == "incubus":
+            turn = Turn([player, incubus])
+
 
         
 
