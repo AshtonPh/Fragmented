@@ -66,6 +66,12 @@ label start:
     default small_table = False
     default more_frantic_annotations = False
 
+    default vial_1 = False
+    default vial_2 = False
+    default vial_3 = False
+    default vial_4 = False
+    default vial_5 = False
+
     default armory = False
     default seal = False
     default assistant = False

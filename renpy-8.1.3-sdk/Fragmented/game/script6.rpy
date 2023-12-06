@@ -128,19 +128,19 @@ label examine_vials:
     "You carefully pick up each vial, examining its contents and pondering its purpose. The variety is astounding, each one seemingly holding a different mystery." 
 ##It should stop you from looking at the vials again once you grab each one##
     menu:
-        "Vial 1":
+        "Vial 1" if vial_1 == False:
             jump vial_1
 
-        "Vial 2":
+        "Vial 2" if vial_2 == False:
             jump vial_2
 
-        "Vial 3":
+        "Vial 3" if vial_3 == False:
             jump vial_3
 
-        "Vial 4":
+        "Vial 4" if vial_4 == False:
             jump vial_4
 
-        "Vial 5":
+        "Vial 5" if vial_5 == False:
             jump vial_5
 
         "Look at other things in the area":
