@@ -206,13 +206,13 @@ label read_writings:
 
     menu:
         "Scroll 1":
-            jump Scroll_1
+            jump scroll_1
         "Scroll 2":
-            jump Scroll_2
+            jump scroll_2
         "Scroll 3":
-            jump Scroll_3
+            jump scroll_3
         "Scroll 4":
-            jump Scroll_4
+            jump scroll_4
 
         "Look at other things in the area":
             jump explore_experimental_area
