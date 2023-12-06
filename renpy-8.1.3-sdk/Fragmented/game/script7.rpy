@@ -44,6 +44,8 @@ label upper_level_choice:
             jump observatory
         "Go to Sanctuary":
             jump sanctuary
+        "Return to the main chamber":
+            jump alchemists_lair
         ##### LOOK AT ME EHEHHEHEHHE plz
         # todo "return to lower level"
         
