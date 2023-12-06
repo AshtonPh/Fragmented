@@ -51,7 +51,7 @@ label post_monster_fight:
     mc "We'll face whatever comes. Together."
 
     "The Duchess nods. Together, you exit the mill, leaving the shadows of the ruined mill behind."
-        jump back_with_duchess
+    jump back_with_duchess
 
 label back_with_duchess:
     "The battle at the old mill has left its mark, both physically and emotionally. As you walk back through the forest with the Duchess, there's a sense of shared accomplishment and relief."
@@ -65,8 +65,8 @@ label back_with_duchess:
     "The Duchess smiles, a genuine expression of gratitude and respect."
     duchess "Thank you. With your help, I believe we can restore our duchy to its former glory, and perhaps... find even greater peace."
     "The walk back is filled with plans and promises, a shared vision of a brighter future. As you part ways at the edge of the forest, you feel a renewed sense of purpose and a deep connection to the land and its people."
-        jump main_village
-        
+    jump main_village
+
 
 
 
