@@ -56,12 +56,11 @@ label start:
     $ inventory.add_item(arrows)
     $ inventory.add_item(gold)
     $ inventory.add_item(simple_clothes)
-    $ inventory.add_item(ring_of_vitality)
-    $ inventory.add_item(necklace_of_energy)
 
     $ equipment.equip(simple_clothes, "armor")
-    $ equipment.equip(ring_of_vitality, "ring")
-    $ equipment.equip(necklace_of_energy, "necklace")
+
+    default armory = False
+
     # Scene starts with the snow-covered wasteland.
     scene bg_wasteland with fade
 

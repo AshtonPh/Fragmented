@@ -202,7 +202,7 @@ label Sir_Hendrick:
             jump fortify_defenses
 
 
-        "Help with the missing supplies.":
+        "Help kill the monster that has been terrorizing the old mill.":
             "Sir Hendrick looks relieved."
             sir_hendrick " 'Your assistance is crucial. The empire seldom responds to our requests for assistance, but their yearly supply delivery was supposed to arrive two weeks ago. Our last confirmation that the supply train was safe was the village before Greenfield– something must have happened to the wagon train on its way to or in Greenfield. We’ll need you to go investigate so that we can find the supplies we desperately need, but the path is overrun with dangers. You'll need to be cautious and swift.'"
             "He hands you a list of the supplies and a small pouch of gold for any expenses."
