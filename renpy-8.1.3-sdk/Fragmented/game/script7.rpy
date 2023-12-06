@@ -1,13 +1,7 @@
 ﻿
 # upper level initial narration + variable initialization
 label explore_upper_levels:
-    # Put these elsewhere
-    default libary_intro = True
-    default observatory_intro = True
-    default sanctuary_intro = True
-    default libary_time = 0
-    default small_table = False
-    default more_frantic_annotations = False
+    
 
     "As the staircase ends, you step into a surprisingly serene and well-lit space, a stark contrast to the lair's lower levels. The upper floor unfolds before you, divided into distinct areas, each revealing a different aspect of the alchemist's life."
 

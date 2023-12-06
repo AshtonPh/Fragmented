@@ -59,6 +59,13 @@ label start:
 
     $ equipment.equip(simple_clothes, "armor")
 
+    default libary_intro = True
+    default observatory_intro = True
+    default sanctuary_intro = True
+    default libary_time = 0
+    default small_table = False
+    default more_frantic_annotations = False
+
     default armory = False
     default seal = False
     default assistant = False

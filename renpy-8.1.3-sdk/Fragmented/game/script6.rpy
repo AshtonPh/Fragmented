@@ -195,7 +195,7 @@ label vial_5:
     menu:
         "Take the vial":
             "You grab the vial and slip it into your bag, hoping it will serve you well."
-            $ vial_4 = True
+            $ vial_5 = True
             jump explore_experimental_area
 
         "Look at the other vials":
