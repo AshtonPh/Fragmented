@@ -18,8 +18,29 @@ label path_to_hell:
         "Turn back and reconsider your approach.":
             "The sight of the incubus gives you pause. Perhaps there is wisdom in retreat, to regroup and approach this challenge with a better plan."
             jump main_village
-        ##Only if with the assistant##
-        "Talk to the Alchemist’s assitant." if assistant == True:
+        
+
+label path_to_hell_with_assistant:
+    "The journey to the alchemist's lair is a descent into a world forgotten by light. The path, shrouded in a perpetual twilight, winds through desolate foothills, each step a defiance against the land's despair."
+
+    "As you navigate the treacherous terrain, the air grows colder, the ground harder. The trees, twisted and bare, claw at the sky like desperate hands. The silence is a heavy cloak, smothering all but the most distant, haunting cries."
+
+    "The path finally opens up to reveal the lair's entrance: a sunken, craggy maw at the base of a towering, ominous mountain. The entrance, framed by jagged rocks, looks like the gaping mouth of some ancient, petrified beast."
+
+    "The entrance to the lair looms before you, a gateway to untold dangers and the promise of a confrontation that could change the fate of the duchy forever."
+
+    "Guarding the entrance is an ice incubus, a creature of nightmares. Its skin is a translucent blue, veins visible beneath like frozen rivers. Its eyes, cold and unblinking, fixate on you with predatory interest. Icicles hang from its elongated limbs, each movement a symphony of chilling whispers."
+
+    "The air around the incubus crackles with a frigid aura, the ground at its feet frosted over, as if its very presence leeches the warmth from the world."
+
+    menu:
+        "Face the ice incubus.":
+            "Determined to confront the alchemist, you steel yourself for battle against the chilling guardian. The incubus, sensing your resolve, readies itself for combat."
+            jump battle_ice_incubus
+        "Turn back and reconsider your approach.":
+            "The sight of the incubus gives you pause. Perhaps there is wisdom in retreat, to regroup and approach this challenge with a better plan."
+            jump main_village
+        "Talk to the Alchemist’s assistant.":
             "The assistant, a hint of fear in his voice, whispers about a hidden path around the back of the mountain, leading to another entrance."
             "You weigh your options, considering the potential risks and rewards of this less direct approach."
             menu:
@@ -283,7 +304,7 @@ label door_2:
     menu:
         "Check out the other doors":
             jump choose_a_door
-        "Turn to the alchemist's assistant" if with_assistant == True:
+        "Turn to the alchemist's assistant" if assistant == True:
             jump inside_door_2
 
 label door_3:

@@ -74,7 +74,7 @@ label start:
 
     default armory = False
     default seal = False
-    default with_assistant = False
+    default assistant = False
     # Scene starts with the snow-covered wasteland.
     scene bg_wasteland with fade
 
