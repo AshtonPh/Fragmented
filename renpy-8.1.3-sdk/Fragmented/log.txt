@@ -1,4 +1,4 @@
-Tue Dec  5 20:44:33 2023
+Tue Dec  5 21:13:47 2023
 Windows-10-10.0.22635
 Ren'Py 8.1.3.23091805
  
@@ -7,8 +7,8 @@ Bootstrap to the start of init.init. took 0.03s
 Early init. took 0.00s
 Loader init. took 0.04s
 Loading error handling. took 0.03s
-Loading script. took 0.22s
-Loading save slot metadata. took 0.03s
+Loading script. took 0.34s
+Loading save slot metadata. took 0.05s
 Loading persistent. took 0.00s
 Running init code. took 0.05s
 Loading analysis data. took 0.01s
@@ -23,19 +23,19 @@ Initial gc. took 0.02s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.21s
+Creating interface object. took 0.24s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.05s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.08s
+Interface start. took 0.09s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -46,4 +46,20 @@ Renderer: b'NVIDIA GeForce RTX 3050 Ti Laptop GPU/PCIe/SSE2'
 Version: b'4.6.0 NVIDIA 545.84'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script4.rpy", line 192, in script
+    jump path_to_hell_with_assistant
+  File "D:\Git-Huh\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 1992, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\Git-Huh\Fragmented\renpy-8.1.3-sdk\renpy\script.py", line 1013, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'path_to_hell_with_assistant'.
+
+While running game code:
+  File "game/script4.rpy", line 192, in script
+    jump path_to_hell_with_assistant
+ScriptError: could not find label 'path_to_hell_with_assistant'.
+Screen sizes: virtual=(1920, 1080) physical=(738, 415) drawable=(738, 415)
 Maximum texture size: 4096x4096

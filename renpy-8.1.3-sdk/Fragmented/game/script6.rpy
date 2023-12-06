@@ -283,7 +283,7 @@ label door_2:
     menu:
         "Check out the other doors":
             jump choose_a_door
-        "Turn to the alchemist's assistant" if assistant == True:
+        "Turn to the alchemist's assistant" if with_assistant == True:
             jump inside_door_2
 
 label door_3:

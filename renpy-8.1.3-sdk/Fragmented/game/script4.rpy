@@ -134,6 +134,7 @@ label assistant_encounter:
         "You sit across from the assistant, a man with a weathered face marked by years of toil and worry. His eyes, deep-set and shadowed, narrow slightly as he studies your features. There's a certain intelligence in his gaze, reminiscent of a scholar who has seen much yet understands little of the world's whims."
         "His hair, unkempt and streaked with grey, falls haphazardly over his forehead. His hands, rough and stained with ink, fidget nervously on the table as he leans in, an air of curiosity mingling with caution in his demeanor."
 
+        
         assistant "Have we met before? You seem... familiar."
 
         if seal == True:
@@ -187,7 +188,7 @@ label assistant_questions:
 
             menu: 
                 "Will you come with me to the alchemist’s lair?":
-                    $ assistant = True
+                    $ with_assistant = True
                     jump path_to_hell_with_assistant
                 "Thanks for the information. I’ll be heading out now":
                     jump main_village
