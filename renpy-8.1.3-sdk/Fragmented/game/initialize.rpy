@@ -214,7 +214,7 @@
             def use_move(self, target):
                 global active_character
 
-                narrator("You healed for " + str(self.value) + " health" + "{w=0.5}{nw}"))
+                narrator("You healed for " + str(self.value) + " health" ))
                 if (target.hp + self.value > target.maxhp):
                     target.hp = target.maxhp
                 else:
