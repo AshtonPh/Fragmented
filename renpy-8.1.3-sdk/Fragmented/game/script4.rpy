@@ -133,7 +133,6 @@ label tavern_gossip:
 label assistant_encounter:
         "You sit across from the assistant, a man with a weathered face marked by years of toil and worry. His eyes, deep-set and shadowed, narrow slightly as he studies your features. There's a certain intelligence in his gaze, reminiscent of a scholar who has seen much yet understands little of the world's whims."
         "His hair, unkempt and streaked with grey, falls haphazardly over his forehead. His hands, rough and stained with ink, fidget nervously on the table as he leans in, an air of curiosity mingling with caution in his demeanor."
-
         assistant "Have we met before? You seem... familiar."
 
         if seal == True:
@@ -169,18 +168,18 @@ label assistant_questions:
             assistant "Experiments that defied nature. We were merging flesh and machine, bending the will of the elements, transmuting the lives of the flora and fauna."
             "His voice drops to a whisper."
             assistant "But at the heart of it all was the pursuit of deathlessness, a quest that consumed the alchemist."
-
+            jump assistant_questions
         "Where did all of this happen?":
             assistant "Ah, the lair. It's a place of twisted magic and dark science. Hidden deep within the cursed lands, it's a labyrinth of his madness."
             "He shivers slightly."
             assistant "The lair is protected by his creations, each more grotesque than the last."
-    
+            jump assistant_questions
 
         "Was there any success in these experiments?":
             assistant "Success and failure are intertwined. Yes, there were breakthroughs, but at a terrible cost. The alchemist lost his humanity in the process. His failed experiments couldn’t be contained– they started prowling the night, terrorizing the people and changing the landscape."
             "He looks at you intently."
             assistant "He became something else, something... inhuman."
-
+            jump assistant_questions
         "How can I find the alchemist now?":
             assistant "After I found out the true nature of the experiments, he cast me out when I protested his methods. He attempted one final experiment, to become a being who rules over death itself. He hasn’t been seen nor have more aberrations come from his lair, so god willing the experiment killed him."
             assistant "Still, it would be worth it to visit his lair. We might be able to glean some information of what happened to him, or how to stop his nightmares from terrorizing the populace."
