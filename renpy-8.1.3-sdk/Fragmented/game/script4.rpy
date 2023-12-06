@@ -96,7 +96,7 @@ label village_shop:
             jump thats_all
 
 label thats_all:
-"With your purchases complete, you thank the shopkeeper and step back into the village, better equipped for your journey."
+    "With your purchases complete, you thank the shopkeeper and step back into the village, better equipped for your journey."
     jump main_village
 
 

@@ -60,7 +60,8 @@ label start:
     $ equipment.equip(simple_clothes, "armor")
 
     default armory = False
-
+    default seal = False
+    default assistant = False
     # Scene starts with the snow-covered wasteland.
     scene bg_wasteland with fade
 
