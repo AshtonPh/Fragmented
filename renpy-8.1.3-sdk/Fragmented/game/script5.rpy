@@ -51,6 +51,22 @@ label post_monster_fight:
     mc "We'll face whatever comes. Together."
 
     "The Duchess nods. Together, you exit the mill, leaving the shadows of the ruined mill behind."
+        jump back_with_duchess
+
+label back_with_duchess:
+    "The battle at the old mill has left its mark, both physically and emotionally. As you walk back through the forest with the Duchess, there's a sense of shared accomplishment and relief."
+    duchess "That was a fearsome creature. Your courage in the face of such evil... it gives me hope."
+    "The forest around you seems to have taken on a new life, the sunlight filtering through the trees a little brighter, the air a bit fresher."
+    "The Duchess stops, turning to face you. She reaches into her cloak and pulls out a small, intricately crafted ring."
+    duchess "I want you to have this. It belonged to my husband, the duke. He was a brave man, much like you. I believe he would have wanted you to have it."
+    "The ring is elegant, yet sturdy, crafted from silver with a small, but vibrant, gemstone set in the center."
+    duchess "There's still much to do. The land is healing, but the scars run deep. We'll need strong hearts and willing hands to rebuild."
+    mc "I'll be here, every step of the way. Whatever you need, you can count on me."
+    "The Duchess smiles, a genuine expression of gratitude and respect."
+    duchess "Thank you. With your help, I believe we can restore our duchy to its former glory, and perhaps... find even greater peace."
+    "The walk back is filled with plans and promises, a shared vision of a brighter future. As you part ways at the edge of the forest, you feel a renewed sense of purpose and a deep connection to the land and its people."
+        jump main_village
+        
 
 
 
