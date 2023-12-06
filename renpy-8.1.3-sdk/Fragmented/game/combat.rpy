@@ -144,4 +144,9 @@ label combat:
             renpy.hide_screen("display_mana")
             renpy.hide_screen("display_arrows")
             renpy.jump("post_monster_fight")
-    
+        elif combat == "incubus":
+            renpy.hide_screen("bar1")
+            renpy.hide_screen("bar2")
+            renpy.hide_screen("display_mana")
+            renpy.hide_screen("display_arrows")
+            renpy.jump("defeat_ice_incubus")

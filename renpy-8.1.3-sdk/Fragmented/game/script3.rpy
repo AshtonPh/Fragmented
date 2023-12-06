@@ -273,8 +273,8 @@ label monster_hunt_preparation:
         "What's the reward for dealing with this creature?":
             sir_hendrick "The Duchy will be in your debt. We can offer you a substantial sum of gold, and you'll have the gratitude of our people. Before you go, if you’d like to take a look around the armory you can take something to help you face the beast."
             $ armory = True
-            ##The point of this is when it returns to the dialogue tree the armory is now available##
-            return
+
+            jump monster_hunt_preparation
         
         "I’ll go check out the armory." if armory == True:
             sir_hendrick "Certainly! Follow me, it’s down at the end of this hall."
