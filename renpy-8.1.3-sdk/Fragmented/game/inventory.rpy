@@ -73,6 +73,10 @@ init python:
                 if item.name == "Greater Elixir" and item.count >= 1 and drink_greater_elixir not in player_move_set:
                     player_move_set.append(drink_greater_elixir)
                     pass
+
+                if item.name == "Strength Potion" and item.count >= 1 and drink_strength_potion not in player_move_set:
+                    player_move_set.append(drink_strength_potion)
+                    pass
                 else:
                     pass
                         
@@ -195,35 +199,35 @@ init python:
     def adjust_moveset(equipment):
         player_move_set.clear()
         if equipment == short_sword:
-            slash.update_value(equipment.value)
+            slash.update_value(equipment.value + persistent.damageupgrade)
             player_move_set.append(slash)
         if equipment == long_bow:
-            arrow.update_value(equipment.value)
+            arrow.update_value(equipment.value + persistent.damageupgrade)
             player_move_set.append(arrow)
         if equipment == mage_staff:
-            smash.update_value(round(equipment.value/2))
+            smash.update_value(round(equipment.value/2) + persistent.damageupgrade)
             player_move_set.append(smash)
 
-            fire_bolt.update_value(round(equipment.value * 1.5))
+            fire_bolt.update_value(round(equipment.value * 1.5) + persistent.damageupgrade)
             player_move_set.append(fire_bolt)
 
-            heal_self.update_value(round(equipment.value * 1.5))
+            heal_self.update_value(round(equipment.value * 1.5) + persistent.damageupgrade)
             player_move_set.append(heal_self)
         if equipment == hunter_bow:
-            arrow.update_value(equipment.value)
+            arrow.update_value(equipment.value + persistent.damageupgrade)
             player_move_set.append(arrow)
         if equipment == magic_sword:
-            magic_thrust.update_value(equipment.value)
+            magic_thrust.update_value(equipment.value +persistent.damageupgrade)
             player_move_set.append(magic_thrust)
 
-            fire_bolt.update_value(round(equipment.value * 1.2))
+            fire_bolt.update_value(round(equipment.value * 1.2) + persistent.damageupgrade)
             player_move_set.append(fire_bolt)
         
         if equipment == arcane_staff:
-            smash.update_value(round(equipment.value/2))
+            smash.update_value(round(equipment.value/2) + persistent.damageupgrade)
             player_move_set.append(smash)
 
-            magic_blast.update_value(round(equipment.value * 1.5))
+            magic_blast.update_value(round(equipment.value * 1.5) + persistent.damageupgrade)
             player_move_set.append(magic_blast)
 
 
