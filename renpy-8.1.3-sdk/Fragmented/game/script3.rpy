@@ -50,8 +50,8 @@ label arrive_at_village_main_path:
             $ combat = "bandits"
 
             $ change_bar1_values(player.maxhp, player.maxhp, 0.1, 0.7, "Player")
-            $ change_bar2_values(200, 50, 0.2, 0.0, "Bandit1")
-            $ change_bar3_values(200, 50, 0.7, 0.0, "Bandit2")
+            $ change_bar2_values(200, 200, 0.2, 0.0, "Bandit1")
+            $ change_bar3_values(200, 200, 0.7, 0.0, "Bandit2")
             show screen bar1
             show screen bar2
             show screen bar3
@@ -257,27 +257,26 @@ label post_fortification:
             mc "I’ll go see if I can help Sir Hendrick with anything else. There might be more I can do to aid the duchy."
             duchess "A wise decision. Sir Hendrick will surely appreciate your assistance. Return when you are ready to proceed."
             jump Sir_Hendrick
+        "I think I'll go seek out the alchemist's assistant at the main village":
+            jump visit_town
+
 
 label monster_hunt_preparation:
     menu:
         "Can you tell me more about this creature?":
             sir_hendrick "It's a fearsome beast, large and covered in disgusting, warped skin. Its eyes glow red in the darkness, and it has been attacking travelers and villagers without warning. It’s fast– almost nobody who’s seen it has lived to tell the tale, and it seems to have an uncanny ability to avoid arrows and the like."
-            jump monster_hunt_preparation
+            return
 
         "What's the reward for dealing with this creature?":
             sir_hendrick "The Duchy will be in your debt. We can offer you a substantial sum of gold, and you'll have the gratitude of our people. Before you go, if you’d like to take a look around the armory you can take something to help you face the beast."
             $ armory= True
             ##The point of this is when it returns to the dialogue tree the armory is now available##
-            jump monster_hunt_preparation
+            return
         
         "I’ll go check out the armory." if armory == True:
             sir_hendrick "Certainly! Follow me, it’s down at the end of this hall."
             jump armory
-
-        "I’m ready to face the beast.":
-            sir_hendrick "Very well. I’ll lead you to the forest where it was last seen. Be careful, it’s a dangerous creature."
-            jump monster_preparation_2
-
+        
 
 
 

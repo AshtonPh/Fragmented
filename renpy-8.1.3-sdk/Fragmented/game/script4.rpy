@@ -96,7 +96,7 @@ label village_shop:
             jump thats_all
 
 label thats_all:
-"With your purchases complete, you thank the shopkeeper and step back into the village, better equipped for your journey."
+    "With your purchases complete, you thank the shopkeeper and step back into the village, better equipped for your journey."
     jump main_village
 
 
@@ -113,7 +113,7 @@ label tavern_gossip:
             "You lean back and tune into the conversations around you."
             "One table discusses a recent monster sighting near the old bridge, while another group argues about the best way to avoid the alchemist's cursed creatures."
             "A lone traveler at the bar mutters about barely escaping a horde of creatures near Greenfield."
-            return
+            jump tavern_gossip
         "Ask the bartender for an ale and information.":
             "You approach the bartender, a burly man with a friendly demeanor."
             bartender "What'll it be? Ale?"
@@ -121,7 +121,7 @@ label tavern_gossip:
             $ gold.use(1)
             "He pours you a frothy ale. You take a sip, savoring the rich flavor. Before you know it, you’ve downed the whole flagon."
             bartender "Ha! I haven’t seen someone with vigor like that in a long time. Stay as long as you’d like!"
-
+            jump tavern_gossip
         "Leave the tavern":
             jump main_village
         
@@ -191,7 +191,7 @@ label assistant_questions:
                 "Thanks for the information. I’ll be heading out now":
                     jump main_village
 
-            return
+           
 
 
 label armory:
