@@ -605,7 +605,10 @@ label explore_basement:
     "You take a step back, gathering your thoughts. The task ahead is monumental, yet it feels like an integral part of your destiny. You must find the elemental stones, face the guardians, and unlock the secrets that lie beyond this door. But first, you must prepare for the trials that await, both mentally and physically."
     menu:
         "Touch the door":
-            jump door_visions
+            jump toby_continue
+
+label toby_continue:
+    "To be continued..."
 
 label door_visions:
     "Compelled by a force beyond your understanding, you reach out and touch the door. The moment your skin contacts the cold surface, a rush of visions engulfs your mind, each one more vivid than the last."
