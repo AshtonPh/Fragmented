@@ -27,7 +27,7 @@ label old_mill_monster_encounter:
     $ combat = "millMonster"
 
     $ change_bar1_values(player.maxhp, player.maxhp, 0.1, 0.7, "Player")
-    $ change_bar2_values(1000, 500, 0.5, 0.0, "Hideous Monster")
+    $ change_bar2_values(1000, 1000, 0.5, 0.0, "Hideous Monster")
 
     show screen bar1
     show screen bar2
