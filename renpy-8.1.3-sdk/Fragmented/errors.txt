@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script3.rpy", line 243: expected statement.
-    gold.add_count(50)
-                      ^
-
-File "game/script4.rpy", line 39: Line is indented, but the preceding one-line python statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    $ gold.use(10)
-    ^
-
-File "game/script4.rpy", line 42: expected statement.
-    else:
-        ^
+File "game/initialize.rpy", line 217: unmatched ')'
+            narrator("You healed for " + str(self.value) + " health" ))
+                                                                       ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Tue Dec  5 17:51:55 2023
+Tue Dec  5 19:29:42 2023
