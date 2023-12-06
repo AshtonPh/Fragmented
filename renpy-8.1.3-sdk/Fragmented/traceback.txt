@@ -1,14 +1,14 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script4.rpy", line 137, in script
+  File "game/script4.rpy", line 136, in script
     assistant "Have we met before? You seem... familiar."
 Exception: Sayer b'assistant' is not a function or string.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script4.rpy", line 137, in script
+  File "game/script4.rpy", line 136, in script
     assistant "Have we met before? You seem... familiar."
   File "D:\Git-Huh\Fragmented\renpy-8.1.3-sdk\renpy\ast.py", line 907, in execute
     raise Exception("Sayer %s is not a function or string." % self.who.encode("utf-8"))
@@ -17,4 +17,4 @@ Exception: Sayer b'assistant' is not a function or string.
 Windows-10-10.0.22635 AMD64
 Ren'Py 8.1.3.23091805
 Fragmented 1.0
-Tue Dec  5 20:17:14 2023
+Tue Dec  5 21:29:57 2023

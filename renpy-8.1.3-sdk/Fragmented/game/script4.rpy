@@ -186,7 +186,7 @@ label assistant_questions:
 
             menu: 
                 "Will you come with me to the alchemist’s lair?":
-                    $ assistant = True
+                    $ with_assistant = True
                     jump path_to_hell_with_assistant
                 "Thanks for the information. I’ll be heading out now":
                     jump main_village
