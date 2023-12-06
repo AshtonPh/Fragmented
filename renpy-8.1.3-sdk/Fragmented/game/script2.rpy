@@ -192,21 +192,22 @@ label Sir_Hendrick:
     "You approach Sir Henrick, a man whose stern visage is softened by the weariness in his eyes. He stands by the door, a list of tasks clutched in his hand."
 
     sir_hendrick " 'I was told you'd come. We have much to do and too few hands to do it. Here are the pressing matters at hand."
-    "We could use help repairing an overrun village; hunting a particularly nasty monster that’s been terrorizing the farmers; or investigating what happened to our most recent supply shipment. '"
-
+    "We could use help repairing an overrun village or with hunting a particularly nasty monster that’s been terrorizing the farmers out near the old mill."
     menu:
         "Help fortify the defenses of the Duchy.":
             "Sir Henrick nods solemnly."
-            sir_hendrick " 'Our walls have suffered from the constant attacks. Your aid in strengthening them could be the difference between life and death for many. A local village has been overrun and some of its walls destroyed. We would’ve just evacuated but there are too many elderly, children, and disabled to be able to move them far away enough to safety. We’ll need you to go help defend and try and rebuild what you can'"
+            sir_hendrick " 'Our walls have suffered from the constant attacks. Your aid in strengthening them could be the difference between life and death for many."
+            "A local village has been overrun and some of its walls destroyed. We would’ve just evacuated but there are too many elderly, children, and disabled to be able to move them far away enough to safety. We’ll need you to go help defend and try and rebuild what you can'"
             "He hands you a map and a hammer, and sends you on your way."
             jump fortify_defenses
 
 
         "Help kill the monster that has been terrorizing the old mill.":
             "Sir Hendrick looks relieved."
-            sir_hendrick " 'Your assistance is crucial. The empire seldom responds to our requests for assistance, but their yearly supply delivery was supposed to arrive two weeks ago. Our last confirmation that the supply train was safe was the village before Greenfield– something must have happened to the wagon train on its way to or in Greenfield. We’ll need you to go investigate so that we can find the supplies we desperately need, but the path is overrun with dangers. You'll need to be cautious and swift.'"
-            "He hands you a list of the supplies and a small pouch of gold for any expenses."
-            "You nod and prepare to leave for Greenfield."
+            sir_hendrick " 'Your assistance is crucial. The empire seldom responds to our requests for assistance, and our forces are stretched thin." 
+            "We need somebody to clear this thing out so we have a semblance of a chance of a good harvest this year."
+            "He hands you a map and a small pouch of gold for any expenses."
+            "You nod and prepare to leave for the old mill."
             $ gold.add_count(100)
             jump monster_hunt_preparation
 
